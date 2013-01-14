@@ -8,6 +8,7 @@
 !/.bash_profile
 !/.emacs.d
 !/.vimrc
+!/.gvimrc
 !/.vim
 !/.zshrc
 !/.tmux.conf
