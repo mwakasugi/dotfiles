@@ -22,7 +22,7 @@ elseif has('mac')
     set guifont=Ricty:h16
     set linespace=3
 elseif has('unix')
-    set guifont=Ricty:h16
+    set guifont=Ricty\ 16
     set linespace=3
 endif
 
