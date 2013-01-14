@@ -12,14 +12,23 @@ elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles' 
 endif 
 
+"----------------------------------------
+" Font Settings 
+"----------------------------------------
+if has('win32')
+    set guifont=MeiryoKe_Gothic:h11
+    set linespace=2
+elseif has('mac')
+    set guifont=Ricty:h16
+    set linespace=3
+endif
+
 "----------------------------------------------------
 " Solarized
 "----------------------------------------------------
-if has("gui_running")
-    syntax enable
-    set background=light
-    let g:solarized_contrast="high"
-    let g:solarized_visibility="low"
-    colorscheme solarized
-endif
+syntax enable
+set background=light
+let g:solarized_contrast="high"
+let g:solarized_visibility="low"
+colorscheme solarized
 
