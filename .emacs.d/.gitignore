@@ -1,0 +1,16 @@
+# 最初に全てを無視リストに入れる
+/*
+
+# git管理するやつ
+!/.gitignore
+!/init.el
+!/config
+!/elisp
+
+# git管理フォルダで更に無視するやつを指定
+.DS_Store
+*~
+*.elc
+\#*#
+elisp/cmigemo-nt/*
+elisp/cmigemo-osx/*

@@ -1,0 +1,18 @@
+# 最初に全てを無視リストに入れる
+/*
+
+# git管理するやつ
+!/README.md
+!/.gitignore
+!/.bashrc
+!/.bash_profile
+!/.emacs.d
+!/.vimrc
+!/.vim
+!/.zshrc
+!/.tmux.conf
+
+# git管理フォルダで更に無視するやつを指定
+.DS_Store
+*~
+\#*#
