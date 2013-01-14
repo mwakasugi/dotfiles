@@ -69,7 +69,8 @@ set smarttab
 set whichwrap=b,s,h,l,<,>,[,]
 "検索をファイルの先頭へループしない
 "set nowrapscan
-
+"シンタックスハイライトを有効に
+syntax enable
 "存在しないフォルダの自動作成
 augroup vimrc-auto-mkdir
     autocmd!

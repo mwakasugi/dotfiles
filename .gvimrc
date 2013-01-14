@@ -26,9 +26,10 @@ endif
 "----------------------------------------------------
 " Solarized
 "----------------------------------------------------
-syntax enable
-set background=light
-let g:solarized_contrast="high"
-let g:solarized_visibility="low"
-colorscheme solarized
+if has("gui_running")
+    set background=light
+    let g:solarized_contrast="high"
+    let g:solarized_visibility="low"
+    colorscheme solarized
+endif
 
