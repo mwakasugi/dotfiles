@@ -12,7 +12,9 @@ elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles' 
 endif 
 
-"ビープ音無し
+"エラー時の音とビジュアルベルの抑制。し
+set errorbells
+set novisualbell
 set visualbell t_vb=
 "行番号を表示
 set number
@@ -54,7 +56,7 @@ set list
 "listで表示される文字のフォーマットを指定する
 set listchars=eol:$,tab:>\ ,extends:<
 "シフト移動幅
-"set shiftwidth=4
+set shiftwidth=4
 "閉じ括弧が入力されたとき、対応する括弧を表示する
 set showmatch
 "検索時に大文字を含んでいたら大/小を区別
@@ -64,7 +66,7 @@ set smartindent
 "行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする。
 set smarttab
 "ファイル内の <Tab> が対応する空白の数
-"set tabstop=4
+set tabstop=4
 "カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
 "検索をファイルの先頭へループしない
@@ -110,6 +112,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/shabadou.vim'
 NeoBundle 'koron/nyancat-vim'
+NeoBundle 'mitechie/pyflakes-pathogen'
 
 " vim-scripts repos
 NeoBundle 'ref.vim'
