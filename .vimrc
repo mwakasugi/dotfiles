@@ -12,6 +12,9 @@ elseif isdirectory($VIM . '\vimfiles')
   let $MY_VIMRUNTIME = $VIM.'\vimfiles' 
 endif 
 
+"文字コードの設定
+set encoding=utf-8
+
 "エラー時の音とビジュアルベルの抑制。し
 set errorbells
 set novisualbell
