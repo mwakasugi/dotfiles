@@ -111,6 +111,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'osyo-manga/unite-quickfix'
@@ -163,6 +164,20 @@ smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<P
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+"----------------------------------------------------
+" vimshell
+"----------------------------------------------------
+" vimshell setting
+let g:vimshell_interactive_update_time = 10
+if has ('win32')
+    let g:vimshell_prompt = $USERNAME."% "
+endif
+
+" vimshell map
+nnoremap <silent> vs :VimShell<CR>
+nnoremap <silent> vsc :VimShellCreate<CR>
+nnoremap <silent> vp :VimShellPop<CR>
 
 "----------------------------------------------------
 " QuickRun
