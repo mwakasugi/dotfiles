@@ -148,6 +148,9 @@ let g:neocomplcache_enable_at_startup = 1
 "----------------------------------------------------
 " neosnippet
 "----------------------------------------------------
+" snippets directory
+let g:neocomplcache_snippets_dir = "~/.vim/snippets"
+
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
