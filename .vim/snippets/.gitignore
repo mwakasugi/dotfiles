@@ -3,7 +3,8 @@
 
 # git管理するやつ
 !/.gitignore
-!/perl.snip
+!/python.snip
+!/cs.snip
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
