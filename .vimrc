@@ -15,7 +15,7 @@ endif
 "文字コードの設定
 "set encoding=utf-8
 
-"エラー時の音とビジュアルベルの抑制。し
+"エラー時の音とビジュアルベルの抑制。
 set errorbells
 set novisualbell
 set visualbell t_vb=
