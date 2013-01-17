@@ -142,12 +142,12 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/shabadou.vim'
 NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mitechie/pyflakes-pathogen'
+NeoBundle 'altercation/vim-colors-solarized'
 
 " vim-scripts repos
 NeoBundle 'ref.vim'
