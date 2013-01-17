@@ -121,7 +121,7 @@ NeoBundle 'mitechie/pyflakes-pathogen'
 " vim-scripts repos
 NeoBundle 'ref.vim'
 NeoBundle 'The-NERD-tree'
-NeoBundle 'mru.vim'
+NeoBundle 'gtags.vim'
 
 " Non github repos
 " e.g.)
@@ -133,12 +133,6 @@ NeoBundle 'mru.vim'
 
 filetype plugin indent on
 NeoBundleCheck
-
-"----------------------------------------------------
-" The NERD Tree
-"----------------------------------------------------
-" autocmd VimEnter * NERDTree ./
-nmap <Leader>n :NERDTreeToggle<CR>
 
 "----------------------------------------------------
 " neocomplcache
@@ -163,6 +157,44 @@ smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<P
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+"----------------------------------------------------
+" unite
+"----------------------------------------------------
+nnoremap [unite] <Nop>
+nmap <Space>f [unite]
+
+" unite general settings
+let g:unite_enable_start_insert = 1
+let g:unite_source_file_mru_limit = 100
+let g:unite_source_file_mru_filename_format = ''
+
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
+nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
+
+autocmd FileType unite call s:unite_my_settings()
+
+function! s:unite_my_settings()"{{{
+    nmap <buffer> <ESC> <Plug>(unite_exit)
+    imap <buffer> jj <Plug>(unite_insert_leave)
+    imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
+    nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+    inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+    nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+    inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
+    nnoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
+    inoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
+endfunction"}}}
+
+"----------------------------------------------------
+" The NERD Tree
+"----------------------------------------------------
+" autocmd VimEnter * NERDTree ./
+nmap <Leader>n :NERDTreeToggle<CR>
 
 "----------------------------------------------------
 " QuickRun

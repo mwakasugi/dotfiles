@@ -31,7 +31,7 @@ endif
 "----------------------------------------------------
 if has("gui_running")
     set background=light
-    let g:solarized_contrast="high"
+    let g:solarized_contrast="normal"
     let g:solarized_visibility="low"
     colorscheme solarized
 endif
