@@ -128,7 +128,7 @@ autocmd QuickfixCmdPost grep cw
 " KeyBindings
 "----------------------------------------------------
 nmap <Space> [mykey]
-nnoremap [mykey]cd :cd<Space>%:h<CR>
+nnoremap [mykey]cd :cd<Space>%:h<CR>:pwd<CR>
 nnoremap [mykey]g :grep<Space>-i<Space>
 nnoremap [mykey]vg :vimgrep<Space>
 
