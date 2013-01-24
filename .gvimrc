@@ -36,3 +36,8 @@ if has("gui_running")
     colorscheme solarized
 endif
 
+"----------------------------------------------------
+" IME Settings
+"----------------------------------------------------
+highlight Cursor guifg=NONE guibg=Green
+highlight CursorIM guifg=NONE guibg=Purple

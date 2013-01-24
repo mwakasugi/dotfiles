@@ -119,6 +119,32 @@ function! s:GetHighlight(hi)
   return hl
 endfunction
 
+" grep
+autocmd QuickfixCmdPost vimgrep cw
+autocmd QuickfixCmdPost grep cw
+
+
+"----------------------------------------------------
+" KeyBindings
+"----------------------------------------------------
+nmap <Space> [mykey]
+nnoremap [mykey]cd :cd<Space>%:h<CR>
+nnoremap [mykey]g :grep<Space>-i<Space>
+nnoremap [mykey]vg :vimgrep<Space>
+
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
+
+" Emacs Like in Insert Mode
+imap <C-p> <Up>
+imap <C-n> <Down>
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-e> <End>
+imap <C-a> <Home>
+imap <C-h> <Backspace>
+imap <C-d> <Del>
+
 "----------------------------------------------------
 " neobundle.vim
 "----------------------------------------------------
