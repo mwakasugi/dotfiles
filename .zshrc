@@ -190,3 +190,8 @@ esac
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# Python virtualenv
+export PATH=/usr/local/share/python:$PATH
+export WORKON_HOME=$HOME/.virtualenvs
+source `which virtualenvwrapper.sh`
+
