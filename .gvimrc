@@ -27,12 +27,13 @@ elseif has('unix')
 endif
 
 "----------------------------------------------------
-" Solarized
+" Color Settings (Solarized)
 "----------------------------------------------------
 if has("gui_running")
     set background=light
     let g:solarized_contrast="normal"
     let g:solarized_visibility="low"
+    let g:solarized_italic=0
     colorscheme solarized
 endif
 
