@@ -175,6 +175,8 @@ NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mitechie/pyflakes-pathogen'
 NeoBundle 'altercation/vim-colors-solarized'
 
+NeoBundle 'mwakasugi/pyrkdown.vim'
+
 " vim-scripts repos
 NeoBundle 'ref.vim'
 NeoBundle 'The-NERD-tree'
