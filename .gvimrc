@@ -26,6 +26,11 @@ elseif has('unix')
     set linespace=3
 endif
 
+"エラー時の音とビジュアルベルの抑制。gvimrcにも。
+set errorbells
+set novisualbell
+set visualbell t_vb=
+
 "----------------------------------------------------
 " Color Settings (Solarized)
 "----------------------------------------------------

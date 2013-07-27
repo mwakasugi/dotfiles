@@ -174,12 +174,12 @@ NeoBundle 'osyo-manga/shabadou.vim'
 NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mitechie/pyflakes-pathogen'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'mwakasugi/pyrkdown.vim'
 
 " vim-scripts repos
 NeoBundle 'ref.vim'
-NeoBundle 'The-NERD-tree'
 NeoBundle 'gtags.vim'
 
 " Non github repos
