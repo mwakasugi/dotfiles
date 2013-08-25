@@ -12,6 +12,7 @@
 !/.vim
 !/.zshrc
 !/.tmux.conf
+!/.globalrc
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
