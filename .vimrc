@@ -21,10 +21,6 @@ set novisualbell
 set visualbell t_vb=
 "行番号を表示
 set number
-"新しい行のインデントを現在行と同じにする
-set autoindent
-"新しい行のインデントを現在行と同じにする
-set autoindent
 "バックアップファイル、スワップファイルの作成場所
 if has('win32')
     "バックアップファイルを作るディレクトリ
@@ -48,8 +44,6 @@ set browsedir=buffer
 set clipboard=unnamed
 "Vi互換をオフ
 set nocompatible
-"タブの代わりに空白文字を挿入する
-set expandtab
 "変更中のファイルでも、保存しないで他のファイルを表示
 set hidden
 "インクリメンタルサーチを行う
@@ -58,18 +52,22 @@ set incsearch
 set list
 "listで表示される文字のフォーマットを指定する
 set listchars=eol:$,tab:>\ ,extends:<
-"シフト移動幅
-set shiftwidth=4
 "閉じ括弧が入力されたとき、対応する括弧を表示する
 set showmatch
-"検索時に大文字を含んでいたら大/小を区別
-set smartcase
+"タブの代わりに空白文字を挿入する
+set expandtab
+"ファイル内の <Tab> が対応する空白の数
+set tabstop=4
+"シフト移動幅
+set shiftwidth=4
+"新しい行のインデントを現在行と同じにする
+set autoindent
 "新しい行を作ったときに高度な自動インデントを行う
 set smartindent
 "行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする。
 set smarttab
-"ファイル内の <Tab> が対応する空白の数
-set tabstop=4
+"検索時に大文字を含んでいたら大/小を区別
+set smartcase
 "カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
 "検索をファイルの先頭へループしない
@@ -175,8 +173,12 @@ NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mitechie/pyflakes-pathogen'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'tomasr/molokai'
 
 NeoBundle 'mwakasugi/pyrkdown.vim'
+NeoBundle 'mwakasugi/nu-gtags.vim'
+NeoBundle 'mwakasugi/neat-json.vim'
 
 " vim-scripts repos
 NeoBundle 'ref.vim'
@@ -255,6 +257,14 @@ endfunction"}}}
 " autocmd VimEnter * NERDTree ./
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>m :NERDTreeFind<CR>
+
+"----------------------------------------------------
+" nu-gtags.vim
+"----------------------------------------------------
+nnoremap <C-I> :NuGtags -f<CR>
+nnoremap <C-J> :NuGtags<CR>
+nnoremap <C-K> :NuGtags -r<CR>
+nnoremap <C-L> :NuGtags -s<CR>
 
 "----------------------------------------------------
 " QuickRun

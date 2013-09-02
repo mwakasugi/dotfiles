@@ -32,16 +32,20 @@ set novisualbell
 set visualbell t_vb=
 
 "----------------------------------------------------
-" Color Settings (Solarized)
+" Color Settings
 "----------------------------------------------------
-if has("gui_running")
-    set background=light
-    let g:solarized_contrast="normal"
-    let g:solarized_visibility="low"
-    let g:solarized_italic=0
-    colorscheme solarized
-endif
+"if has("gui_running")
+"    set background=light
+"    let g:solarized_contrast="normal"
+"    let g:solarized_visibility="low"
+"    let g:solarized_italic=0
+"    colorscheme solarized
+"endif
 
+if has("gui_running")
+    "let g:molokai_original = 1
+    colorscheme molokai
+endif
 "----------------------------------------------------
 " IME Settings
 "----------------------------------------------------
