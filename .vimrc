@@ -13,7 +13,12 @@ elseif isdirectory($VIM . '\vimfiles')
 endif 
 
 "文字コードの設定
-set encoding=utf-8
+if has('win32')
+    set encoding=sjis
+else
+    set encoding=utf-8
+endif
+
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 "エラー時の音とビジュアルベルの抑制。
