@@ -13,7 +13,8 @@ elseif isdirectory($VIM . '\vimfiles')
 endif 
 
 "文字コードの設定
-"set encoding=utf-8
+set encoding=utf-8
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 "エラー時の音とビジュアルベルの抑制。
 set errorbells
@@ -34,9 +35,9 @@ elseif has('mac')
     set directory=$HOME/Documents/backup_files/vimbackup
 elseif has('unix')
     "バックアップファイルを作るディレクトリ
-    set backupdir=$HOME/Documents/backup_files/vimbackup
+    set backupdir=$HOME/documents/backup_files/vimbackup
     "スワップファイル用のディレクトリ
-    set directory=$HOME/Documents/backup_files/vimbackup
+    set directory=$HOME/documents/backup_files/vimbackup
 endif
 "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
 set browsedir=buffer 
