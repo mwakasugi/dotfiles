@@ -25,11 +25,19 @@ case ${UID} in
     SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
     ;;
 *)
-    PROMPT="%{${fg[cyan]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-    PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
-    SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-    RPROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
-    ;;
+    case ${OSTYPE} in
+    darwin*)
+        PROMPT="%{${fg[cyan]}%}%n@%m%(!.#.$) %{${reset_color}%}"
+        PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
+        SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+        RPROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
+        ;;
+    linux*)
+        PROMPT="%{${fg[green]}%}%n@%m%(!.#.$) %{${reset_color}%}"
+        PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
+        SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+        RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
+    esac
 esac
 
 # auto change directory
