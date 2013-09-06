@@ -58,16 +58,16 @@ case ${HOST%%.*} in
         RPROMPT="%{${fg[magenta]}%}[%~]%{${reset_color}%}"
         ;;
     kenzo)
-        PROMPT="%{${fg[green]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-        PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
-        SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-        RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-        ;;
-    issey)
         PROMPT="%{${fg[yellow]}%}%n@%m%(!.#.$) %{${reset_color}%}"
         PROMPT2="%{${fg[yellow]}%}%_> %{${reset_color}%}"
         SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
         RPROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%}"
+        ;;
+    issey)
+        PROMPT="%{${fg[green]}%}%n@%m%(!.#.$) %{${reset_color}%}"
+        PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
+        SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+        RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
         ;;
 esac
 
