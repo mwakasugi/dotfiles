@@ -19,25 +19,56 @@ esac
 autoload colors
 colors
 case ${UID} in
-0)
-    PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') %B%{${fg[red]}%}%/#%{${reset_color}%}%b "
-    PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
-    SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
-    ;;
-*)
-    case ${OSTYPE} in
-    darwin*)
+    0)
+        PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') %B%{${fg[red]}%}%/#%{${reset_color}%}%b "
+        PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
+        SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
+        ;;
+    *)
+        case ${OSTYPE} in
+            darwin*)
+                PROMPT="%{${fg[cyan]}%}%n@%m%(!.#.$) %{${reset_color}%}"
+                PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
+                SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+                RPROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
+                ;;
+            linux*)
+                PROMPT="%{${fg[green]}%}%n@%m%(!.#.$) %{${reset_color}%}"
+                PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
+                SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+                RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
+        esac
+esac
+
+##############################
+# Da configuration, jus 4 me #
+##############################
+#
+case ${HOST%%.*} in
+    margiela)
         PROMPT="%{${fg[cyan]}%}%n@%m%(!.#.$) %{${reset_color}%}"
         PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
         SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
         RPROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
         ;;
-    linux*)
+    garcons)
+        PROMPT="%{${fg[magenta]}%}%n@%m%(!.#.$) %{${reset_color}%}"
+        PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
+        SPROMPT="%{${fg[magenta]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+        RPROMPT="%{${fg[magenta]}%}[%~]%{${reset_color}%}"
+        ;;
+    kenzo)
         PROMPT="%{${fg[green]}%}%n@%m%(!.#.$) %{${reset_color}%}"
         PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
-        SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+        SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
         RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-    esac
+        ;;
+    issey)
+        PROMPT="%{${fg[yellow]}%}%n@%m%(!.#.$) %{${reset_color}%}"
+        PROMPT2="%{${fg[yellow]}%}%_> %{${reset_color}%}"
+        SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
+        RPROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%}"
+        ;;
 esac
 
 # auto change directory
