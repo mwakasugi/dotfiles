@@ -181,6 +181,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'plasticboy/vim-markdown'
 
 NeoBundle 'mwakasugi/pyrkdown.vim'
 NeoBundle 'mwakasugi/nu-gtags.vim'
@@ -291,3 +292,7 @@ let g:quickrun_config = {
 \   }
 \}
 
+"----------------------------------------------------
+" vim-markdown
+"----------------------------------------------------
+let g:vim_markdown_folding_disabled=1
