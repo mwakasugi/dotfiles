@@ -4,6 +4,8 @@
 # git管理するやつ
 !/.gitignore
 !/snippets
+!/template
+!/ftplugin
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
