@@ -32,6 +32,9 @@ endif
 
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
+" statusline
+let &statusline = '%F%m%r%h%w %=[Type: %Y] [Format: %{&ff}] [Enc: %{&fileencoding}] [%4l/%4L, %3c] '
+
 " Change colors on INSERT mode
 let g:hi_insert = 'highlight StatusLine guifg=#fdf6e3 guibg=#b58900 gui=none ctermfg=blue ctermbg=yellow cterm=none'
 
@@ -62,7 +65,6 @@ function! s:GetHighlight(hi)
   let hl = substitute(hl, 'xxx', '', '')
   return hl
 endfunction
-"set encoding=utf-8
 
 "----------------------------------------
 " Settings for searching
@@ -258,21 +260,18 @@ else
   nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
   nnoremap <silent> [unite]t :<C-u>Unite tab<CR>
   nnoremap <silent> [unite]w :<C-u>Unite window<CR>
-  let s:hooks = neobundle#get_hooks("unite.vim")
-  
-  function! s:hooks.on_source(bundle)
-    " start unite in insert mode
-    let g:unite_enable_start_insert = 1
-    " use vimfiler to open directory
-    call unite#custom_default_action("source/bookmark/directory", "vimfiler")
-    call unite#custom_default_action("directory", "vimfiler")
-    call unite#custom_default_action("directory_mru", "vimfiler")
-    autocmd MyAutoCmd FileType unite call s:unite_settings()
-  
-    function! s:unite_settings()
-      imap <buffer> <Esc><Esc> <Plug>(unite_exit)
-      nmap <buffer> <Esc> <Plug>(unite_exit)
-    endfunction
+
+  " start unite in insert mode
+  let g:unite_enable_start_insert = 1
+  " use vimfiler to open directory
+  call unite#custom_default_action("source/bookmark/directory", "vimfiler")
+  call unite#custom_default_action("directory", "vimfiler")
+  call unite#custom_default_action("directory_mru", "vimfiler")
+  autocmd MyAutoCmd FileType unite call s:unite_settings()
+
+  function! s:unite_settings()
+    imap <buffer> <Esc><Esc> <Plug>(unite_exit)
+    nmap <buffer> <Esc> <Plug>(unite_exit)
   endfunction
 
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
@@ -383,12 +382,6 @@ else
       \   if search('<+CURSOR+>')
       \ |   silent! execute 'normal! "_da>'
       \ | endif
- 
-  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
-  " current-func-info
-  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
-  NeoBundle 'tyru/current-func-info.vim'
-  let &statusline = '%F%m%r%h%w [ %{cfi#format("%s()", "nofunction")} ]%=[Type: %Y] [Format: %{&ff}] [Enc: %{&fileencoding}] [%4l/%4L, %3c] '
 
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'osyo-manga/unite-quickfix'
@@ -399,12 +392,13 @@ else
   NeoBundle 'tomasr/molokai'
   
   NeoBundle 'tpope/vim-surround'
+  NeoBundle 'tpope/vim-markdown'
   NeoBundle 'vim-scripts/Align'
   NeoBundle 'vim-scripts/YankRing.vim'
   
-  NeoBundle 'mwakasugi/pyrkdown.vim'
-  NeoBundle 'mwakasugi/nu-gtags.vim'
-  NeoBundle 'mwakasugi/neat-json.vim'
+  NeoBundle '5t111111/pyrkdown.vim'
+  NeoBundle '5t111111/alt-gtags.vim'
+  NeoBundle '5t111111/neat-json.vim'
   NeoBundle 'testscript.vim'
 
   " Check the plugin that is not installed, then download it if necessary.
@@ -418,7 +412,7 @@ filetype plugin indent on
 "----------------------------------------------------
 " alt-gtags.vim
 "----------------------------------------------------
-nnoremap <C-I> :AltGtags -f<CR>
+"nnoremap <C-I> :AltGtags -f<CR>
 nnoremap <C-J> :AltGtags<CR>
 nnoremap <C-K> :AltGtags -r<CR>
 nnoremap <C-L> :AltGtags -s<CR>
