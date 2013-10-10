@@ -108,14 +108,6 @@ set matchpairs& matchpairs+=<:>
 " Add the characters that backspace removes.
 set backspace=indent,eol,start
 
-" Set the clipboard as the default register.
-" Settings must be distinguished because of YankRing.
-if has('unnamedplus')
-  set clipboard& clipboard+=unnamedplus,unnamed 
-else
-  set clipboard& clipboard+=unnamed
-endif
-
 " Disable swap files and backup file.
 set nowritebackup
 set nobackup
@@ -394,7 +386,6 @@ else
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'tpope/vim-markdown'
   NeoBundle 'vim-scripts/Align'
-  NeoBundle 'vim-scripts/YankRing.vim'
   
   NeoBundle '5t111111/pyrkdown.vim'
   NeoBundle '5t111111/alt-gtags.vim'
@@ -412,10 +403,9 @@ filetype plugin indent on
 "----------------------------------------------------
 " alt-gtags.vim
 "----------------------------------------------------
-"nnoremap <C-I> :AltGtags -f<CR>
-nnoremap <C-J> :AltGtags<CR>
-nnoremap <C-K> :AltGtags -r<CR>
-nnoremap <C-L> :AltGtags -s<CR>
+nnoremap <C-j> :AltGtags<CR>
+nnoremap <C-j> :AltGtags -r<CR>
+nnoremap <C-l> :AltGtags -s<CR>
 
 "----------------------------------------------------
 " QuickRun
