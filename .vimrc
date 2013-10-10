@@ -375,6 +375,25 @@ else
       \ |   silent! execute 'normal! "_da>'
       \ | endif
 
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  " jedi-vim
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  NeoBundleLazy "davidhalter/jedi-vim", {
+     \ "autoload": {
+     \   "filetypes": ["python", "python3", "djangohtml"],
+     \ }}
+  let s:hooks = neobundle#get_hooks("jedi-vim")
+  function! s:hooks.on_source(bundle)
+    " Disable auto vim configration.
+    let g:jedi#auto_vim_configuration = 0
+    " Disable selecting the first one when running completion
+    let g:jedi#popup_select_first = 0
+    " Change the keymap of rename command as it conflict with 'quickrun'.
+    let g:jedi#rename_command = '<Leader>R'
+    " Change the keymap of goto command as it conflict with 'gundo'.
+    let g:jedi#goto_assignments_command = '<Leader>G'
+  endfunction
+
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'osyo-manga/unite-quickfix'
   NeoBundle 'osyo-manga/shabadou.vim'
@@ -403,9 +422,12 @@ filetype plugin indent on
 "----------------------------------------------------
 " alt-gtags.vim
 "----------------------------------------------------
-nnoremap <C-j> :AltGtags<CR>
-nnoremap <C-j> :AltGtags -r<CR>
-nnoremap <C-l> :AltGtags -s<CR>
+  nnoremap [alt-gtags] <Nop>
+  nmap T [alt-gtags]
+  nnoremap <silent> [alt-gtags]i :AltGtags -f<CR>
+  nnoremap <silent> [alt-gtags]j :AltGtags<CR>
+  nnoremap <silent> [alt-gtags]k :AltGtags -r<CR>
+  nnoremap <silent> [alt-gtags]l :AltGtags -s<CR>
 
 "----------------------------------------------------
 " QuickRun
