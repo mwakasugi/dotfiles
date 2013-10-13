@@ -409,7 +409,6 @@ else
   NeoBundle '5t111111/pyrkdown.vim'
   NeoBundle '5t111111/alt-gtags.vim'
   NeoBundle '5t111111/neat-json.vim'
-  NeoBundle 'testscript.vim'
 
   " Check the plugin that is not installed, then download it if necessary.
   NeoBundleCheck
