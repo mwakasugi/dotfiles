@@ -231,6 +231,11 @@ esac
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Python virtualenv
+case ${HOST%%.*} in
+    issey)
+        export PATH=/usr/local/python-2.7/bin:$PATH
+        ;;
+esac
 case "${OSTYPE}" in
 darwin*)
     export WORKON_HOME=$HOME/.virtualenvs
