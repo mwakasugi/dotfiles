@@ -156,6 +156,7 @@ setopt complete_aliases     # aliased ls needs if file/dir completions work
 
 alias where="command -v"
 alias j="jobs -l"
+alias mvim="/Applications/MacVim.app/Contents/MacOS/mvim"
 
 case "${OSTYPE}" in
 freebsd*|darwin*)
@@ -230,6 +231,13 @@ esac
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Python virtualenv
-export WORKON_HOME=$HOME/.virtualenvs
+case "${OSTYPE}" in
+darwin*)
+    export WORKON_HOME=$HOME/.virtualenvs
+    ;;
+linux*)
+    export WORKON_HOME=/opt/virtualenvs
+    ;;
+esac
 source `which virtualenvwrapper.sh`
 
