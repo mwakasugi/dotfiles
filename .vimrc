@@ -188,6 +188,9 @@ if filereadable(s:local_vimrc)
   execute 'source ' . s:local_vimrc
 endif
 
+" Enables matchit
+source $VIMRUNTIME/macros/matchit.vim
+
 "----------------------------------------------------
 " Key bindings
 "----------------------------------------------------
@@ -402,11 +405,6 @@ else
               \ 'active_filetypes': ['ruby'] }
   let g:syntastic_ruby_checkers = ['rubocop']
   let g:syntastic_quiet_warnings = 0
-
-  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
-  " ruby-matchit
-  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
-  NeoBundle 'vim-scripts/ruby-matchit'
 
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   " other plugins
