@@ -223,6 +223,14 @@ xterm|xterm-color|kterm|kterm-color)
     ;;
 esac
 
+# Vim
+case "${OSTYPE}" in
+darwin*)
+    export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    ;;
+esac
 
 ## load user .zshrc configuration file
 #
@@ -245,4 +253,3 @@ linux*)
     ;;
 esac
 source `which virtualenvwrapper.sh`
-

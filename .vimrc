@@ -20,7 +20,7 @@ endif
 "----------------------------------------
 " General settings
 "----------------------------------------
-" Disblae vi compativility
+" Disable vi compativility
 set nocompatible
 
 " Encodings
@@ -394,6 +394,23 @@ else
     let g:jedi#goto_assignments_command = '<Leader>G'
   endfunction
 
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  " syntastic
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  NeoBundle 'scrooloose/syntastic'
+  let g:syntastic_mode_map = { 'mode': 'passive',
+              \ 'active_filetypes': ['ruby'] }
+  let g:syntastic_ruby_checkers = ['rubocop']
+  let g:syntastic_quiet_warnings = 0
+
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  " ruby-matchit
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  NeoBundle 'vim-scripts/ruby-matchit'
+
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  " other plugins
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'osyo-manga/unite-quickfix'
   NeoBundle 'osyo-manga/shabadou.vim'
