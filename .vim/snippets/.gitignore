@@ -6,6 +6,7 @@
 !/python.snip
 !/cs.snip
 !/html.snip
+!/ruby.snip
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
