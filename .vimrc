@@ -407,6 +407,11 @@ else
   let g:syntastic_quiet_warnings = 0
 
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  " evervim
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  NeoBundle 'kakkyz81/evervim'
+
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   " other plugins
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   NeoBundle 'thinca/vim-quickrun'
@@ -416,9 +421,11 @@ else
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'elzr/vim-json'
   NeoBundle 'tomasr/molokai'
+  NeoBundle 'jmcantrell/vim-virtualenv'
   
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'tpope/vim-markdown'
+  NeoBundle 'tpope/vim-bundler'
   NeoBundle 'vim-scripts/Align'
   
   NeoBundle '5t111111/pyrkdown.vim'
@@ -462,3 +469,9 @@ let g:quickrun_config = {
       \   }
       \}
 
+"----------------------------------------------------
+" Load other .vimrc files
+"----------------------------------------------------
+if filereadable(expand('~/.vimrc.secret'))
+  source ~/.vimrc.secret
+endif
