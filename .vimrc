@@ -25,7 +25,7 @@ set nocompatible
 
 " Encodings
 if has('win32')
-    set encoding=sjis
+    set encoding=cp932
 else
     set encoding=utf-8
 endif
