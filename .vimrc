@@ -303,6 +303,11 @@ else
   endfunction
 
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  " vimshell.vim
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  NeoBundle 'Shougo/vimshell.vim'
+
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   " neocomplcache.vim & neocomplete.vim
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   if has('lua') && v:version >= 703 && has('patch885')
@@ -411,6 +416,18 @@ else
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   NeoBundle 'kakkyz81/evervim'
 
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  " vim-tags
+  " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+  NeoBundle 'szw/vim-tags'
+  if has('win32')
+    " ToDo ...
+  elseif has('mac')
+      let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+      let g:vim_tags_gems_tags_command = "/usr/local/bin/ctags -R {OPTIONS} `bundle show --paths` 2>/dev/null"
+  elseif has('unix')
+    " ToDo ...
+  endif
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   " other plugins
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
