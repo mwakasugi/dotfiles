@@ -439,7 +439,7 @@ else
   NeoBundle 'elzr/vim-json'
   NeoBundle 'tomasr/molokai'
   NeoBundle 'jmcantrell/vim-virtualenv'
-  
+  NeoBundle 'sophacles/vim-processing'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'tpope/vim-markdown'
   NeoBundle 'tpope/vim-bundler'
@@ -471,19 +471,25 @@ filetype plugin indent on
 " QuickRun
 "----------------------------------------------------
 let g:quickrun_config = {
-      \   "_" : {
-      \       "hook/close_unite_quickfix/enable_hook_loaded" : 1,
-      \       "hook/unite_quickfix/enable_failure" : 1,
-      \       "hook/close_quickfix/enable_exit" : 1,
-      \       "hook/close_buffer/enable_failure" : 1,
-      \       "hook/close_buffer/enable_empty_data" : 1,
-      \       "outputter" : "multi:buffer:quickfix",
-      \       "hook/inu/enable" : 1,
-      \       "hook/inu/wait" : 20,
-      \       "outputter/buffer/split" : ":botright 8sp",
-      \       "runner" : "vimproc",
-      \       "runner/vimproc/updatetime" : 40,
-      \   }
+      \   '_' : {
+      \       'hook/close_unite_quickfix/enable_hook_loaded' : 1,
+      \       'hook/unite_quickfix/enable_failure' : 1,
+      \       'hook/close_quickfix/enable_exit' : 1,
+      \       'hook/close_buffer/enable_failure' : 1,
+      \       'hook/close_buffer/enable_empty_data' : 1,
+      \       'outputter' : 'multi:buffer:quickfix',
+      \       'hook/inu/enable' : 1,
+      \       'hook/inu/wait' : 20,
+      \       'outputter/buffer/split' : ':botright 8sp',
+      \       'runner' : 'vimproc',
+      \       'runner/vimproc/updatetime' : 40,
+      \   },
+      \   'processing' : {
+      \       'command' : 'processing-java',
+      \       'cmdopt' : '--run --force',
+      \       'exec' : '%c --sketch=%s:h --output=~/Documents/Processing %o',
+      \       'outputter' : 'error:buffer:quickfix',
+      \   },
       \}
 
 "----------------------------------------------------
