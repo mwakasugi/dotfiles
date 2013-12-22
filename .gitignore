@@ -12,6 +12,7 @@
 !/.vim
 !/.zshrc
 !/.zshenv
+!/.zprofile
 !/.tmux.conf
 !/.globalrc
 

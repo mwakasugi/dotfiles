@@ -445,7 +445,7 @@ else
   NeoBundle 'tpope/vim-bundler'
   NeoBundle 'vim-scripts/Align'
   
-  NeoBundle '5t111111/pyrkdown.vim'
+  NeoBundle '5t111111/markdown-preview.vim'
   NeoBundle '5t111111/alt-gtags.vim'
   NeoBundle '5t111111/neat-json.vim'
 
@@ -478,8 +478,8 @@ let g:quickrun_config = {
       \       'hook/close_buffer/enable_failure' : 1,
       \       'hook/close_buffer/enable_empty_data' : 1,
       \       'outputter' : 'multi:buffer:quickfix',
-      \       'hook/inu/enable' : 1,
-      \       'hook/inu/wait' : 20,
+      \       'hook/neco/enable' : 1,
+      \       'hook/neco/wait' : 20,
       \       'outputter/buffer/split' : ':botright 8sp',
       \       'runner' : 'vimproc',
       \       'runner/vimproc/updatetime' : 40,
