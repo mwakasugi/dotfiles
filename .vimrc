@@ -444,6 +444,9 @@ else
   NeoBundle 'tpope/vim-markdown'
   NeoBundle 'tpope/vim-bundler'
   NeoBundle 'vim-scripts/Align'
+
+  NeoBundle 'kannokanno/previm'
+  NeoBundle 'tyru/open-browser.vim'
   
   NeoBundle '5t111111/markdown-preview.vim'
   NeoBundle '5t111111/alt-gtags.vim'
@@ -462,10 +465,10 @@ filetype plugin indent on
 "----------------------------------------------------
   nnoremap [alt-gtags] <Nop>
   nmap T [alt-gtags]
-  nnoremap <silent> [alt-gtags]i :AltGtags -f<CR>
-  nnoremap <silent> [alt-gtags]j :AltGtags<CR>
-  nnoremap <silent> [alt-gtags]k :AltGtags -r<CR>
-  nnoremap <silent> [alt-gtags]l :AltGtags -s<CR>
+  nnoremap <silent> [alt-gtags]f :AltGtags -f<CR>
+  nnoremap <silent> [alt-gtags]t :AltGtags<CR>
+  nnoremap <silent> [alt-gtags]r :AltGtags -r<CR>
+  nnoremap <silent> [alt-gtags]s :AltGtags -s<CR>
 
 "----------------------------------------------------
 " QuickRun
