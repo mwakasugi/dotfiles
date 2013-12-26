@@ -443,11 +443,10 @@ else
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'tpope/vim-markdown'
   NeoBundle 'tpope/vim-bundler'
+  NeoBundle 'tpope/vim-pathogen'
   NeoBundle 'vim-scripts/Align'
+  NeoBundle 'slim-template/vim-slim'
 
-  NeoBundle 'kannokanno/previm'
-  NeoBundle 'tyru/open-browser.vim'
-  
   NeoBundle '5t111111/markdown-preview.vim'
   NeoBundle '5t111111/alt-gtags.vim'
   NeoBundle '5t111111/neat-json.vim'
@@ -458,7 +457,9 @@ endif
 
 " Enable File Type plugin and Indent.
 " This must be called adtere NeoBundle process has completed..
-filetype plugin indent on
+execute pathogen#infect()
+syntax on
+filetype plugin indent on 
 
 "----------------------------------------------------
 " alt-gtags.vim
