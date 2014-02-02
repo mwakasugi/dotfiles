@@ -57,7 +57,7 @@ case ${HOST%%.*} in
         SPROMPT="%{${fg[magenta]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
         RPROMPT="%{${fg[magenta]}%}[%~]%{${reset_color}%}"
         ;;
-    kenzo)
+    jacobs)
         PROMPT="%{${fg[yellow]}%}%n@%m%(!.#.$) %{${reset_color}%}"
         PROMPT2="%{${fg[yellow]}%}%_> %{${reset_color}%}"
         SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
