@@ -113,7 +113,6 @@ setopt complete_aliases     # aliased ls needs if file/dir completions work
 
 alias where="command -v"
 alias j="jobs -l"
-alias mvim="/Applications/MacVim.app/Contents/MacOS/mvim"
 
 case "${OSTYPE}" in
 freebsd*|darwin*)
