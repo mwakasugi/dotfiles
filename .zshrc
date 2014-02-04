@@ -5,12 +5,12 @@
 # LANG
 #
 export LANG=ja_JP.UTF-8
+# set LANG=C when root
 case ${UID} in
 0)
     LANG=C
     ;;
 esac
-
 
 ## Default shell configuration
 #
@@ -18,58 +18,15 @@ esac
 #
 autoload colors
 colors
-case ${UID} in
-    0)
-        PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') %B%{${fg[red]}%}%/#%{${reset_color}%}%b "
-        PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
-        SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
-        ;;
-    *)
-        case ${OSTYPE} in
-            darwin*)
-                PROMPT="%{${fg[cyan]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-                PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
-                SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-                RPROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
-                ;;
-            linux*)
-                PROMPT="%{${fg[green]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-                PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
-                SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-                RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-        esac
-esac
 
-##############################
-# Da configuration, jus 4 me #
-##############################
-#
-case ${HOST%%.*} in
-    margiela)
-        PROMPT="%{${fg[cyan]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-        PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
-        SPROMPT="%{${fg[red]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-        RPROMPT="%{${fg[cyan]}%}[%~]%{${reset_color}%}"
-        ;;
-    garcons)
-        PROMPT="%{${fg[magenta]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-        PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
-        SPROMPT="%{${fg[magenta]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-        RPROMPT="%{${fg[magenta]}%}[%~]%{${reset_color}%}"
-        ;;
-    jacobs)
-        PROMPT="%{${fg[yellow]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-        PROMPT2="%{${fg[yellow]}%}%_> %{${reset_color}%}"
-        SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-        RPROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%}"
-        ;;
-    issey)
-        PROMPT="%{${fg[green]}%}%n@%m%(!.#.$) %{${reset_color}%}"
-        PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
-        SPROMPT="%{${fg[cyan]}%}correct: %R -> %r [n,y,a,e]? %{${reset_color}%}"
-        RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-        ;;
-esac
+local p_normal="%(!,%F{red},%F{cyan})"
+local p_warn="%F{red}"
+local p_mark="%(?,${p_normal},${p_warn})%(!,#,$)%f"
+
+PROMPT="${p_normal}%n@%m%f $p_mark "
+PROMPT2="${p_normal}%_> %f"
+SPROMPT="${p_warn}correct: %R -> %r [n,y,a,e]?%f"
+RPROMPT="${p_normal}[%~]%f"
 
 # auto change directory
 #
@@ -223,44 +180,8 @@ xterm|xterm-color|kterm|kterm-color)
     ;;
 esac
 
-# Vim
-case "${OSTYPE}" in
-darwin*)
-    export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-    ;;
-esac
 
 ## load user .zshrc configuration file
 #
 [ -f ${HOME}/.zshrc.mine ] && source ${HOME}/.zshrc.mine
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# Python virtualenv
-case ${HOST%%.*} in
-    issey)
-        export PATH=/usr/local/python-2.7/bin:$PATH
-        ;;
-esac
-case "${OSTYPE}" in
-darwin*)
-    export WORKON_HOME=$HOME/.virtualenvs
-    ;;
-linux*)
-    export WORKON_HOME=/opt/virtualenvs
-    ;;
-esac
-if hash virtualenvwrapper.sh 2> /dev/null; then
-    source `which virtualenvwrapper.sh`
-fi
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-if hash rbenv 2> /dev/null; then
-    eval "$(rbenv init -)"
-fi
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
