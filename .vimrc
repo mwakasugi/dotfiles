@@ -275,14 +275,12 @@ else
   NeoBundleLazy "Shougo/vimfiler.vim", {
         \ "depends": ["Shougo/unite.vim"],
         \ "autoload": {
-        \   "commands": ["VimFilerTab", "VimFiler", "VimFilerExplorer"],
+        \   "commands": ["VimFiler", "VimFilerExplorer", "VimFilerBufferDir"],
         \   "mappings": ['<Plug>(vimfiler_switch)'],
         \   "explorer": 1,
         \ }}
 
   nnoremap <Leader>e :VimFilerExplorer<CR>
-  " close vimfiler automatically when there are only vimfiler open
-  autocmd MyAutoCmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
   let s:hooks = neobundle#get_hooks("vimfiler")
   function! s:hooks.on_source(bundle)
     let g:vimfiler_as_default_explorer = 1
@@ -353,8 +351,8 @@ else
   let g:indent_guides_enable_on_vim_startup=1
   let g:indent_guides_start_level=1
   let g:indent_guides_auto_colors=0
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#1F211F ctermbg=gray
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#222222 ctermbg=darkgray
   let g:indent_guides_color_change_percent=30
   let g:indent_guides_guide_size=1
 
@@ -409,7 +407,7 @@ else
   let g:syntastic_mode_map = { 'mode': 'passive',
               \ 'active_filetypes': ['ruby'] }
   let g:syntastic_ruby_checkers = ['rubocop']
-  let g:syntastic_quiet_warnings = 0
+  let g:syntastic_quiet_messages = {'level':'warnings'}
 
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   " evervim
