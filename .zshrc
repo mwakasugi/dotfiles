@@ -98,6 +98,10 @@ compinit
 #
 autoload zed
 
+## zmv
+#
+autoload -Uz zmv
+alias zmv='noglob zmv -W'
 
 ## Prediction configuration
 #
