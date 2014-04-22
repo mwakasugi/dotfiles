@@ -390,8 +390,6 @@ else
      \ }}
   let s:hooks = neobundle#get_hooks("jedi-vim")
   function! s:hooks.on_source(bundle)
-    " Disable auto vim configration.
-    let g:jedi#auto_vim_configuration = 0
     " Disable selecting the first one when running completion
     let g:jedi#popup_select_first = 0
     " Change the keymap of rename command as it conflict with 'quickrun'.
@@ -399,6 +397,10 @@ else
     " Change the keymap of goto command as it conflict with 'gundo'.
     let g:jedi#goto_assignments_command = '<Leader>G'
   endfunction
+  " Disable auto vim configration.
+  let g:jedi#auto_vim_configuration = 0
+  " Disable conmpletion.
+  let g:jedi#completions_enabled = 0
 
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   " syntastic
@@ -444,6 +446,7 @@ else
   NeoBundle 'tpope/vim-pathogen'
   NeoBundle 'vim-scripts/Align'
   NeoBundle 'slim-template/vim-slim'
+  NeoBundle 'nvie/vim-flake8'
 
   NeoBundle '5t111111/markdown-preview.vim'
   NeoBundle '5t111111/alt-gtags.vim'
