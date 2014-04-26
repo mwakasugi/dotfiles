@@ -439,7 +439,6 @@ else
   NeoBundle 'thinca/vim-quickrun'
   NeoBundle 'osyo-manga/unite-quickfix'
   NeoBundle 'osyo-manga/shabadou.vim'
-  NeoBundle 'mitechie/pyflakes-pathogen'
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'elzr/vim-json'
   NeoBundle 'tomasr/molokai'
