@@ -33,6 +33,7 @@ endif
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 " statusline
+set laststatus=2
 let &statusline = '%F%m%r%h%w %=[Type: %Y] [Format: %{&ff}] [Enc: %{&fileencoding}] [%4l/%4L, %3c] '
 
 " Change colors on INSERT mode
