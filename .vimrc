@@ -451,6 +451,7 @@ else
   NeoBundle 'vim-scripts/Align'
   NeoBundle 'slim-template/vim-slim'
   NeoBundle 'nvie/vim-flake8'
+  NeoBundle 'digitaltoad/vim-jade'
 
   NeoBundle '5t111111/markdown-preview.vim'
   NeoBundle '5t111111/alt-gtags.vim'
