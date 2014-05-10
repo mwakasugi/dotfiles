@@ -29,14 +29,6 @@
 (setq iswitchb-prompt-newbuffer nil)
 
 ;; ------------------------------------------------------------------------
-;; recentf
-;; ------------------------------------------------------------------------
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-saved-items 3000)
-(global-set-key "\C-cr" 'recentf-open-files)
-
-;; ------------------------------------------------------------------------
 ;; ediff
 ;; ------------------------------------------------------------------------
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
