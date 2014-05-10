@@ -98,20 +98,26 @@
   (if window-system 
     (set-frame-parameter nil 'alpha 96))
 
+
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;; key bindings
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+  ;; C-h sends backspace
+  (keyboard-translate ?\C-h ?\C-?)
+
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 ;; Load builtins elisp settings
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
-
-  (load "~/.emacs.d/config/init-package.el")
-  (load "~/.emacs.d/config/init-recentf.el")
-  (load "~/.emacs.d/config/init-linum.el")
-  (load "~/.emacs.d/config/init-iswitchb.el")
+  (load "~/.emacs.d/config/builtins.el")
 
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 ;; Load Addons elisp settings
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
   (load "~/.emacs.d/config/addons.el")
 
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;; Theme
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
   (load-theme 'tango-dark t)
 
 

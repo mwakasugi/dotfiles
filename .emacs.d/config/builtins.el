@@ -1,21 +1,43 @@
 ;; ------------------------------------------------------------------------
-;; @ linum
+;; package
+;; ------------------------------------------------------------------------
+(require 'package)
 
-   ;; バッファ中の行番号表示
-   (global-linum-mode t)
+;; MELPAを追加
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-   ;; 行番号のフォーマット
-   ;; (set-face-attribute 'linum nil :foreground "red" :height 0.8)
-   (set-face-attribute 'linum nil :height 0.8)
-   (setq linum-format "%4d")
+;; Marmaladeを追加
+(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+;; 初期化
+(package-initialize)
 
 ;; ------------------------------------------------------------------------
-;; @ iswitchb
+;; linum
+;; ------------------------------------------------------------------------
+;; Display line number
+(global-linum-mode t)
 
-  (iswitchb-mode 1)
-  (setq read-buffer-function 'iswitchb-read-buffer)
-  (setq iswitchb-regexp nil)
-  (setq iswitchb-prompt-newbuffer nil)
+;; Line number format
+;; (set-face-attribute 'linum nil :foreground "red" :height 0.8)
+(set-face-attribute 'linum nil :height 0.8)
+(setq linum-format "%4d")
+
+;; ------------------------------------------------------------------------
+;; iswitchb
+;; ------------------------------------------------------------------------
+(iswitchb-mode 1)
+(setq read-buffer-function 'iswitchb-read-buffer)
+(setq iswitchb-regexp nil)
+(setq iswitchb-prompt-newbuffer nil)
+
+;; ------------------------------------------------------------------------
+;; recentf
+;; ------------------------------------------------------------------------
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-saved-items 3000)
+(global-set-key "\C-c\C-r" 'recentf-open-files)
 
 ;; ------------------------------------------------------------------------
 ;; @ org
@@ -34,10 +56,3 @@
          ("Todo" ?t "** TODO %?\n   %i\n   %a\n   %t" nil "Inbox")))
   (define-key global-map (kbd "C-<f9>") 'org-remember) ;key-binding
 
-  ;; MobileOrg
-  ;; MobileOrgで新しく作ったノートを保存するファイルの名前を設定
-  (setq org-mobile-inbox-for-pull "~/.emacs.d/org-docs/flagged.org")
-  ;; Dropbox直下のMobileOrgフォルダへのパスを設定
-  (setq org-mobile-directory "~/Dropbox/MobileOrg")
-  ;; 同期するファイル
-  (setq org-agenda-files `("~/.emacs.d/org-docs/memo.org"))
