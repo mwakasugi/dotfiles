@@ -1,130 +1,108 @@
-;; ------------------------------------------------------------------------
-;; @ recentf
 
-  (setq recentf-max-saved-items 3000)
-  (require 'recentf-ext)
-  (global-set-key "\C-c\C-h" 'recentf-open-files) ; key-binding
+;; =====================================================================
+;;  ________  ____   ____  _____  _____     
+;; |_   __  ||_  _| |_  _||_   _||_   _|    
+;;   | |_ \_|  \ \   / /    | |    | |      
+;;   |  _| _    \ \ / /     | |    | |   _  
+;;  _| |__/ |    \ ' /     _| |_  _| |__/ | 
+;; |________|     \_/     |_____||________| 
+;;                                          
+;; =====================================================================
+;; Turn off IME when exiting insert state
+(add-hook 'evil-normal-state-entry-hook 'mac-change-language-to-us)
 
-;; ------------------------------------------------------------------------
-;; @ dmacro
+(setq evil-want-C-u-scroll t
+      Evil-search-module 'evil-search
+      evil-ex-search-vim-style-regexp t)
 
-  (defconst *dmacro-key* "\C-t" "繰返し指定キー") ;key-binding
-  (global-set-key *dmacro-key* 'dmacro-exec)
-  (autoload 'dmacro-exec "dmacro" nil t)
+(require 'evil)
+(evil-mode 1)
 
-;; ------------------------------------------------------------------------
-;; @ jaspace
+;; =====================================================================
+;;                                                                 _ _
+;;                          _/_/        /)                   /    ////
+;;   _ _., _ _.---   _  __. / /_ ---   //__ ________ --- _  /_ _ //// 
+;;  <// /\</(__     /_)(_/|<_/ /_     /// ((_) / / <_   /_)/ /</</</_ 
+;;                 /                 />                               
+;;               '                </                               
+;; =====================================================================
+(exec-path-from-shell-initialize)
 
-  ;; 全角空白、タブ、改行表示モード
-  ;; 切り替えは M-x jaspace-mode-on or -off
-  (require 'jaspace)
-  ;; 全角空白を表示させる。
-  (setq jaspace-alternate-jaspace-string "□")
-  ;; 改行記号を表示させる。
-  (setq jaspace-alternate-eol-string "↓\n")
-  ;; タブ記号を表示。
-  (setq jaspace-highlight-tabs t)  ; highlight tabs
-  ;; フック
-  (add-hook 'text-mode-hook 'jaspace-mode)
+;; =====================================================================
+;;     _  _   _ _____ ___       ___ ___  __  __ ___ _    ___ _____ ___ 
+;;    /_\| | | |_   _/ _ \ ___ / __/ _ \|  \/  | _ \ |  | __|_   _| __|
+;;   / _ \ |_| | | || (_) |___| (_| (_) | |\/| |  _/ |__| _|  | | | _| 
+;;  /_/ \_\___/  |_| \___/     \___\___/|_|  |_|_| |____|___| |_| |___|
+;;                                                                     
+;; =====================================================================
+;; Enable Emacs key-bindings on insert state
+(setcdr evil-insert-state-map nil)
 
-;; ------------------------------------------------------------------------
-;; @ sequential-command
+;; ESC to exit insert state
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
 
-  ;;sequential-commandの設定
-  (require 'sequential-command-config)
-  (sequential-command-setup-keys)
+(require 'auto-complete)
+(require 'auto-complete-config)
+(global-auto-complete-mode t)
 
-;; ------------------------------------------------------------------------
-;; @ color-theme
+;; =====================================================================
+;;      _____  ________  _______   ______ 
+;;     /     |/        |/       \ /      |
+;;     $$$$$ |$$$$$$$$/ $$$$$$$  |$$$$$$/ 
+;;        $$ |$$ |__    $$ |  $$ |  $$ |  
+;;   __   $$ |$$    |   $$ |  $$ |  $$ |  
+;;  /  |  $$ |$$$$$/    $$ |  $$ |  $$ |  
+;;  $$ \__$$ |$$ |_____ $$ |__$$ | _$$ |_ 
+;;  $$    $$/ $$       |$$    $$/ / $$   |
+;;   $$$$$$/  $$$$$$$$/ $$$$$$$/  $$$$$$/ 
+;; =====================================================================
+(require 'epc)
+(require 'auto-complete-config)
+(require 'python)
 
-  (require 'color-theme)
-;  (color-theme-initialize)
-  (when (require 'color-theme)
-    (color-theme-initialize)
-    (when (require 'color-theme-solarized)
-      (color-theme-solarized-dark)))
+(require 'jedi)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 
-;; ------------------------------------------------------------------------
-;; @ nyan-mode
+;; =====================================================================
+;;     ___  _                  _                    _     
+;;   /'___)(_ )               ( )                  ( )    
+;;  | (__   | |  _   _    ___ | |__     __     ___ | |/') 
+;;  | ,__)  | | ( ) ( ) /'___)|  _ `\ /'__`\ /'___)| , <  
+;;  | |     | | | (_) |( (___ | | | |(  ___/( (___ | |\`\ 
+;;  (_)    (___)`\__, |`\____)(_) (_)`\____)`\____)(_) (_)
+;;              ( )_| |                                   
+;;              `\___/'                                   
+;; =====================================================================
+(require 'flycheck)
+(setq flycheck-check-syntax-automatically '(mode-enabled save))
+(add-hook 'python-mode-hook 'flycheck-mode)
+(add-hook 'ruby-mode-hook 'flycheck-mode)
 
-  (if window-system
-    (require 'nyan-mode))
- (if window-system
-    (nyan-mode))
- (if window-system
-    (nyan-start-animation))
-
-;; ------------------------------------------------------------------------
-;; @ redo+
-
-  (require 'redo+)
-  (global-set-key (kbd "C-M-/") 'redo) ; key-binding
-  (setq undo-noredo t)
-  (setq undo-limit 600000)
-  (setq undo-strong-limit 900000)
-
-;; ------------------------------------------------------------------------
-;; @ color-moccur
-
-  (require 'color-moccur)
-
-  (define-key global-map (kbd "C-<f10>") 'moccur) ; key-binding
-  (define-key global-map (kbd "C-<f11>") 'moccur-grep-find) ; key-binding
+;; =====================================================================
+;;      o  +           +        +
+;;  +        o     o       +        o
+;;  -_-_-_-_-_-_-_,------,      o 
+;;  _-_-_-_-_-_-_-|   /\_/\  
+;;  -_-_-_-_-_-_-~|__( ~ .~)  +     +  
+;;  _-_-_-_-_-_-_-""  ""      
+;;  +      o         o   +       o
+;;      +         +
+;; =====================================================================
+(require 'nyan-mode)
+(nyan-mode)
+(nyan-start-animation)
 
 
-;; ------------------------------------------------------------------------
-;; @ moccur-edit
+;; =====================================================================
+;;             .          .                                             
+;;  .  , . ,-. |- . . ,-. |  ,-. ,-. .  , . , , ,-. ,-. ,-. ,-. ,-. ,-. 
+;;  | /  | |   |  | | ,-| |  |-' | | | /  |/|/  |   ,-| | | | | |-' |   
+;;  `'   ' '   `' `-^ `-^ `' `-' ' ' `'   ' '   '   `-^ |-' |-' `-' '   
+;;                                                      |   |           
+;;                                                      '   '          
+;; =====================================================================
+(require 'virtualenvwrapper)
+(setq venv-location "~/.virtualenvs")
 
-  (require 'moccur-edit)
 
-;; ------------------------------------------------------------------------
-;; @ goto-chg
-
-  (require 'goto-chg)
-  (define-key global-map (kbd "<f8>") 'goto-last-change)
-  (define-key global-map (kbd "<S-f8>") 'goto-last-change-reverse)
-
-;; ------------------------------------------------------------------------
-;; @ browse-kill-ring
-  (require 'browse-kill-ring)
-  (global-set-key "\M-y" 'browse-kill-ring) ; key-binding
-
-;; ------------------------------------------------------------------------
-;; @ major mode
-
-  ;; ------------------------------------------------------------------------
-  ;; @ vbnet-mode
-  (autoload 'vbnet-mode "vbnet-mode" "Mode for editing VB.NET code." t)
-  (setq auto-mode-alist (append '(("\\.\\(frm\\|bas\\|vb\\)$" . vbnet-mode)) auto-mode-alist))
-
-  ;; ------------------------------------------------------------------------
-  ;; @ dos-mode
-  (autoload 'dos-mode "dos" "Mode for editing Dos scripts." t)
-  (setq auto-mode-alist (append '(("\\.\\(bat\\|cmd\\)$" . dos-mode)) auto-mode-alist))
-
-  ;; ------------------------------------------------------------------------
-  ;; @ php-mode
-  (require 'php-mode)
-  (setq auto-mode-alist (append '(("\\.\\(php\\)$" . php-mode)) auto-mode-alist))
-
-;; ------------------------------------------------------------------------
-;; @ GNU GLOBAL(gtags)
-
-  (when (locate-library "gtags")
-    (require 'gtags)
-  )
-
-  (global-set-key "\M-t" 'gtags-find-tag)     ;関数の定義元へ
-  (global-set-key "\M-r" 'gtags-find-rtag)    ;関数の参照先へ
-  (global-set-key "\M-s" 'gtags-find-symbol)  ;変数の定義元/参照先へ
-  (global-set-key "\M-p" 'gtags-find-pattern)
-  (global-set-key "\M-f" 'gtags-find-file)    ;ファイルにジャンプ
-  (global-set-key [?\C-,] 'gtags-pop-stack)   ;前のバッファに戻る
-
-;; ------------------------------------------------------------------------
-;; @ open-junk-file
-
-  (add-to-list 'load-path "~/.emacs.d/elisp/auto-complete")
-  (require 'auto-complete-config)
-  (ac-config-default)
-  (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/auto-complete/ac-dict")

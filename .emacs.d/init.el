@@ -1,13 +1,33 @@
-;; ------------------------------------------------------------------------
-;; @ environment setup
+;;        ____ ____ ____ ____ ____ ____ ____ 
+;;       ||i |||n |||i |||t |||. |||e |||l ||
+;;       ||__|||__|||__|||__|||__|||__|||__||
+;;       |/__\|/__\|/__\|/__\|/__\|/__\|/__\|
+;;       
+;;   ……………../´¯/)……….. (\¯`\
+;;    ……………/….//……….. …\\….\
+;; ……………../….//………… ….\\….\
+;;      ……../´¯/…./´¯\………../¯ `\….\¯`\
+;;      .././…/…./…./.|_……_| .\….\….\…\.\..
+;;      (.(….(….(…./.)..)..(..(. \….)….)….).)
+;;  …….\…………….\/…/….\. ..\/……………./
+;;      ..\…………….. /……..\………………/
+;;      ….\…………..(………. ..)……………./
+;;    ………\………….\……… ../…………./
 
-  ;; ロードパスの追加
-  (setq load-path (append
-                   '("~/.emacs.d"
-                     "~/.emacs.d/elisp")
-                   load-path))
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;;        ___          ___     
+;;       /  /\        /  /\    
+;;      /  /::\      /  /:/_   
+;;     /  /:/\:\    /  /:/ /\  
+;;    /  /:/  \:\  /  /:/ /::\ 
+;;   /__/:/ \__\:\/__/:/ /:/\:\
+;;   \  \:\ /  /:/\  \:\/:/~/:/
+;;    \  \:\  /:/  \  \::/ /:/ 
+;;     \  \:\/:/    \__\/ /:/  
+;;      \  \::/       /__/:/   
+;;       \__\/        \__\/   specific settings 
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 
-  ;; OS別環境設定
   (setq darwin-p  (eq system-type 'darwin)
         ns-p      (eq window-system 'ns)
         carbon-p  (eq window-system 'mac)
@@ -17,115 +37,81 @@
         meadow-p  (featurep 'meadow)
         windows-p (or cygwin-p nt-p meadow-p))
   
-  ;; Mac - cocoaemacs
+  ;; Mac - CocoaEmacs
   (when ns-p
-    (progn
-      (load "~/.emacs.d/config/cocoa.el")
-    ))
+    (load "~/.emacs.d/config/cocoa.el"))
 
-  ;; Windows - ntemacs
+  ;; Windows - NTEmacs
   (when nt-p
-    (progn
-      (load "~/.emacs.d/config/nt.el")
-    ))
+      (load "~/.emacs.d/config/nt.el"))
 
-;; ------------------------------------------------------------------------
-;; @ language setup
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;; Default settings
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 
-  (load "~/.emacs.d/config/lang-python.el")
-
-;; ------------------------------------------------------------------------
-;; @ key-bindings
-
-  ;; 非標準のelispに関するキーバインドはaddons.el内にて記載
-  (global-set-key "\C-j" 'goto-line)
-
-;; ------------------------------------------------------------------------
-;; @ emacs
-
-  ;;ビープ音を消す
+  ;; Turn off alarms completely
   (setq visible-bell t)
+  (setq ring-bell-function 'ignore)
 
-  ;; スタートアップページを表示しない
+  ;; Do not display Start-up page
   (setq inhibit-startup-message t)
 
-  ;; メニューバー、ツールバーを消す
+  ;; Do not disspay Menu bar and Tool bar
   (if window-system
     (tool-bar-mode 0))
   (if window-system
     (menu-bar-mode 0))
 
-  ;; カーソルの点滅を止める
-  (blink-cursor-mode 0)
+  ;; Highlight corresponding parens
+  (show-paren-mode t)
+  (setq show-paren-delay 0)
+  (setq show-paren-style 'expression)
   
-  ;; evalした結果を全部表示
-  (setq eval-expression-print-length nil)
-  
-  ;; 対応する括弧を光らせる。
-  (show-paren-mode 1)
-  ;; ウィンドウ内に収まらないときだけ括弧内も光らせる。
-  (setq show-paren-style 'mixed)
-  
-  ;; 現在行を目立たせる
-  ;;(setq hl-line-face 'hlline-face)
-  (setq hl-line-face 'underline)
-  (global-hl-line-mode)
-  
-  ;; カーソルの位置が何文字目かを表示する
+  ;; Display column number where the cursor is on
   (column-number-mode t)
   
-  ;; カーソルの位置が何行目かを表示する
+  ;; Display line number where the cursor is on
   (line-number-mode t)
   
-  ;; カーソルの場所を保存する
-  (require 'saveplace)
+  ;; Save where the cursor is on
   (setq-default save-place t)
   
-  ;; 行の先頭でC-kを一回押すだけで行全体を消去する
+  ;; Kill whole line when pressing C-k at beginning of a line
   (setq kill-whole-line t)
   
-  ;; 最終行に必ず一行挿入する
-  (setq require-final-newline t)
-  
-  ;; バッファの最後でnewlineで新規行を追加するのを禁止する
-  (setq next-line-add-newlines nil)
-  
-  ;; バックアップファイルを作らない
+  ;; Do not create backup files
   (setq backup-inhibited t)
   
-  ;; 終了時にオートセーブファイルを消す
+  ;; Cleanup auto save files on exit
   (setq delete-auto-save-files t)
   
-  ;; 補完時に大文字小文字を区別しない
-  (setq completion-ignore-case t)
-  (setq read-file-name-completion-ignore-case t)
-  
-  ;; 補完可能なものを随時表示
-  ;; 少しうるさい
-  (icomplete-mode 1)
-  
-  ;; 履歴数を大きくする
+  ;; Extend history size
   (setq history-length 10000)
   
-  ;; ミニバッファの履歴を保存する
+  ;; Save mini-buffer history
   (savehist-mode 1)
   
-  ;; 最近開いたファイルを保存する数を増やす
+  ;; Extend recentf items to store
   (setq recentf-max-saved-items 10000)
 
-  ;; 透過設定とか
-  (if window-system (progn
-    (set-background-color "Black")
-    (set-foreground-color "LightGray")
-    (set-frame-parameter nil 'alpha 96)
-  ))
+  ;; Transparency settings
+  (if window-system 
+    (set-frame-parameter nil 'alpha 96))
+
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;; Load builtins elisp settings
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+
+  (load "~/.emacs.d/config/init-package.el")
+  (load "~/.emacs.d/config/init-recentf.el")
+  (load "~/.emacs.d/config/init-linum.el")
+  (load "~/.emacs.d/config/init-iswitchb.el")
+
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;; Load Addons elisp settings
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+  (load "~/.emacs.d/config/addons.el")
+
+  (load-theme 'tango-dark t)
 
 
-;; ------------------------------------------------------------------------
-;; @ load elisp settings
-
-  ;; 標準Elispの設定
-  (load "config/builtins")
-  
-  ;; 非標準Elispの設定
-  (load "config/addons")

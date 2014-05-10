@@ -5,12 +5,9 @@
 !/.gitignore
 !/init.el
 !/config
-!/elisp
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
 *~
 *.elc
 \#*#
-elisp/cmigemo-nt/*
-elisp/cmigemo-osx/*
