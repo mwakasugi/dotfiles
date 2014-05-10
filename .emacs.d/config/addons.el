@@ -43,6 +43,9 @@
 ;; =====================================================================
 (require 'auto-complete)
 (require 'auto-complete-config)
+(ac-config-default)
+;; for enhanced-ruby-mode
+(add-to-list 'ac-modes 'enh-ruby-mode)
 (global-auto-complete-mode t)
 
 ;; =====================================================================
@@ -76,10 +79,11 @@
 ;; 8 8888     `88.    `8888888P'     8 888888888P   8 888888888888 
 ;;
 ;; =====================================================================
-(add-hook 'ruby-mode-hook 'robe-mode)
+;;(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
-;; set ac-auto-start 1 because robe's default value is 2
-(setq ac-auto-start 1)
+;; set ac-auto-start t because robe's default value is 2
+(setq ac-auto-start t)
 
 ;; =====================================================================
 ;;     ___  _                  _                    _     
@@ -130,10 +134,13 @@
 ;; 
 ;; =====================================================================
 (global-set-key (kbd "C-c h") 'helm-mini)
-(helm-mode 1)
+(helm-mode t)
 
 ;;
 ;; magit
 
 ;;
 ;; helm-ag
+
+;;
+;; enhanced-ruby-mode
