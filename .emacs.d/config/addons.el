@@ -18,6 +18,12 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Enable Emacs key-bindings on insert state
+(setcdr evil-insert-state-map nil)
+
+;; ESC to exit insert state
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
 ;; =====================================================================
 ;;                                                                 _ _
 ;;                          _/_/        /)                   /    ////
@@ -35,12 +41,6 @@
 ;;  /_/ \_\___/  |_| \___/     \___\___/|_|  |_|_| |____|___| |_| |___|
 ;;                                                                     
 ;; =====================================================================
-;; Enable Emacs key-bindings on insert state
-(setcdr evil-insert-state-map nil)
-
-;; ESC to exit insert state
-(define-key evil-insert-state-map [escape] 'evil-normal-state)
-
 (require 'auto-complete)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
@@ -57,12 +57,29 @@
 ;;   $$$$$$/  $$$$$$$$/ $$$$$$$/  $$$$$$/ 
 ;; =====================================================================
 (require 'epc)
-(require 'auto-complete-config)
 (require 'python)
-
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
+
+;; =====================================================================
+;;                                                                 
+;; 8 888888888o.      ,o888888o.     8 888888888o   8 8888888888   
+;; 8 8888    `88.  . 8888     `88.   8 8888    `88. 8 8888         
+;; 8 8888     `88 ,8 8888       `8b  8 8888     `88 8 8888         
+;; 8 8888     ,88 88 8888        `8b 8 8888     ,88 8 8888         
+;; 8 8888.   ,88' 88 8888         88 8 8888.   ,88' 8 888888888888 
+;; 8 888888888P'  88 8888         88 8 8888888888   8 8888         
+;; 8 8888`8b      88 8888        ,8P 8 8888    `88. 8 8888         
+;; 8 8888 `8b.    `8 8888       ,8P  8 8888      88 8 8888         
+;; 8 8888   `8b.   ` 8888     ,88'   8 8888    ,88' 8 8888         
+;; 8 8888     `88.    `8888888P'     8 888888888P   8 888888888888 
+;;
+;; =====================================================================
+(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
+;; set ac-auto-start 1 because robe's default value is 2
+(setq ac-auto-start 1)
 
 ;; =====================================================================
 ;;     ___  _                  _                    _     
@@ -93,7 +110,6 @@
 (nyan-mode)
 (nyan-start-animation)
 
-
 ;; =====================================================================
 ;;             .          .                                             
 ;;  .  , . ,-. |- . . ,-. |  ,-. ,-. .  , . , , ,-. ,-. ,-. ,-. ,-. ,-. 
@@ -104,5 +120,4 @@
 ;; =====================================================================
 (require 'virtualenvwrapper)
 (setq venv-location "~/.virtualenvs")
-
 

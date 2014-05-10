@@ -37,7 +37,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-saved-items 3000)
-(global-set-key "\C-c\C-r" 'recentf-open-files)
+(global-set-key "\C-cr" 'recentf-open-files)
 
 ;; ------------------------------------------------------------------------
 ;; @ org

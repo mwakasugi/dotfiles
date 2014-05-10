@@ -104,6 +104,9 @@
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
   ;; C-h sends backspace
   (keyboard-translate ?\C-h ?\C-?)
+  ;; auto indent when newline
+  (global-set-key "\C-m" 'newline-and-indent) 
+  (global-set-key "\C-j" 'newline) 
 
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 ;; Load builtins elisp settings
