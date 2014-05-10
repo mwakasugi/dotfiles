@@ -415,7 +415,8 @@ else
   let g:syntastic_mode_map = { 'mode': 'passive',
               \ 'active_filetypes': ['ruby'] }
   let g:syntastic_ruby_checkers = ['rubocop']
-  let g:syntastic_quiet_messages = {'level':'warnings'}
+  "let g:syntastic_quiet_messages = {'level':'warnings'}
+  "let g:syntastic_debug = 3
 
   " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
   " evervim
