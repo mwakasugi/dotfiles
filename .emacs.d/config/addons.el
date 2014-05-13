@@ -143,4 +143,18 @@
 ;; helm-ag
 
 ;;
+;; helm-ls-git
+
+;;
 ;; enhanced-ruby-mode
+
+;;
+;; markdown-mode
+
+
+;; =====================================================================
+;; Addon key bindings
+;; =====================================================================
+(define-key global-map (kbd "<f2>") 'helm-ls-git-ls)
+(define-key global-map (kbd "<f3>") 'helm-ag)
+

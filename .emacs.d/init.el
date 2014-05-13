@@ -65,7 +65,7 @@
   ;; Highlight corresponding parens
   (show-paren-mode t)
   (setq show-paren-delay 0)
-  (setq show-paren-style 'expression)
+  (setq show-paren-style 'parenthesis)
   
   ;; Display column number where the cursor is on
   (column-number-mode t)
