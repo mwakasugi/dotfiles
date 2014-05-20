@@ -45,8 +45,8 @@
 (require 'auto-complete-config)
 (ac-config-default)
 ;; for enhanced-ruby-mode
-(add-to-list 'ac-modes 'enh-ruby-mode)
-(global-auto-complete-mode t)
+;;(add-to-list 'ac-modes 'enh-ruby-mode)
+;;(global-auto-complete-mode t)
 
 ;; =====================================================================
 ;;      _____  ________  _______   ______ 
@@ -79,8 +79,8 @@
 ;; 8 8888     `88.    `8888888P'     8 888888888P   8 888888888888 
 ;;
 ;; =====================================================================
-;;(add-hook 'ruby-mode-hook 'robe-mode)
-(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(add-hook 'ruby-mode-hook 'robe-mode)
+;;(add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
 ;; set ac-auto-start t because robe's default value is 2
 (setq ac-auto-start t)
@@ -99,6 +99,7 @@
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'coffee-mode-hook 'flycheck-mode)
 
 ;; =====================================================================
 ;;      o  +           +        +
@@ -151,6 +152,19 @@
 ;;
 ;; markdown-mode
 
+;;
+;; jade-mode
+
+;;
+;; slim-mode
+
+;;
+;; coffee-mode
+;; This gives you a tab of 2 spaces
+(custom-set-variables '(coffee-tab-width 2))
+
+;;
+;; gist
 
 ;; =====================================================================
 ;; Addon key bindings
