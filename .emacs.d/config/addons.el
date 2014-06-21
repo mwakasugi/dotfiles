@@ -46,7 +46,8 @@
 (ac-config-default)
 ;; for enhanced-ruby-mode
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
-;;(global-auto-complete-mode t)
+(add-to-list 'ac-modes 'ruby-mode)
+(global-auto-complete-mode t)
 
 ;; =====================================================================
 ;;      _____  ________  _______   ______ 
@@ -99,6 +100,7 @@
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'ruby-mode-hook 'flycheck-mode)
+;;(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
 (add-hook 'coffee-mode-hook 'flycheck-mode)
 
 ;; =====================================================================
@@ -148,6 +150,10 @@
 
 ;;
 ;; enhanced-ruby-mode
+;;(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+;;(add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
+;;(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+;;(add-hook 'enh-ruby-mode-hook 'smartparens-mode)
 
 ;;
 ;; markdown-mode
@@ -163,8 +169,15 @@
 ;; This gives you a tab of 2 spaces
 (custom-set-variables '(coffee-tab-width 2))
 
+;;smartparens
+(require 'smartparens-config)
+
+
 ;;
 ;; gist
+
+;;
+;; yaml-mode
 
 ;; =====================================================================
 ;; Addon key bindings

@@ -98,6 +98,11 @@
   (if window-system 
     (set-frame-parameter nil 'alpha 96))
 
+  ;; Ignore case on completion
+  (setq completion-ignore-case t)
+
+  ;; Automatically reload a buffer when changed
+  (global-auto-revert-mode 1)
 
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 ;; key bindings
@@ -121,6 +126,6 @@
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 ;; Theme
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
-  (load-theme 'tango-dark t)
+  (load-theme 'deeper-blue t)
 
 
