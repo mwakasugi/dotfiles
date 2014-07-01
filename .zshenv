@@ -4,3 +4,5 @@ if [ -d ${HOME}/.rbenv ] ; then
   export PATH
   eval "$(rbenv init -)"
 fi
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
