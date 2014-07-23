@@ -157,6 +157,9 @@
 
 ;;
 ;; markdown-mode
+(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
+;;(setq markdown-css-path "/Users/mubae/markdown.css")
+(setq markdown-command "markdown_py -x linkify -x del_ins -x fenced_code -x codehilite -x tables")
 
 ;;
 ;; jade-mode
