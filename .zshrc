@@ -136,6 +136,10 @@ alias df="df -h"
 
 alias su="su -l"
 
+# Git aliases
+alias gdiffw="git diff --color-words"
+alias gstatus="git status --short --branch"
+alias glog="git log --graph --decorate --oneline"
 
 ## terminal configuration
 #
