@@ -54,6 +54,14 @@ fi
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+## Share history
+function share_history {
+ history -a
+ history -c
+ history -r
+}
+
+PROMPT_COMMAND='share_history'
 
 ## Setup Amazon EC2 Command-Line Tools
 #export EC2_HOME=~/.ec2
