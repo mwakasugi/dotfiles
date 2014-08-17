@@ -6,6 +6,10 @@
   (prefer-coding-system 'utf-8)
 
 ;; ------------------------------------------------------------------------
+;; @ drag and drop to open in a buffer
+(setq ns-pop-up-frames nil)
+
+;; ------------------------------------------------------------------------
 ;; @ ime
 
   ;(setq default-input-method "MacOSX")
