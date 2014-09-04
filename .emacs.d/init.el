@@ -81,6 +81,9 @@
   
   ;; Do not create backup files
   (setq backup-inhibited t)
+
+  ;; Do not create lock files
+  (setq create-lockfiles nil)
   
   ;; Cleanup auto save files on exit
   (setq delete-auto-save-files t)
