@@ -41,13 +41,13 @@
 ;;  /_/ \_\___/  |_| \___/     \___\___/|_|  |_|_| |____|___| |_| |___|
 ;;                                                                     
 ;; =====================================================================
-(require 'auto-complete)
-(require 'auto-complete-config)
+(global-auto-complete-mode t)
 (ac-config-default)
-;; for enhanced-ruby-mode
+(setq ac-dwim t)
+
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'ruby-mode)
-(global-auto-complete-mode t)
+(add-to-list 'ac-modes 'coffee-mode)
 
 ;; =====================================================================
 ;;      _____  ________  _______   ______ 
