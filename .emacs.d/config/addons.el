@@ -204,7 +204,7 @@
 ;; =====================================================================
 ;; Addon key bindings
 ;; =====================================================================
-(define-key global-map (kbd "<f2>") 'helm-ls-git-ls)
-(define-key global-map (kbd "<f3>") 'helm-ag)
-(define-key global-map (kbd "<f5>") 'helm-git-grep)
+(global-set-key (kbd "<f3>") 'helm-ag)
+(global-set-key (kbd "C-c j") 'helm-ls-git-ls)
+(global-set-key (kbd "C-c k") 'helm-git-grep)
 
