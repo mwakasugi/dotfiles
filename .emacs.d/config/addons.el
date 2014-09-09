@@ -152,6 +152,9 @@
 ;; helm-ls-git
 
 ;;
+;; helm-git-grep
+
+;;
 ;; enhanced-ruby-mode
 ;;(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 ;;(add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
@@ -188,6 +191,12 @@
 ;; yaml-mode
 
 ;;
+;; rainbow-mode
+
+;;
+;; rainbow-delimiters
+
+;;
 ;; dash-at-point
 (global-set-key "\C-cd" 'dash-at-point)
 (global-set-key "\C-ce" 'dash-at-point-with-docset)
@@ -197,4 +206,5 @@
 ;; =====================================================================
 (define-key global-map (kbd "<f2>") 'helm-ls-git-ls)
 (define-key global-map (kbd "<f3>") 'helm-ag)
+(define-key global-map (kbd "<f5>") 'helm-git-grep)
 
