@@ -1,197 +1,80 @@
-# users generic .zshrc file for zsh(1)
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
-## Environment variable configuration
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export PATH="/usr/local/heroku/bin:/usr/local/heroku/bin:/Users/mubae/.rbenv/shims:/Users/mubae/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/mubae/.rbenv/shims:/Users/mubae/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/mubae/.ndenv/shims:/Users/mubae/.ndenv/bin:/Users/mubae/.rbenv/shims:/Users/mubae/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
 #
-# LANG
-#
-export LANG=ja_JP.UTF-8
-# set LANG=C when root
-case ${UID} in
-0)
-    LANG=C
-    ;;
-esac
-
-## Default shell configuration
-#
-# set prompt
-#
-autoload colors
-colors
-
-local p_normal="%(!,%F{red},%F{cyan})"
-local p_warn="%F{red}"
-local p_mark="%(?,${p_normal},${p_warn})%(!,#,$)%f"
-
-PROMPT="${p_normal}%n@%m%f $p_mark "
-PROMPT2="${p_normal}%_> %f"
-SPROMPT="${p_warn}correct: %R -> %r [n,y,a,e]?%f"
-RPROMPT="${p_normal}[%~]%f"
-
-# auto change directory
-#
-setopt auto_cd
-
-# auto directory pushd that you can get dirs list by cd -[tab]
-#
-setopt auto_pushd
-
-# command correct edition before each completion attempt
-#
-setopt correct
-
-# compacked complete list display
-#
-setopt list_packed
-
-# no remove postfix slash of command line
-#
-setopt noautoremoveslash
-
-# no beep sound when complete list displayed
-#
-setopt nolistbeep
-
-
-## Keybind configuration
-#
-# emacs like keybind (e.x. Ctrl-a gets to line head and Ctrl-e gets
-#   to end) and something additions
-#
-bindkey -e
-bindkey "^[[1~" beginning-of-line # Home gets to line head
-bindkey "^[[4~" end-of-line # End gets to line end
-bindkey "^[[3~" delete-char # Del
-
-# historical backward/forward search with linehead string binded to ^P/^N
-#
-autoload history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^n" history-beginning-search-forward-end
-bindkey "\\ep" history-beginning-search-backward-end
-bindkey "\\en" history-beginning-search-forward-end
-
-# reverse menu completion binded to Shift-Tab
-#
-bindkey "\e[Z" reverse-menu-complete
-
-
-## Command history configuration
-#
-HISTFILE=${HOME}/.zsh_history
-HISTSIZE=50000
-SAVEHIST=50000
-setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history        # share command history data
-
-
-## Completion configuration
-#
-fpath=(${HOME}/.zsh/functions/Completion ${fpath})
-autoload -U compinit
-compinit
-
-
-## zsh editor
-#
-autoload zed
-
-## zmv
-#
-autoload -Uz zmv
-alias zmv='noglob zmv -W'
-
-## Prediction configuration
-#
-#autoload predict-on
-#predict-off
-
-
-## Alias configuration
-#
-# expand aliases before completing
-#
-setopt complete_aliases     # aliased ls needs if file/dir completions work
-
-alias where="command -v"
-alias j="jobs -l"
-
-case "${OSTYPE}" in
-freebsd*|darwin*)
-    alias ls="ls -G -w"
-    ;;
-linux*)
-    alias ls="ls --color"
-    ;;
-esac
-
-alias la="ls -a"
-alias lf="ls -F"
-alias ll="ls -l"
-
-alias du="du -h"
-alias df="df -h"
-
-alias su="su -l"
-
-# Git aliases
-alias gdiffw="git diff --color-words"
-alias gstatus="git status --short --branch"
-alias glog="git log --graph --decorate --oneline"
-
-## terminal configuration
-#
-case "${TERM}" in
-screen)
-    TERM=xterm
-    ;;
-esac
-
-case "${TERM}" in
-xterm|xterm-color)
-    export LSCOLORS=exfxcxdxbxegedabagacad
-    export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-    zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-    ;;
-kterm-color)
-    stty erase '^H'
-    export LSCOLORS=exfxcxdxbxegedabagacad
-    export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-    zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-    ;;
-kterm)
-    stty erase '^H'
-    ;;
-cons25)
-    unset LANG
-    export LSCOLORS=ExFxCxdxBxegedabagacad
-    export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-    zstyle ':completion:*' list-colors 'di=;34;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
-    ;;
-jfbterm-color)
-    export LSCOLORS=gxFxCxdxBxegedabagacad
-    export LS_COLORS='di=01;36:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-    zstyle ':completion:*' list-colors 'di=;36;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
-    ;;
-esac
-
-# set terminal title including current directory
-#
-case "${TERM}" in
-xterm|xterm-color|kterm|kterm-color)
-    precmd() {
-        echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
-    }
-    ;;
-esac
-
-
-## load user .zshrc configuration file
-#
-[ -f ${HOME}/.zshrc.mine ] && source ${HOME}/.zshrc.mine
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
