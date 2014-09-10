@@ -51,7 +51,39 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/heroku/bin:/usr/local/heroku/bin:/Users/mubae/.rbenv/shims:/Users/mubae/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/mubae/.rbenv/shims:/Users/mubae/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/Users/mubae/.ndenv/shims:/Users/mubae/.ndenv/bin:/Users/mubae/.rbenv/shims:/Users/mubae/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# PATH configuration
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# rbenv
+if [ -d ${HOME}/.rbenv ] ; then
+  PATH=${HOME}/.rbenv/bin:${PATH}
+  export PATH
+  eval "$(rbenv init -)"
+fi
+
+# ndenv
+if [ -d ${HOME}/.ndenv ] ; then
+  PATH=${HOME}/.ndenv/bin:${PATH}
+  export PATH
+  eval "$(ndenv init -)"
+fi
+
+# Python virtualenv
+if [ -d ${HOME}/.virtualenvs ] ; then
+  export WORKON_HOME=$HOME/.virtualenvs
+elif [ -d /opt/.virtualenvs ] ; then
+  export WORKON_HOME=/opt/virtualenvs
+fi
+
+if hash virtualenvwrapper.sh 2> /dev/null; then
+  source `which virtualenvwrapper.sh`
+fi
+
+# heroku
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
