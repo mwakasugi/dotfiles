@@ -46,3 +46,15 @@
   ;; (migemo-init)
   ;; (set-process-query-on-exit-flag migemo-process nil)
 
+
+;; ------------------------------------------------------------------------
+;; @ Marked
+
+(defun markdown-preview-file-with-marked ()
+  "run Marked on the current file and revert the buffer"
+  (interactive)
+  (shell-command 
+   (format "open -a /Applications/Marked\\ 2.app %s" 
+       (shell-quote-argument (buffer-file-name))))
+)
+(global-set-key "\C-cm" 'markdown-preview-file-with-marked)
