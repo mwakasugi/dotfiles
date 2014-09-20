@@ -110,3 +110,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Open Emacs.app in Terminal
+function emacs
+{
+    if [ -e "$@" ]
+    then
+        command open -a emacs "${@}"
+    else
+        touch "$@"
+        command open -a emacs "${@}"
+    fi
+}
