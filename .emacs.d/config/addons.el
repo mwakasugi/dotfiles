@@ -24,6 +24,16 @@
 ;; ESC to exit insert state
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 
+;; evil-surround
+(global-evil-surround-mode 1)
+;; evil-numbers
+(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
+;; evil-matchit
+(global-evil-matchit-mode 1)
+;; evil-search-highlight-persist
+(global-evil-search-highlight-persist t)
+
 ;; =====================================================================
 ;;                                                                 _ _
 ;;                          _/_/        /)                   /    ////
