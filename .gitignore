@@ -15,6 +15,7 @@
 !/.globalrc
 !/.xvimrc
 !/.gemrc
+!/.pryrc
 !/.gitignore_global
 
 # git管理フォルダで更に無視するやつを指定
