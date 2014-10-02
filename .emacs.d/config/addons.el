@@ -1,3 +1,53 @@
+;; =====================================================================
+;; Install addon packages if not yet installed
+;; =====================================================================
+(require 'cl)
+
+(defvar installing-package-list
+  '(
+    evil
+    evil-surround
+    evil-numbers
+    evil-matchit
+    evil-search-highlight-persist
+    exec-path-from-shell
+    auto-complete
+    jedi
+    robe
+    flycheck
+    virtualenvwrapper
+    helm
+    helm-ag
+    helm-git-files
+    helm-git-grep
+    helm-gtags
+    helm-ls-git
+    magit
+    smartparens
+    open-junk-file
+    undo-tree
+    dash-at-point
+    yasnippet
+    rainbow-delimiters
+    nyan-mode
+    coffee-mode
+    jade-mode
+    markdown-mode
+    scss-mode
+    slim-mode
+    stylus-mode
+    yaml-mode
+    rainbow-mode
+    solarized-theme
+    ))
+
+(let ((not-installed (loop for x in installing-package-list
+                            when (not (package-installed-p x))
+                            collect x)))
+  (when not-installed
+    (package-refresh-contents)
+    (dolist (pkg not-installed)
+        (package-install pkg))))
 
 ;; =====================================================================
 ;;  ________  ____   ____  _____  _____     
@@ -246,10 +296,18 @@
 
 ;; sass-mode
 
+;; yasnippet
+(yas-global-mode 1)
+
+;; open-junk-file
+(require 'open-junk-file)
+(setq open-junk-file-format "~/Dropbox/Documents/junk/%Y/%m/%Y-%m-%d-%H%M%S.")
+
 ;; =====================================================================
 ;; Addon key bindings
 ;; =====================================================================
 (global-set-key (kbd "<f3>") 'helm-ag)
 (global-set-key (kbd "C-c j") 'helm-ls-git-ls)
 (global-set-key (kbd "C-c k") 'helm-git-grep)
+(global-set-key (kbd "C-x j") 'open-junk-file)
 
