@@ -36,25 +36,24 @@
 ;; ------------------------------------------------------------------------
 ;; clearly distinguish the same file names
 (require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)`
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;; ------------------------------------------------------------------------
-;; @ org
-
-  (require 'org)
-  (setq org-log-done 'time) ; log timestamp when done
-  (setq org-use-fast-todo-selection t) ; input suport for TODO
-  (setq org-startup-truncated nil)
-  (setq org-return-follows-link t)
-  (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-  (org-remember-insinuate)
-  (setq org-directory "~/.emacs.d/org-docs/")
-  (setq org-default-notes-file (concat org-directory "memo.org"))
-  (setq org-remember-templates
-        '(("Note" ?n "** %?\n   %i\n   %a\n   %t" nil "Inbox")
-         ("Todo" ?t "** TODO %?\n   %i\n   %a\n   %t" nil "Inbox")))
-  (define-key global-map (kbd "C-<f9>") 'org-remember) ;key-binding
-
+;; org
+;; ------------------------------------------------------------------------
+(require 'org)
+(setq org-log-done 'time)
+(setq org-use-fast-todo-selection t)
+(setq org-startup-truncated nil)
+(setq org-return-follows-link t)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(org-remember-insinuate)
+(setq org-directory "~/.emacs.d/org-docs/")
+(setq org-default-notes-file (concat org-directory "memo.org"))
+(setq org-remember-templates
+      '(("Note" ?n "** %?\n   %i\n   %a\n   %t" nil "Inbox")
+       ("Todo" ?t "** TODO %?\n   %i\n   %a\n   %t" nil "Inbox")))
+(define-key global-map (kbd "C-<f9>") 'org-remember) ;key-binding
 
 ;; ------------------------------------------------------------------------
 ;; ruby-mode
