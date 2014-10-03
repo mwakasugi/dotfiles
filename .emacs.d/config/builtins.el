@@ -32,11 +32,18 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;; ------------------------------------------------------------------------
+;; uniquify
+;; ------------------------------------------------------------------------
+;; clearly distinguish the same file names
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)`
+
+;; ------------------------------------------------------------------------
 ;; @ org
 
   (require 'org)
-  (setq org-log-done 'time) ; DONE時にタイムスタンプ
-  (setq org-use-fast-todo-selection t) ; TODO項目の入力補助
+  (setq org-log-done 'time) ; log timestamp when done
+  (setq org-use-fast-todo-selection t) ; input suport for TODO
   (setq org-startup-truncated nil)
   (setq org-return-follows-link t)
   (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
