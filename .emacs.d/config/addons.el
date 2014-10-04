@@ -275,7 +275,8 @@
 ;;
 ;; rainbow-delimiters
 (require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode t)
+(add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'ruby-mode-hook 'rainbow-delimiters-mode)
 
 ;;
 ;; dash-at-point
