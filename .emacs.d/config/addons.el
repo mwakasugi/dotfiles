@@ -39,6 +39,7 @@
     yaml-mode
     rainbow-mode
     twittering-mode
+    rspec-mode
     solarized-theme
     ))
 
@@ -203,6 +204,28 @@
 (global-set-key (kbd "C-c h") 'helm-mini)
 (helm-mode t)
 
+;; ------------------------------------------------------------------------
+;; org
+;; Place org settings here because builtin org is outdated.
+;; ------------------------------------------------------------------------
+(setq org-src-fontify-natively t)
+(require 'org-install)
+(setq org-directory "~/Dropbox/Documents/org-docs/")
+(setq org-default-notes-file (concat org-directory "agenda.org"))
+(require 'org-capture)
+(setq org-capture-templates
+  '(("t" "Task" entry (file+headline nil "Inbox")
+     "** TODO %?\n %T\n %a\n %i\n")
+    ("b" "Bug" entry (file+headline nil "Inbox")
+     "** TODO %?   :bug:\n  %T\n %a\n %i\n")
+    ("m" "Meeting" entry (file+headline nil "Meeting")
+     "** %?\n %U\n %a\n %i\n")
+    ("i" "Idea" entry (file+headline nil "Idea")
+     "** %?\n %U\n %i\n %a\n %i\n")
+    ("w" "Twitter" entry (file+datetree "twitter.org")
+     "** %U %?\n")))
+(global-set-key (kbd "C-c c") 'org-capture)
+
 ;;
 ;; magit
 
@@ -341,3 +364,8 @@
 (global-set-key (kbd "C-c k") 'helm-git-grep)
 (global-set-key (kbd "C-x j") 'open-junk-file)
 
+;; =====================================================================
+;; additional load-path and packages
+;; =====================================================================
+ (add-to-list 'load-path "~/.emacs.d/elisp")
+ (require 'ox-gfm)

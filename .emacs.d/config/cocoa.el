@@ -12,9 +12,11 @@
 ;; ------------------------------------------------------------------------
 ;; @ ime
 
-  ;(setq default-input-method "MacOSX")
+  (setq default-input-method "MacOSX")
   ;; minibufferは英数モードで始める
-  ;(add-hook 'minibuffer-setup-hook 'mac-change-language-to-us)
+  (add-hook 'minibuffer-setup-hook 'mac-change-language-to-us)
+  ;; for Google IME
+  (mac-set-input-method-parameter "com.google.inputmethod.Japanese.base" `title "あ")
 
 ;; ------------------------------------------------------------------------
 ;; @ font
