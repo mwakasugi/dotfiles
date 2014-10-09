@@ -321,6 +321,10 @@
 
 ;; sass-mode
 
+;; rspec-mode
+;; not to use "rake spec" instead of simply "spec"
+(setq rspec-use-rake-when-possible nil)
+
 ;; yasnippet
 (yas-global-mode 1)
 
