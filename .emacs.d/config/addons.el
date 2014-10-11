@@ -210,20 +210,15 @@
 ;; ------------------------------------------------------------------------
 (setq org-src-fontify-natively t)
 (require 'org-install)
-(setq org-directory "~/Dropbox/Documents/org-docs/")
-(setq org-default-notes-file (concat org-directory "agenda.org"))
+(setq org-directory "~/Dropbox/Documents/org/")
+(setq org-default-notes-file (concat org-directory "lifelog.org"))
 (require 'org-capture)
 (setq org-capture-templates
   '(("t" "Task" entry (file+headline nil "Inbox")
      "** TODO %?\n %T\n %a\n %i\n")
-    ("b" "Bug" entry (file+headline nil "Inbox")
-     "** TODO %?   :bug:\n  %T\n %a\n %i\n")
-    ("m" "Meeting" entry (file+headline nil "Meeting")
-     "** %?\n %U\n %a\n %i\n")
-    ("i" "Idea" entry (file+headline nil "Idea")
-     "** %?\n %U\n %i\n %a\n %i\n")
-    ("w" "Twitter" entry (file+datetree "twitter.org")
-     "** %U %?\n")))
+    ("n" "Note" entry (file+headline (concat org-directory "notes.org") "Notes")
+     "* %?\n %U\n %i")))
+
 (global-set-key (kbd "C-c c") 'org-capture)
 
 ;;
