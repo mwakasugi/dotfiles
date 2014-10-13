@@ -354,6 +354,11 @@
 	    (local-set-key "k" 'evil-previous-line)
 	    (local-unset-key (kbd "j"))
 	    (local-set-key "j" 'evil-next-line)))
+;; Load bit.ly API setings
+;; (setq twittering-tinyurl-service 'bit.ly)
+;; (setq twittering-bitly-login "USERNAME")
+;; (setq twittering-bitly-api-key "API-KEY")
+(load "~/Dropbox/extra-dotfiles/bitly.el")
 
 ;; =====================================================================
 ;; Addon key bindings
