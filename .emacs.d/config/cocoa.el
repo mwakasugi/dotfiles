@@ -50,7 +50,8 @@
 
 
 ;; ------------------------------------------------------------------------
-;; @ Marked
+;; @ Marked Integration
+;; ------------------------------------------------------------------------
 
 ;(defun markdown-preview-file-with-marked ()
 ;  "run Marked on the current file and revert the buffer"
@@ -70,3 +71,58 @@
 	    (concat (file-name-sans-extension buffer-file-name) ".md")))))
 
 (global-set-key "\C-cm" 'markdown-preview-file-with-marked)
+
+;; ------------------------------------------------------------------------
+;; @ iTerm Integration
+;; ------------------------------------------------------------------------
+;; They will fail if no shell session is opened in iTerm.
+(defun execute-on-iterm-current-session (command)
+  (interactive "MCommand: ")
+  (do-applescript
+   (format "tell application \"iTerm\"
+              activate
+              tell current session of current terminal
+                write text \"%s\"
+              end tell
+            end tell"
+           command)))
+
+(defun execute-on-iterm-new-session (command)
+  (interactive "MCommand: ")
+  (do-applescript
+   (format "tell application \"iTerm\"
+              activate
+              make new terminal
+              tell the current terminal
+                activate current session
+                launch session \"Default Session\"
+                tell the last session
+                  write text \"%s\"
+                end tell
+              end tell
+	     end tell"
+           command)))
+
+(defun cd-and-execute-on-iterm-new-session (command)
+  (interactive "MCommand: ")
+  (do-applescript
+   (format "tell application \"iTerm\"
+              activate
+              make new terminal
+              tell the current terminal
+                activate current session
+                launch session \"Default Session\"
+                tell the last session
+                  write text \"cd %s; clear\"
+                  write text \"%s\"
+                end tell
+              end tell
+	     end tell"
+           default-directory command)))
+
+(defun cd-on-iterm-new-session ()
+  (interactive)
+  (execute-on-iterm-new-session (format "cd %s" default-directory)))
+
+(global-set-key "\C-ct" 'cd-on-iterm-new-session)
+(global-set-key "\C-cr" 'cd-and-execute-on-iterm-new-session)
