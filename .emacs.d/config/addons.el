@@ -209,6 +209,15 @@
 ;; Place org settings here because builtin org is outdated.
 ;; ------------------------------------------------------------------------
 (setq org-src-fontify-natively t)
+(custom-set-faces
+ '(org-level-1 ((t (:inherit variable-pitch :foreground "#cb4b16" :height 1.0 :family "Ricty"))))
+ '(org-level-2 ((t (:inherit variable-pitch :foreground "#859900" :height 1.0 :family "Ricty"))))
+ '(org-level-3 ((t (:inherit variable-pitch :foreground "#268bd2" :height 1.0 :family "Ricty"))))
+ '(org-level-4 ((t (:inherit variable-pitch :foreground "#b58900" :height 1.0 :family "Ricty"))))
+ '(org-level-5 ((t (:inherit variable-pitch :foreground "#2aa198" :family "Ricty"))))
+ '(org-level-6 ((t (:inherit variable-pitch :foreground "#859900" :family "Ricty"))))
+ '(org-level-7 ((t (:inherit variable-pitch :foreground "#dc322f" :family "Ricty"))))
+ '(org-level-8 ((t (:inherit variable-pitch :foreground "#268bd2" :family "Ricty")))))
 (require 'org-install)
 (setq org-directory "~/Dropbox/Documents/org/")
 (setq org-default-notes-file (concat org-directory "lifelog.org"))
