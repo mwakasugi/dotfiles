@@ -330,6 +330,9 @@
 (setq rspec-use-rake-when-possible nil)
 
 ;; yasnippet
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets" 
+        ))
 (yas-global-mode 1)
 
 ;; open-junk-file
