@@ -41,6 +41,7 @@
     twittering-mode
     rspec-mode
     solarized-theme
+    js2-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -329,6 +330,9 @@
 ;; not to use "rake spec" instead of simply "spec"
 (setq rspec-use-rake-when-possible nil)
 
+;; js2-mode
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
 ;; yasnippet
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets" 
@@ -378,7 +382,6 @@
 (global-set-key (kbd "<f3>") 'helm-ag)
 (global-set-key (kbd "C-c j") 'helm-ls-git-ls)
 (global-set-key (kbd "C-c k") 'helm-git-grep)
-(global-set-key (kbd "C-x j") 'open-junk-file)
 
 ;; =====================================================================
 ;; additional load-path and packages
