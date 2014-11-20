@@ -168,6 +168,7 @@
              (flycheck-mode 1)))
 ;;(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
 (add-hook 'coffee-mode-hook 'flycheck-mode)
+(add-hook 'js2-mode-hook 'flycheck-mode)
 
 ;; =====================================================================
 ;;      o  +           +        +
