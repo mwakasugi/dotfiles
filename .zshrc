@@ -69,16 +69,16 @@ if [ -d ${HOME}/.ndenv ] ; then
   eval "$(ndenv init -)"
 fi
 
-# Python virtualenv
-if [ -d ${HOME}/.virtualenvs ] ; then
-  export WORKON_HOME=$HOME/.virtualenvs
-elif [ -d /opt/.virtualenvs ] ; then
-  export WORKON_HOME=/opt/virtualenvs
-fi
-
-if hash virtualenvwrapper.sh 2> /dev/null; then
-  source `which virtualenvwrapper.sh`
-fi
+## Python virtualenv
+#if [ -d ${HOME}/.virtualenvs ] ; then
+#  export WORKON_HOME=$HOME/.virtualenvs
+#elif [ -d /opt/.virtualenvs ] ; then
+#  export WORKON_HOME=/opt/virtualenvs
+#fi
+#
+#if hash virtualenvwrapper.sh 2> /dev/null; then
+#  source `which virtualenvwrapper.sh`
+#fi
 
 # heroku
 ### Added by the Heroku Toolbelt
