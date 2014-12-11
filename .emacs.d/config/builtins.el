@@ -66,3 +66,7 @@
 (add-hook 'ruby-mode-hook
   '(lambda ()
      (smartparens-mode t)))
+
+(require 'inf-ruby)
+(setq inf-ruby-default-implementation "pry")
+(setq inf-ruby-eval-binding "Pry.toplevel_binding")
