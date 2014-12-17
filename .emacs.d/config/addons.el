@@ -42,6 +42,7 @@
     rspec-mode
     solarized-theme
     js2-mode
+    migemo
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -387,5 +388,31 @@
 ;; =====================================================================
 ;; additional load-path and packages
 ;; =====================================================================
- (add-to-list 'load-path "~/.emacs.d/elisp")
- (require 'ox-gfm)
+(add-to-list 'load-path "~/.emacs.d/elisp")
+(require 'ox-gfm)
+
+;; =====================================================================
+;; Migemo
+;; =====================================================================
+(when (and (executable-find "cmigemo")
+           (require 'migemo nil t))
+  (setq migemo-options '("-q" "--emacs"))
+
+  (setq migemo-user-dictionary nil)
+  (setq migemo-regex-dictionary nil)
+  (setq migemo-coding-system 'utf-8-unix)
+  (load-library "migemo")
+  (migemo-init)
+)
+
+(setq migemo-command "cmigemo")
+(setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
+
+;; =====================================================================
+;; DDSKK
+;; =====================================================================
+(add-to-list 'load-path "~/.emacs.d/elisp/skk")
+(setq skk-user-directory "~/.emacs.d/ddskk/")
+(when (require 'skk-autoloads nil t)
+(define-key global-map (kbd "C-x C-j") 'skk-mode)
+(setq skk-byte-compile-init-file t))
