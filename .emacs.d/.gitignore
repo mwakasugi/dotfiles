@@ -7,9 +7,12 @@
 !/config
 !/elisp
 !/snippets
+!/ddskk
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
 *~
 *.elc
 \#*#
+*.bak
+record
