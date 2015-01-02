@@ -1,3 +1,16 @@
+set incsearch
+set hlsearch
+
+set ignorecase
+set smartcase
+
+" Jump to ...
+nmap gi :nissue<cr>
+nmap gI :pissue<cr>
+nmap gp :pcounterpart<cr>
+nmap gn :ncounterpart<cr>
+nmap gt :xccmd jumpToDefinition<cr>
+
 " <ESC> when typing 'jj' quick
 inoremap jj <Esc>
 

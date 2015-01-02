@@ -69,7 +69,6 @@
       Evil-search-module 'evil-search
       evil-ex-search-vim-style-regexp t)
 
-(require 'evil)
 (evil-mode 1)
 
 ;; Enable Emacs key-bindings on insert state
