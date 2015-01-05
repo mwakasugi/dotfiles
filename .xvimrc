@@ -24,5 +24,4 @@ imap <C-b> <Left>
 imap <C-f> <Right>
 imap <C-e> <End>
 imap <C-a> <Home>
-imap <C-h> <Backspace>
 imap <C-d> <Del>
