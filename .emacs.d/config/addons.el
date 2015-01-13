@@ -22,6 +22,7 @@
     helm-git-grep
     helm-gtags
     helm-ls-git
+    helm-projectile
     magit
     smartparens
     open-junk-file
@@ -86,6 +87,16 @@
 (global-evil-matchit-mode 1)
 ;; evil-search-highlight-persist
 (global-evil-search-highlight-persist t)
+
+;; use with NeoTree
+(add-hook 'neotree-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+	    (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
+	    (define-key evil-normal-state-local-map (kbd "?") 'describe-mode)
+            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 ;; =====================================================================
 ;;                                                                 _ _
@@ -383,6 +394,8 @@
 (global-set-key (kbd "<f3>") 'helm-ag)
 (global-set-key (kbd "C-c j") 'helm-ls-git-ls)
 (global-set-key (kbd "C-c k") 'helm-git-grep)
+(global-set-key (kbd "C-c p") 'helm-projectile)
+(global-set-key (kbd "C-c g") 'magit-status)
 
 ;; =====================================================================
 ;; additional load-path and packages
@@ -415,3 +428,11 @@
 (when (require 'skk-autoloads nil t)
 (define-key global-map (kbd "C-x C-j") 'skk-mode)
 (setq skk-byte-compile-init-file t))
+
+;; =====================================================================
+;; inf-ruby
+;; =====================================================================
+(add-to-list 'inf-ruby-implementations '("pry" . "pry"))
+(setq inf-ruby-default-implementation "pry")
+(setq inf-ruby-first-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)> *")
+(setq inf-ruby-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)[>*\"'] *")
