@@ -214,7 +214,6 @@
 ;; |_____|_| |_| |_|\__,_|\___|___/ |_| |_|\___|_|_| |_| |_|
 ;; 
 ;; =====================================================================
-(global-set-key (kbd "C-c h") 'helm-mini)
 (helm-mode t)
 
 ;; ------------------------------------------------------------------------
@@ -392,10 +391,10 @@
 ;; Addon key bindings
 ;; =====================================================================
 (global-set-key (kbd "<f3>") 'helm-ag)
-(global-set-key (kbd "C-c j") 'helm-ls-git-ls)
-(global-set-key (kbd "C-c k") 'helm-git-grep)
-(global-set-key (kbd "C-c p") 'helm-projectile)
 (global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-c j") 'helm-projectile)
+(global-set-key (kbd "C-c k") 'helm-projectile-ag)
 
 ;; =====================================================================
 ;; additional load-path and packages
