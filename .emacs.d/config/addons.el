@@ -122,6 +122,7 @@
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'ruby-mode)
 (add-to-list 'ac-modes 'coffee-mode)
+(add-to-list 'ac-modes 'gfm-mode)
 
 ;; =====================================================================
 ;;      _____  ________  _______   ______ 
@@ -346,7 +347,8 @@
 
 ;; yasnippet
 (setq yas-snippet-dirs
-      '("~/.emacs.d/snippets" 
+      '("~/.emacs.d/my-snippets" 
+	"~/.emacs.d/yasnippet-snippets"
         ))
 (yas-global-mode 1)
 
