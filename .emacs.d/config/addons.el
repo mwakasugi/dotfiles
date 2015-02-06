@@ -44,6 +44,7 @@
     solarized-theme
     js2-mode
     migemo
+    minitest
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -397,6 +398,10 @@
 (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "C-c j") 'helm-projectile)
 (global-set-key (kbd "C-c k") 'helm-projectile-ag)
+(global-set-key (kbd "C-c v") 'minitest-verify)
+(global-set-key (kbd "C-c s") 'minitest-verify-single)
+(global-set-key (kbd "C-c r") 'minitest-rerun)
+(global-set-key (kbd "C-c a") 'minitest-verify-all)
 
 ;; =====================================================================
 ;; additional load-path and packages

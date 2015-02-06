@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: global-set-key
+# key: gkey
+# binding: direct-keybinding
+# --
+(global-set-key (kbd "${1:key}") '$0)
