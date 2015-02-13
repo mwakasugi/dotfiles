@@ -18,10 +18,8 @@
     virtualenvwrapper
     helm
     helm-ag
-    helm-git-files
     helm-git-grep
     helm-gtags
-    helm-ls-git
     helm-projectile
     magit
     smartparens
