@@ -107,6 +107,9 @@
   ;; Automatically reload a buffer when changed
   (global-auto-revert-mode 1)
 
+  ;; Make sure to enter newline at the end of the file
+  (setq require-final-newline t)
+
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 ;; key bindings
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
