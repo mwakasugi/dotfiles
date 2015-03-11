@@ -39,6 +39,7 @@
     rainbow-mode
     twittering-mode
     rspec-mode
+    enh-ruby-mode
     solarized-theme
     js2-mode
     migemo
@@ -114,14 +115,14 @@
 ;;  /_/ \_\___/  |_| \___/     \___\___/|_|  |_|_| |____|___| |_| |___|
 ;;                                                                     
 ;; =====================================================================
-(global-auto-complete-mode t)
 (ac-config-default)
+(global-auto-complete-mode t)
 (setq ac-dwim t)
 
 ;;(add-to-list 'ac-modes 'enh-ruby-mode)
-(add-to-list 'ac-modes 'ruby-mode)
-(add-to-list 'ac-modes 'coffee-mode)
-(add-to-list 'ac-modes 'gfm-mode)
+;;(add-to-list 'ac-modes 'ruby-mode)
+;;(add-to-list 'ac-modes 'coffee-mode)
+;;(add-to-list 'ac-modes 'gfm-mode)
 
 ;; =====================================================================
 ;;      _____  ________  _______   ______ 
@@ -155,7 +156,7 @@
 ;;
 ;; =====================================================================
 (add-hook 'ruby-mode-hook 'robe-mode)
-;;(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
 ;; set ac-auto-start t because robe's default value is 2
 (setq ac-auto-start t)
@@ -177,7 +178,10 @@
           '(lambda ()
              (setq flycheck-checker 'ruby-rubocop)
              (flycheck-mode 1)))
-;;(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
+(add-hook 'enh-ruby-mode-hook
+          '(lambda ()
+             (setq flycheck-checker 'ruby-rubocop)
+             (flycheck-mode 1)))
 (add-hook 'coffee-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook 'flycheck-mode)
 
@@ -259,6 +263,7 @@
 (require 'helm-gtags)
 (add-hook 'python-mode-hook (lambda () (helm-gtags-mode)))  
 (add-hook 'ruby-mode-hook (lambda () (helm-gtags-mode)))                         
+(add-hook 'enh-ruby-mode-hook (lambda () (helm-gtags-mode)))                         
 (setq helm-gtags-path-style 'root)                       
 (setq helm-gtags-auto-update t)
 (add-hook 'helm-gtags-mode-hook
@@ -270,10 +275,9 @@
 
 ;;
 ;; enhanced-ruby-mode
-;;(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-;;(add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
-;;(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
-;;(add-hook 'enh-ruby-mode-hook 'smartparens-mode)
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
 
 ;;
 ;; markdown-mode
@@ -296,7 +300,12 @@
 
 ;;smartparens
 (require 'smartparens-config)
-
+(require 'smartparens-ruby)
+(smartparens-global-mode)
+(show-smartparens-global-mode t)
+(sp-with-modes '(rhtml-mode)
+  (sp-local-pair "<" ">")
+  (sp-local-pair "<%" "%>"))
 
 ;;
 ;; gist
@@ -317,6 +326,7 @@
 (require 'rainbow-delimiters)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'ruby-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'enh-ruby-mode-hook 'rainbow-delimiters-mode)
 
 ;;
 ;; dash-at-point
