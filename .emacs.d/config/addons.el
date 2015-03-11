@@ -21,6 +21,7 @@
     helm-git-grep
     helm-gtags
     helm-projectile
+    helm-robe
     magit
     smartparens
     open-junk-file
@@ -160,6 +161,10 @@
 (add-hook 'robe-mode-hook 'ac-robe-setup)
 ;; set ac-auto-start t because robe's default value is 2
 (setq ac-auto-start t)
+
+;; helm-robe
+(custom-set-variables
+ '(robe-completing-read-func 'helm-robe-completing-read))
 
 ;; =====================================================================
 ;;     ___  _                  _                    _     
