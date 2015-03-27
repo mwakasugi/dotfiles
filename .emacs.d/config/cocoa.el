@@ -69,10 +69,15 @@
   (interactive)
   (if (string= (file-name-extension buffer-file-name) "org")
       (org-gfm-export-to-markdown) nil)
-  (shell-command
-   (format "open -a /Applications/Marked\\ 2.app %s"
-	   (shell-quote-argument
-	    (concat (file-name-sans-extension buffer-file-name) ".md")))))
+  (if (file-exists-p (concat (file-name-sans-extension buffer-file-name) ".md"))
+      (shell-command
+       (format "open -a /Applications/Marked\\ 2.app %s"
+	       (shell-quote-argument
+		(concat (file-name-sans-extension buffer-file-name) ".md"))))
+    (shell-command
+     (format "open -a /Applications/Marked\\ 2.app %s"
+	     (shell-quote-argument
+	      (concat (file-name-sans-extension buffer-file-name) ".markdown"))))))
 
 (global-set-key "\C-cm" 'markdown-preview-file-with-marked)
 
@@ -130,3 +135,22 @@
 
 (global-set-key "\C-ct" 'cd-on-iterm-new-session)
 (global-set-key "\C-cr" 'cd-and-execute-on-iterm-new-session)
+
+
+;; ------------------------------------------------------------------------
+;; @ Geeknote
+;; ------------------------------------------------------------------------
+(defun geeknote-create-from-region (beg end)
+  "Create a note from selected region via Geeknote"
+  (interactive (if (use-region-p)
+                   (list (region-beginning) (region-end))
+                 (list nil nil)))
+  (setq title
+	(format-time-string "%Y-%m-%d %H:%M:%S" (current-time)))
+  (setq content
+	(format "%s" (if (and beg end)
+			 (buffer-substring-no-properties beg end)
+		       "")))
+  (shell-command
+   (format "geeknote create --title '%s' --content '%s'" title content))
+  )

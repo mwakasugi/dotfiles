@@ -114,6 +114,13 @@ export PATH=~/Laboratory/mybin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias emc="emacsclient"
+alias gnc="geeknote create --title"
+alias gns="geeknote show"
+alias gne="geeknote edit --note"
+alias gnr="geeknote remove --note"
+alias gnf="geeknote find --search"
+
 # Open Emacs.app in Terminal
 function emacs
 {
