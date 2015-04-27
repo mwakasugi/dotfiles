@@ -25,10 +25,10 @@
 ;; ------------------------------------------------------------------------
 ;; @ font
 
-  (create-fontset-from-ascii-font "Ricty-16:weight=normal:slant=normal" nil "ricty")
+  (create-fontset-from-ascii-font "Ricty Diminished-16:weight=normal:slant=normal" nil "ricty")
   (set-fontset-font "fontset-ricty"
                     'unicode
-                    (font-spec :family "Ricty" :size 16)
+                    (font-spec :family "Ricty Diminished" :size 16)
                     nil
                     'append)
   (add-to-list 'default-frame-alist '(font . "fontset-ricty"))
