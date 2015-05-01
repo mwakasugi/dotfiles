@@ -44,6 +44,8 @@
     enh-ruby-mode
     solarized-theme
     js2-mode
+    php-mode
+    web-mode
     migemo
     minitest
     ))
