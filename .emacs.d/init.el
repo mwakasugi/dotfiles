@@ -36,7 +36,7 @@
         nt-p      (eq system-type 'windows-nt)
         meadow-p  (featurep 'meadow)
         windows-p (or cygwin-p nt-p meadow-p))
-  
+
   ;; Mac - CocoaEmacs
   (when ns-p
     (load "~/.emacs.d/config/cocoa.el"))
@@ -66,34 +66,34 @@
   (show-paren-mode t)
   (setq show-paren-delay 0)
   (setq show-paren-style 'parenthesis)
-  
+
   ;; Display column number where the cursor is on
   (column-number-mode t)
-  
+
   ;; Display line number where the cursor is on
   (line-number-mode t)
-  
+
   ;; Save where the cursor is on
   (setq-default save-place t)
-  
+
   ;; Kill whole line when pressing C-k at beginning of a line
   (setq kill-whole-line t)
-  
+
   ;; Do not create backup files
   (setq backup-inhibited t)
 
   ;; Do not create lock files
   (setq create-lockfiles nil)
-  
+
   ;; Cleanup auto save files on exit
   (setq delete-auto-save-files t)
-  
+
   ;; Extend history size
   (setq history-length 10000)
-  
+
   ;; Save mini-buffer history
   (savehist-mode 1)
-  
+
   ;; Extend recentf items to store
   (setq recentf-max-saved-items 10000)
 
@@ -116,8 +116,48 @@
   ;; C-h sends backspace
   (keyboard-translate ?\C-h ?\C-?)
   ;; auto indent when newline
-  (global-set-key "\C-m" 'newline-and-indent) 
-  (global-set-key "\C-j" 'newline) 
+  (global-set-key "\C-m" 'newline-and-indent)
+  (global-set-key "\C-j" 'newline)
+
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;; Window Resizer
+;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
+;; hjkl to resize window after pressing C-c C-r
+(defun window-resizer ()
+  "Control window size and position."
+  (interactive)
+  (let ((window-obj (selected-window))
+	(current-width (window-width))
+	(current-height (window-height))
+	(dx (if (= (nth 0 (window-edges)) 0) 1
+	      -1))
+	(dy (if (= (nth 1 (window-edges)) 0) 1
+	      -1))
+	action c)
+    (catch 'end-flag
+      (while t
+	(setq action
+	      (read-key-sequence-vector (format "size[%dx%d]"
+						(window-width)
+						(window-height))))
+	(setq c (aref action 0))
+	(cond ((= c ?l)
+	       (enlarge-window-horizontally dx))
+	      ((= c ?h)
+	       (shrink-window-horizontally dx))
+	      ((= c ?k)
+	       (enlarge-window dy))
+	      ((= c ?j)
+	       (shrink-window dy))
+	      ;; otherwise
+	      (t
+	       (let ((last-command-char (aref action 0))
+		     (command (key-binding action)))
+		 (when command
+		   (call-interactively command)))
+	       (message "Quit")
+	       (throw 'end-flag t)))))))
+(global-set-key "\C-c\C-r" 'window-resizer)
 
 ;; *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-
 ;; Load builtins elisp settings
