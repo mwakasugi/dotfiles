@@ -347,6 +347,7 @@
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'ruby-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'enh-ruby-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'php-mode-hook 'rainbow-delimiters-mode)
 
 ;;
 ;; dash-at-point
@@ -423,6 +424,7 @@
 ;; =====================================================================
 (global-set-key (kbd "<f3>") 'helm-ag)
 (global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c b") 'helm-bookmarks)
 (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "C-c j") 'helm-projectile)
 (global-set-key (kbd "C-c k") 'helm-projectile-ag)
