@@ -290,6 +290,8 @@
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.cr$" . enh-ruby-mode))
+
 ; Disable adding magic comment when saving
 (defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
   "If enh-ruby-not-insert-magic-comment is true, stops enh-ruby-mode-set-encoding."
@@ -302,7 +304,7 @@
 ;;
 ;; markdown-mode
 (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
-(setq markdown-css-path (expand-file-name "~/.github.css"))
+(setq markdown-css-paths (expand-file-name "~/.github.css"))
 (setq markdown-command "export LANG=ja_JP.UTF-8; markdown_py -x linkify -x del_ins -x fenced_code -x 'codehilite(css_class=highlight)' -x tables")
 
 ;;
