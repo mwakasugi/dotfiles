@@ -46,6 +46,7 @@
     js2-mode
     php-mode
     web-mode
+    elixir-mode
     migemo
     minitest
     ))
