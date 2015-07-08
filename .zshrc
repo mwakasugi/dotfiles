@@ -62,11 +62,10 @@ if [ -d ${HOME}/.rbenv ] ; then
   eval "$(rbenv init -)"
 fi
 
-# ndenv
-if [ -d ${HOME}/.ndenv ] ; then
-  PATH=${HOME}/.ndenv/bin:${PATH}
-  export PATH
-  eval "$(ndenv init -)"
+# nvm
+if [ -d ${HOME}/.nvm ] ; then
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
 fi
 
 ## Python virtualenv
