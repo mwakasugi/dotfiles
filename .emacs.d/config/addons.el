@@ -49,6 +49,7 @@
     elixir-mode
     migemo
     minitest
+    ruby-block
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -512,3 +513,8 @@
 ;; =====================================================================
 (add-to-list 'auto-mode-alist '("\\.ctp$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl$" . web-mode))
+
+;; =====================================================================
+;; ruby-block
+;; =====================================================================
+(setq ruby-block-highlight-toggle t)
