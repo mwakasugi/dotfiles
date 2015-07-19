@@ -47,6 +47,7 @@
     php-mode
     web-mode
     elixir-mode
+    go-mode
     migemo
     minitest
     ruby-block

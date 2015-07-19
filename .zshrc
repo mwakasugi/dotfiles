@@ -79,6 +79,14 @@ fi
 #  source `which virtualenvwrapper.sh`
 #fi
 
+# Go
+if [ ! -d $HOME/.go ] ; then
+  mkdir $HOME/.go
+fi
+export GOPATH=$HOME/.go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$GOPATH/bin
+
 # heroku
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
