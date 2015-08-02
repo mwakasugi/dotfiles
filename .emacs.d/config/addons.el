@@ -519,10 +519,16 @@
 ;; js2-mode
 ;; =====================================================================
 (add-hook 'js2-mode-hook '(lambda ()
-			    (setq default-tab-width 4)
+			    (setq default-tab-width 2)
 			    (setq indent-tabs-mode nil)))
 
 ;; =====================================================================
 ;; ruby-block
 ;; =====================================================================
 (setq ruby-block-highlight-toggle t)
+
+;; =====================================================================
+;; crystal-mode
+;; =====================================================================
+(require 'crystal-mode)
+(add-hook 'crystal-mode-hook 'flycheck-mode)

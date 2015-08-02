@@ -79,3 +79,10 @@
       '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
 
 (global-whitespace-mode 1)
+
+;; ------------------------------------------------------------------------
+;; html-mode
+;; ------------------------------------------------------------------------
+(add-hook 'html-mode-hook '(lambda ()
+			    (setq default-tab-width 2)
+			    (setq indent-tabs-mode nil)))
