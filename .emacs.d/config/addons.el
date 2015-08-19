@@ -394,9 +394,6 @@
 ;; not to use "rake spec" instead of simply "spec"
 (setq rspec-use-rake-when-possible nil)
 
-;; js2-mode
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-
 ;; yasnippet
 (setq yas-snippet-dirs
       '("~/.emacs.d/my-snippets" 
@@ -541,11 +538,12 @@
 ;; =====================================================================
 ;; js2-mode
 ;; =====================================================================
-(autoload 'js2-mode "js2-mode" nil t)
+;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-hook 'js2-mode-hook
-          '(lambda ()
-             (setq js2-basic-offset 2)))
+	  '(lambda ()
+	     (setq js2-basic-offset 2)
+	     (setq indent-tabs-mode nil)))
 
 ;; =====================================================================
 ;; ruby-block
