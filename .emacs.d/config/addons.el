@@ -374,19 +374,13 @@
 
 ;; scss-mode
 (add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
-(defun scss-custom ()
-  "scss-mode-hook"
-  (and
-   (set (make-local-variable 'css-indent-offset) 2)
-   (set (make-local-variable 'scss-compile-at-save) nil)
-   )
-  )
 
 (add-hook 'scss-mode-hook
-					'(lambda()
-						 (scss-custom)
-						 (setq default-tab-width 2)
-						 (setq indent-tabs-mode nil)))
+	  (lambda()
+	    (setq css-indent-offset 2)
+	    (setq scss-compile-at-save nil)
+	    (flycheck-mode)
+	    (setq indent-tabs-mode nil)))
 
 ;; sass-mode
 
