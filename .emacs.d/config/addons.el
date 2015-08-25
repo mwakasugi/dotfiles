@@ -134,6 +134,7 @@
 (add-to-list 'ac-modes 'js2-mode)
 (add-to-list 'ac-modes 'coffee-mode)
 (add-to-list 'ac-modes 'gfm-mode)
+(add-to-list 'ac-modes 'elixir-mode)
 
 ;; =====================================================================
 ;;      _____  ________  _______   ______ 
