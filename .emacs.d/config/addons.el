@@ -47,6 +47,7 @@
     php-mode
     web-mode
     elixir-mode
+    dockerfile-mode
     go-mode
     migemo
     minitest
@@ -557,3 +558,8 @@
 ;; =====================================================================
 (require 'crystal-mode)
 (add-hook 'crystal-mode-hook 'flycheck-mode)
+
+;; =====================================================================
+;; dockerfile-mode
+;; =====================================================================
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
