@@ -47,6 +47,7 @@
     php-mode
     web-mode
     elixir-mode
+    dockerfile-mode
     go-mode
     migemo
     minitest
@@ -134,6 +135,7 @@
 (add-to-list 'ac-modes 'js2-mode)
 (add-to-list 'ac-modes 'coffee-mode)
 (add-to-list 'ac-modes 'gfm-mode)
+(add-to-list 'ac-modes 'elixir-mode)
 
 ;; =====================================================================
 ;;      _____  ________  _______   ______ 
@@ -556,3 +558,8 @@
 ;; =====================================================================
 (require 'crystal-mode)
 (add-hook 'crystal-mode-hook 'flycheck-mode)
+
+;; =====================================================================
+;; dockerfile-mode
+;; =====================================================================
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
