@@ -52,6 +52,7 @@
     migemo
     minitest
     ruby-block
+    quickrun
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -447,6 +448,7 @@
 (global-set-key (kbd "C-c s") 'minitest-verify-single)
 (global-set-key (kbd "C-c r") 'minitest-rerun)
 (global-set-key (kbd "C-c a") 'minitest-verify-all)
+(global-set-key (kbd "C-c o") 'quickrun)
 
 ;; =====================================================================
 ;; additional load-path and packages
@@ -563,3 +565,8 @@
 ;; dockerfile-mode
 ;; =====================================================================
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+;; =====================================================================
+;; quickrun
+;; =====================================================================
+(setq quickrun-focus-p nil)
