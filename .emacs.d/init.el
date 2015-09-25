@@ -18,6 +18,11 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 ; (add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+(if (require 'quelpa nil t)
+    (quelpa-self-upgrade)
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
+    (eval-buffer)))
 
 (load (concat user-emacs-directory "elisp/" "preinstall.el"))
 

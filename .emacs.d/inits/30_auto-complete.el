@@ -7,6 +7,7 @@
 
 (add-to-list 'ac-modes 'enh-ruby-mode)
 (add-to-list 'ac-modes 'ruby-mode)
+(add-to-list 'ac-modes 'crystal-mode)
 (add-to-list 'ac-modes 'slim-mode)
 (add-to-list 'ac-modes 'scss-mode)
 (add-to-list 'ac-modes 'yaml-mode)
