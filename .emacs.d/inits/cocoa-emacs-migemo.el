@@ -1,3 +1,5 @@
+(quelpa 'migemo)
+
 (when (and (executable-find "cmigemo")
            (require 'migemo nil t))
   (setq migemo-options '("-q" "--emacs"))

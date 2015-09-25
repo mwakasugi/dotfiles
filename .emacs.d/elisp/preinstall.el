@@ -5,56 +5,56 @@
 
 (defvar installing-package-list
   '(
-    init-loader
-    evil
-    evil-surround
-    evil-numbers
-    evil-matchit
-    evil-search-highlight-persist
-    exec-path-from-shell
-    auto-complete
-    git-gutter
-    jedi
-    inf-ruby
-    robe
-    flycheck
-    virtualenvwrapper
-    helm
-    helm-ag
-    helm-git-grep
-    helm-gtags
-    helm-projectile
-    helm-robe
-    magit
-    smartparens
+    ; auto-complete
+    ; coffee-mode
+    ; dash-at-point
+    ; dockerfile-mode
+    ; elixir-mode
+    ; enh-ruby-mode
+    ; evil
+    ; evil-matchit
+    ; evil-numbers
+    ; evil-search-highlight-persist
+    ; evil-surround
+    ; exec-path-from-shell
+    ; flycheck
+    ; git-gutter
+    ; go-mode
+    ; helm
+    ; helm-ag
+    ; helm-git-grep
+    ; helm-gtags
+    ; helm-projectile
+    ; helm-robe
+    ; inf-ruby
+    ; init-loader
+    ; jade-mode
+    ; jedi
+    ; js2-mode
+    ; magit
+    ; markdown-mode
+    ; migemo
+    ; minitest
+    ; nyan-mode
     open-junk-file
-    undo-tree
-    dash-at-point
-    yasnippet
+    php-mode
+    quickrun
     rainbow-delimiters
-    nyan-mode
-    coffee-mode
-    jade-mode
-    markdown-mode
+    rainbow-mode
+    robe
+    rspec-mode
+    ruby-block
     scss-mode
     slim-mode
-    stylus-mode
-    yaml-mode
-    rainbow-mode
-    twittering-mode
-    rspec-mode
-    enh-ruby-mode
+    smartparens
     solarized-theme
-    js2-mode
-    php-mode
+    ; stylus-mode
+    twittering-mode
+    undo-tree
+    virtualenvwrapper
     web-mode
-    elixir-mode
-    dockerfile-mode
-    go-mode
-    migemo
-    minitest
-    ruby-block
-    quickrun
+    yaml-mode
+    yasnippet
     ))
 
 (let ((not-installed (loop for x in installing-package-list

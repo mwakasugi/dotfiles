@@ -1,4 +1,5 @@
-(require 'flycheck)
+(quelpa 'flycheck)
+
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'ruby-mode-hook

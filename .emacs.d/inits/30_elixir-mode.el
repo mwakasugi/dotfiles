@@ -1,3 +1,5 @@
+(quelpa 'elixir-mode)
+
 (add-hook 'elixir-mode-hook '(lambda ()
 			       (local-set-key "\\t" 'elixir-mode-indent-line)
 			       (make-local-variable 'default-tab-width)

@@ -1,11 +1,9 @@
-;; =====================================================================
-;;  ________  ____   ____  _____  _____
-;; |_   __  ||_  _| |_  _||_   _||_   _|
-;;   | |_ \_|  \ \   / /    | |    | |
-;;   |  _| _    \ \ / /     | |    | |   _
-;;  _| |__/ |    \ ' /     _| |_  _| |__/ |
-;; |________|     \_/     |_____||________|
-;; =====================================================================
+(quelpa 'evil)
+(quelpa 'evil-matchit)
+(quelpa 'evil-numbers)
+(quelpa 'evil-search-highlight-persist)
+(quelpa 'evil-surround)
+
 ;; Turn off IME when exiting insert state
 ;(add-hook 'evil-normal-state-entry-hook 'mac-change-language-to-us)
 

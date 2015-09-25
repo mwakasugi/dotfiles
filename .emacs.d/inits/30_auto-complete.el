@@ -1,3 +1,5 @@
+(quelpa 'auto-complete)
+
 (ac-config-default)
 (ac-set-trigger-key "TAB")
 (setq ac-use-menu-map t)
