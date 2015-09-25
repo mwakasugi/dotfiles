@@ -10,7 +10,7 @@
             (assq-delete-all 'which-func-mode mode-line-misc-info))
 
 (custom-set-faces
- '(which-func ((t (:foreground "Yellow")))))
+ '(which-func ((t (:foreground "#d33682")))))
 
 (add-to-list 'which-func-modes 'ruby-mode)
 (add-to-list 'which-func-modes 'enh-ruby-mode)
