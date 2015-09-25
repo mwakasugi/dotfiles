@@ -1,7 +1,6 @@
-(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.cr$" . enh-ruby-mode))
+; (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+; (add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
+; (add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
 
 ; Disable adding magic comment when saving
 (defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)

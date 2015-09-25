@@ -37,3 +37,10 @@
 	    (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
 	    (define-key evil-normal-state-local-map (kbd "?") 'describe-mode)
             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
+(add-hook 'helm-gtags-mode-hook
+	  '(lambda ()
+	     (local-set-key (kbd "M-g") 'helm-gtags-dwim)
+	     (local-set-key (kbd "M-s") 'helm-gtags-show-stack)
+	     (local-set-key (kbd "M-p") 'helm-gtags-previous-history)
+	     (local-set-key (kbd "M-n") 'helm-gtags-next-history)))
