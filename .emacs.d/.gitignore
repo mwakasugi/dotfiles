@@ -4,7 +4,7 @@
 # git管理するやつ
 !/.gitignore
 !/init.el
-!/config
+!/inits
 !/elisp
 !/my-snippets
 !/yasnippet-snippets
