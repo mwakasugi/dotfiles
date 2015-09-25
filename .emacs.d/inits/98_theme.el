@@ -1,8 +1,8 @@
 (if window-system
-    ; (load-theme 'solarized-dark t) (load-theme 'tango-dark t))
+    (load-theme 'solarized-dark t) (load-theme 'tango-dark t))
     ; (load-theme 'deeper-blue t) (load-theme 'tango-dark t))
     ; (load-theme 'wombat t) (load-theme 'tango-dark t))
-    (load-theme 'tango-dark t) (load-theme 'tango-dark t))
+    ; (load-theme 'tango-dark t) (load-theme 'tango-dark t))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
