@@ -4,3 +4,5 @@ begin
 rescue LoadError => err
   puts "no awesome_print :("
 end
+
+Pry.config.correct_indent = false if ENV["INSIDE_EMACS"]

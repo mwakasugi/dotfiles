@@ -1,5 +1,3 @@
-(add-to-list 'inf-ruby-implementations '("pry" . "pry"))
 (setq inf-ruby-default-implementation "pry")
 (setq inf-ruby-eval-binding "Pry.toplevel_binding")
-(setq inf-ruby-first-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)> *")
-(setq inf-ruby-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)[>*\"'] *")
+(add-hook 'inf-ruby-mode-hook 'ansi-color-for-comint-mode-on)
