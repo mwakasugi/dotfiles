@@ -6,8 +6,7 @@
 !/init.el
 !/inits
 !/elisp
-!/my-snippets
-!/yasnippet-snippets
+!/snippets
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store

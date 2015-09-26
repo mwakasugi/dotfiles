@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: pry
+# key: pry
+# binding: direct-keybinding
+# --
+binding.pry

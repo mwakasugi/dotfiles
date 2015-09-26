@@ -24,8 +24,6 @@
     (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
     (eval-buffer)))
 
-(load (concat user-emacs-directory "elisp/" "preinstall.el"))
-
 (quelpa 'init-loader)
 
 (custom-set-variables '(init-loader-show-log-after-init nil))

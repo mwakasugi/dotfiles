@@ -1,3 +1,7 @@
+; Need to install let-alist from elpa
+; https://github.com/flycheck/flycheck/issues/551
+(package-install 'let-alist)
+
 (quelpa 'flycheck)
 
 (setq flycheck-check-syntax-automatically '(mode-enabled save))

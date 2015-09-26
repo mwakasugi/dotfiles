@@ -1,2 +1,2 @@
-(require 'virtualenvwrapper)
+(quelpa 'virtualenvwrapper)
 (setq venv-location "~/.virtualenvs")

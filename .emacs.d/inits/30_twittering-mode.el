@@ -1,3 +1,5 @@
+(quelpa 'twittering-mode)
+
 ;; Password authorizatin on launch (* gpg command is needed)
 (setq twittering-use-master-password t)
 ;; Password encryption file is stored in (* Default: home directory)
