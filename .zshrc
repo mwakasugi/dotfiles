@@ -122,3 +122,4 @@ export PATH=~/Laboratory/mybin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias emc="emacsclient"
+export BUNDLER_EDITOR=emacsclient
