@@ -2,7 +2,6 @@
 (quelpa 'helm-ag)
 (quelpa 'helm-git-grep)
 (quelpa 'helm-gtags)
-(quelpa 'helm-projectile)
 (quelpa 'helm-robe)
 
 (helm-mode t)
