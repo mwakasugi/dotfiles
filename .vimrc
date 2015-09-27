@@ -233,6 +233,11 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+" Color Scheme
+" *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
+NeoBundle 'tomasr/molokai'
+
+" *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
 " vimproc
 " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
 " vimproc is getting compiled when installing.
@@ -355,8 +360,6 @@ NeoBundle "nathanaelkane/vim-indent-guides"
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=1
 let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#1F211F ctermbg=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#222222 ctermbg=0
 let g:indent_guides_color_change_percent=30
 let g:indent_guides_guide_size=1
 
@@ -437,7 +440,6 @@ NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'osyo-manga/shabadou.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'tomasr/molokai'
 NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'sophacles/vim-processing'
 NeoBundle 'tpope/vim-surround'
@@ -499,3 +501,11 @@ let g:quickrun_config = {
       \       'outputter' : 'error:buffer:quickfix',
       \   },
       \}
+
+"----------------------------------------------------
+" Color Scheme Settings
+"----------------------------------------------------
+colorscheme molokai
+
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#1F211F ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#222222 ctermbg=0

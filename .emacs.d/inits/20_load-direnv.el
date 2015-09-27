@@ -1,3 +1,5 @@
+;; Most functions are taken from zph/direnv.el https://gist.github.com/zph/50c766d6c7aa212896b5
+
 (require 'cl-lib)
 ;; Depends on s.el
 
