@@ -55,6 +55,11 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# direnv
+if type direnv >/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
 # rbenv
 if [ -d ${HOME}/.rbenv ] ; then
   PATH=${HOME}/.rbenv/bin:${PATH}
@@ -122,4 +127,5 @@ export PATH=~/Laboratory/mybin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias emc="emacsclient"
-export BUNDLER_EDITOR=emacsclient
+export EDITOR=vim
+export BUNDLER_EDITOR=vim
