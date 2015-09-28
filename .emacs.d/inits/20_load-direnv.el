@@ -14,7 +14,7 @@
                 (split-string (first (last (split-string text "\n"))) ";")))
 
 (defun line->pair (line)
-  (split-string (string-join (rest (split-string line " ")) " ") "="))
+  (split-string (s-join " " (rest (split-string line " "))) "="))
 
 (defun remove-$-and-quotes (val)
   (s-with val
