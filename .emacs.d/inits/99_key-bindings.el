@@ -48,6 +48,7 @@
 
 (eval-after-load "helm-gtags"
   '(progn
+     (define-key helm-gtags-mode-map (kbd "M-g") 'helm-gtags-dwim)
      (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
      (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
      (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
