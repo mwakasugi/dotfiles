@@ -454,6 +454,8 @@ NeoBundle '5t111111/markdown-preview.vim'
 NeoBundle '5t111111/alt-gtags.vim'
 NeoBundle '5t111111/neat-json.vim'
 
+NeoBundle '5t111111/vim-gtags'
+
 call neobundle#end()
 
 " Required:
