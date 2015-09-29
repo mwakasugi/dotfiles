@@ -431,6 +431,8 @@ elseif has('unix')
   " ToDo ...
 endif
 
+NeoBundle 'hewes/unite-gtags'
+
 " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
 " other plugins
 " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
@@ -469,14 +471,31 @@ execute pathogen#infect()
 syntax on
 
 "----------------------------------------------------
+" unite-gtags.vim
+"----------------------------------------------------
+nnoremap [unite-gtags] <Nop>
+nmap T [unite-gtags]
+nnoremap <silent> [unite-gtags]g :<C-u>Unite gtags/context<CR>
+nnoremap <silent> [unite-gtags]t :<C-u>Unite gtags/def<CR>
+nnoremap <silent> [unite-gtags]r :<C-u>Unite gtags/ref<CR>
+
+let g:unite_source_gtags_project_config = {
+      \ '_': {
+      \     'gtags_libpath':
+      \       [ '/usr/include/' ],
+      \     'treelize': 1
+      \ }
+\ }
+
+"----------------------------------------------------
 " alt-gtags.vim
 "----------------------------------------------------
-  nnoremap [alt-gtags] <Nop>
-  nmap T [alt-gtags]
-  nnoremap <silent> [alt-gtags]f :AltGtags -f<CR>
-  nnoremap <silent> [alt-gtags]t :AltGtags<CR>
-  nnoremap <silent> [alt-gtags]r :AltGtags -r<CR>
-  nnoremap <silent> [alt-gtags]s :AltGtags -s<CR>
+" nnoremap [alt-gtags] <Nop>
+" nmap T [alt-gtags]
+" nnoremap <silent> [alt-gtags]f :AltGtags -f<CR>
+" nnoremap <silent> [alt-gtags]t :AltGtags<CR>
+" nnoremap <silent> [alt-gtags]r :AltGtags -r<CR>
+" nnoremap <silent> [alt-gtags]s :AltGtags -s<CR>
 
 "----------------------------------------------------
 " QuickRun
