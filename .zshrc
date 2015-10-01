@@ -129,3 +129,10 @@ export PATH=~/Laboratory/mybin:$PATH
 alias emc="emacsclient"
 export EDITOR=vim
 export BUNDLER_EDITOR=vim
+
+# Peco
+# if peco > /dev/null 2>&1
+if type peco > /dev/null 2>&1
+then
+  . ~/.zshlib/peco
+fi

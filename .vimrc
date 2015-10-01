@@ -431,8 +431,6 @@ elseif has('unix')
   " ToDo ...
 endif
 
-NeoBundle 'hewes/unite-gtags'
-
 " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
 " other plugins
 " *-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*-.-*
@@ -457,6 +455,8 @@ NeoBundle '5t111111/alt-gtags.vim'
 NeoBundle '5t111111/neat-json.vim'
 
 NeoBundle '5t111111/vim-gtags'
+" NeoBundle 'hewes/unite-gtags'
+NeoBundle '5t111111/unite-gtags'
 
 call neobundle#end()
 
@@ -483,7 +483,7 @@ let g:unite_source_gtags_project_config = {
       \ '_': {
       \     'gtags_libpath':
       \       [ '/usr/include/' ],
-      \     'treelize': 1
+      \     'through_all_tags': 1,
       \ }
 \ }
 

@@ -11,6 +11,7 @@
 !/.gvimrc
 !/.vim
 !/.zshrc
+!/.zshlib/
 !/.tmux.conf
 !/.globalrc
 !/.xvimrc
