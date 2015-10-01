@@ -3,6 +3,7 @@
 
 # git管理するやつ
 !/README.md
+!/setup.sh
 !/.gitignore
 !/.bashrc
 !/.bash_profile
