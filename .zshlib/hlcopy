@@ -1,0 +1,1 @@
+hlcopy() { pbpaste | highlight -s Moria -k 'Ricty Diminished' -K 32 $* -O rtf | pbcopy }

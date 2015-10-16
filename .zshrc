@@ -136,3 +136,5 @@ if type peco > /dev/null 2>&1
 then
   . ~/.zshlib/peco
 fi
+
+. ~/.zshlib/hlcopy
