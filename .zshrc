@@ -54,6 +54,7 @@ source $ZSH/oh-my-zsh.sh
 # PATH configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 
 # direnv
 if type direnv >/dev/null 2>&1; then
