@@ -5,6 +5,7 @@
 (quelpa 'flycheck)
 
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
+(add-hook 'php-mode-hook 'flycheck-mode)
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'ruby-mode-hook
           '(lambda ()
