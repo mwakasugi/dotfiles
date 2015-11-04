@@ -17,3 +17,19 @@
 (add-to-list 'ac-modes 'coffee-mode)
 (add-to-list 'ac-modes 'gfm-mode)
 (add-to-list 'ac-modes 'elixir-mode)
+
+(add-to-list 'ac-modes 'eshell-mode)
+(ac-define-source pcomplete
+  '((candidates . pcomplete-completions)))
+(defun my-ac-eshell-mode ()
+  (setq ac-sources
+        '(ac-source-pcomplete
+          ac-source-filename
+          ac-source-files-in-current-dir
+          ac-source-words-in-buffer
+          ac-source-dictionary)))
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (my-ac-eshell-mode)
+            (define-key eshell-mode-map (kbd "C-i") 'auto-complete)
+            (define-key eshell-mode-map [(tab)] 'auto-complete)))

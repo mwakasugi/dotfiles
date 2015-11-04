@@ -55,3 +55,8 @@
      (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
      (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
      (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
+
+(add-hook 'eshell-mode-hook
+          (lambda ()
+            (define-key eshell-mode-map (kbd "M-,") 'helm-esh-pcomplete)
+            (define-key eshell-mode-map (kbd "M-.") 'helm-eshell-history)))
