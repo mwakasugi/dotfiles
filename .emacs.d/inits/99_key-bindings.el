@@ -20,10 +20,11 @@
 ;; (global-set-key (kbd "C-c s") 'minitest-verify-single)
 ;; (global-set-key (kbd "C-c r") 'minitest-rerun)
 ;; (global-set-key (kbd "C-c a") 'minitest-verify-all)
-(global-set-key (kbd "C-c o") 'quickrun)
+(global-set-key (kbd "C-c r") 'quickrun)
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c d") 'dash-at-point)
 (global-set-key (kbd "C-c e") 'dash-at-point-with-docset)
+(global-set-key (kbd "C-c o") 'browse-at-remote)
 
 ;; evil-numbers
 (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
