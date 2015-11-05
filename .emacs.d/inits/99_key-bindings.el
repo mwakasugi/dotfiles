@@ -13,6 +13,7 @@
 (global-set-key (kbd "<f3>") 'helm-ag)
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c b") 'helm-bookmarks)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "C-c j") 'helm-projectile)
 (global-set-key (kbd "C-c k") 'helm-projectile-ag)
