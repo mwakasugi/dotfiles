@@ -12,6 +12,8 @@
 (custom-set-faces
  '(which-func ((t (:foreground "#d33682")))))
 
+(add-to-list 'which-func-modes 'php-mode)
+(add-to-list 'which-func-modes 'python-mode)
 (add-to-list 'which-func-modes 'ruby-mode)
 (add-to-list 'which-func-modes 'enh-ruby-mode)
 (add-to-list 'which-func-modes 'emacs-lisp-mode)

@@ -1,7 +1,8 @@
 (quelpa 'solarized-theme)
 
 (if window-system
-    (load-theme 'solarized-dark t) (load-theme 'tango-dark t))
+    ; (load-theme 'solarized-dark t) (load-theme 'tango-dark t))
+    (load-theme 'solarized-light t) (load-theme 'tango-dark t))
     ; (load-theme 'deeper-blue t) (load-theme 'tango-dark t))
     ; (load-theme 'wombat t) (load-theme 'tango-dark t))
     ; (load-theme 'tango-dark t) (load-theme 'tango-dark t))
