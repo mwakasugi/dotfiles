@@ -8,10 +8,26 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 # kill process
-function peco-pkill() {
+function ppkill() {
   for pid in `ps aux | peco | awk '{ print $2 }'`
   do
     kill $pid
     echo "Killed ${pid}"
   done
+}
+
+# filename search
+function pfind() {
+  find . -name "*${1}*" | grep -v "/\." | peco
+}
+
+# Git log
+function pglog() {
+  git log --oneline --decorate=full | peco | awk '{print $1}'
+}
+
+# SSH
+function pssh() {
+  res=`grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | peco`
+  ssh $res
 }
