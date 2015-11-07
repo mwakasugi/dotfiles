@@ -128,6 +128,8 @@ export PATH=~/Laboratory/mybin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias emc="emacsclient"
+alias pfopen="open -a 'Path Finder'"
+
 export EDITOR=vim
 export BUNDLER_EDITOR=vim
 
