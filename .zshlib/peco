@@ -31,3 +31,9 @@ function pssh() {
   res=`grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | peco`
   ssh $res
 }
+
+# Repositories
+function plab() {
+  res=`ls ~/Laboratory | peco`
+  cd ~/Laboratory/${res}
+}
