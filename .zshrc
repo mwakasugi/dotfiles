@@ -127,6 +127,7 @@ export PATH=~/Laboratory/mybin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias lla="ls -la"
 alias emc="emacsclient"
 alias pfopen="open -a 'Path Finder'"
 
