@@ -59,3 +59,8 @@
 ;; Make sure to enter newline at the end of the file
 (setq require-final-newline t)
 
+;; Set markdown mode to scratch buffer
+(when (require 'markdown-mode nil t)
+  (setq
+   initial-major-mode 'markdown-mode
+   initial-scratch-message "Scratch\n========\n\n"))

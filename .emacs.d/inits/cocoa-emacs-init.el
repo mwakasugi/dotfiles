@@ -17,10 +17,13 @@
 ;; @ ime
 
 ;(setq default-input-method "MacOSX")
-;; minibufferは英数モードで始める
-;(add-hook 'minibuffer-setup-hook 'mac-change-language-to-us)
 ;; for Google IME
 ;(mac-set-input-method-parameter "com.google.inputmethod.Japanese.base" `title "あ")
+
+;; Turn off IME when Emacs becomes active
+;(add-hook 'focus-in-hook 'mac-change-language-to-us)
+;; Turn off IME in minibuffer
+;(add-hook 'minibuffer-setup-hook 'mac-change-language-to-us)
 
 ;; ------------------------------------------------------------------------
 ;; @ font
