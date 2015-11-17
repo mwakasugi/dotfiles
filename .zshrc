@@ -142,3 +142,8 @@ then
 fi
 
 . ~/.zshlib/hlcopy
+
+# added by travis gem
+if [ -d ${HOME}/.travis/travis.sh ] ; then
+  source ${HOME}/.travis/travis.sh
+fi
