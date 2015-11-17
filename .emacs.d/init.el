@@ -26,6 +26,8 @@
 
 (quelpa 'init-loader)
 
+(byte-recompile-directory (concat user-emacs-directory "inits/") 0)
+
 (custom-set-variables '(init-loader-show-log-after-init nil))
 (init-loader-load (concat user-emacs-directory "inits/"))
 
