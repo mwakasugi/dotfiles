@@ -7,6 +7,9 @@
 (global-set-key "\C-c\C-r" 'window-resizer)
 (global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)
 
+;; Do not minimize with C-z
+(global-set-key "\C-z" 'scroll-down)
+
 ;; =====================================================================
 ;; Addon key bindings
 ;; =====================================================================
