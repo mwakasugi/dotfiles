@@ -37,7 +37,7 @@
  '(init-loader-show-log-after-init nil)
  '(package-selected-packages
    (quote
-    (let-alist yasnippet yaml-mode web-mode virtualenvwrapper twittering-mode stylus-mode solarized-theme smartparens slim-mode scss-mode ruby-block rspec-mode robe rainbow-delimiters quickrun quelpa php-mode ox-gfm open-junk-file nyan-mode minitest migemo markdown-mode magit js2-mode jedi jade-mode init-loader helm-robe helm-projectile helm-gtags helm-git-grep helm-ag haskell-mode go-mode git-gutter flycheck exec-path-from-shell evil-surround evil-search-highlight-persist evil-rails evil-numbers evil-matchit enh-ruby-mode elm-mode elixir-mode dockerfile-mode dash-at-point crystal-mode coffee-mode browse-at-remote)))
+    (projectile magit-popup git-commit with-editor helm helm-core async auto-complete let-alist yasnippet yaml-mode web-mode virtualenvwrapper twittering-mode stylus-mode solarized-theme smartparens slim-mode scss-mode ruby-block rspec-mode robe rainbow-delimiters quickrun quelpa php-mode ox-gfm open-junk-file nyan-mode minitest migemo markdown-mode magit js2-mode jedi jade-mode init-loader helm-robe helm-projectile helm-gtags helm-git-grep helm-ag haskell-mode go-mode git-gutter flycheck exec-path-from-shell evil-surround evil-search-highlight-persist evil-rails evil-numbers evil-matchit enh-ruby-mode elm-mode elixir-mode dockerfile-mode dash-at-point crystal-mode coffee-mode browse-at-remote)))
  '(robe-completing-read-func (quote helm-robe-completing-read)))
 (init-loader-load (concat user-emacs-directory "inits/"))
 

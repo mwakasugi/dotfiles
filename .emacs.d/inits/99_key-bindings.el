@@ -29,6 +29,7 @@
 (global-set-key (kbd "C-c d") 'dash-at-point)
 (global-set-key (kbd "C-c e") 'dash-at-point-with-docset)
 (global-set-key (kbd "C-c o") 'browse-at-remote)
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; evil-numbers
 (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
