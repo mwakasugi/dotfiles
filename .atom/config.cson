@@ -23,3 +23,10 @@
       "highlight-selected": true
   linter: {}
   "recent-finder": {}
+  "atom-material-ui":
+    ui: {}
+    tabs:
+      showTabIcons: "Show on all tabs"
+      tabSize: "Small"
+    fonts: {}
+    panels: {}
