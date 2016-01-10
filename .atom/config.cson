@@ -13,7 +13,9 @@
     fontFamily: "Ricty Diminished"
     showInvisibles: true
     fontSize: 16
-  "vim-mode": {}
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
   minimap:
     plugins:
       "git-diff": true
@@ -30,3 +32,4 @@
       tabSize: "Small"
     fonts: {}
     panels: {}
+  "git-plus": {}

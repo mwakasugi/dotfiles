@@ -4,6 +4,7 @@ atom-material-syntax@0.2.10
 atom-material-ui@0.8.0
 autocomplete-paths@1.0.2
 color-picker@2.0.14
+ex-mode@0.8.0
 file-icons@1.6.13
 git-plus@5.9.0
 highlight-selected@0.11.1
