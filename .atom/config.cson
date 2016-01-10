@@ -1,0 +1,25 @@
+"*":
+  "exception-reporting":
+    userId: "24a22743-3ade-0a31-d740-004d6a4e0199"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    invisibles: {}
+    fontFamily: "Ricty Diminished"
+    showInvisibles: true
+    fontSize: 16
+  "vim-mode": {}
+  minimap:
+    plugins:
+      "git-diff": true
+      "minimap-autohide": true
+      bookmarks: true
+      pigments: true
+      "highlight-selected": true
+  linter: {}
+  "recent-finder": {}

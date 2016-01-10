@@ -22,6 +22,7 @@
 !/.tigrc
 !/.gitignore_global
 !/.rubocop.yml
+!/.atom
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store

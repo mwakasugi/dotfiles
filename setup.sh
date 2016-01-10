@@ -14,3 +14,4 @@ ln -s Laboratory/dotfiles/.pryrc
 ln -s Laboratory/dotfiles/.tigrc
 ln -s Laboratory/dotfiles/.rubocop.yml
 ln -s Laboratory/dotfiles/.tmux.conf
+ln -s Laboratory/dotfiles/.atom
