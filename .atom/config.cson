@@ -31,5 +31,6 @@
       showTabIcons: "Show on all tabs"
       tabSize: "Small"
     fonts: {}
-    panels: {}
+    panels:
+      panelContrast: true
   "git-plus": {}
