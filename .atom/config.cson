@@ -12,7 +12,7 @@
     invisibles: {}
     fontFamily: "Ricty Diminished"
     showInvisibles: true
-    fontSize: 16
+    fontSize: 15
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true

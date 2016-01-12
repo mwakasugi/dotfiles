@@ -7,8 +7,8 @@
 ;; Turn off IME when exiting insert state
 ;(add-hook 'evil-normal-state-entry-hook 'mac-change-language-to-us)
 
-(setq evil-want-C-u-scroll t
-      Evil-search-module 'evil-search
+;; (setq evil-want-C-u-scroll t)
+(setq Evil-search-module 'evil-search
       evil-ex-search-vim-style-regexp t)
 
 (evil-mode 1)

@@ -44,21 +44,13 @@
             (define-key evil-normal-state-local-map (kbd "?") 'describe-mode)
             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
-;; helm-gtags
-;; (add-hook 'helm-gtags-mode-hook
-;;           '(lambda ()
-;;              (local-set-key (kbd "M-g") 'helm-gtags-dwim)
-;;              (local-set-key (kbd "M-s") 'helm-gtags-show-stack)
-;;              (local-set-key (kbd "M-p") 'helm-gtags-previous-history)
-;;              (local-set-key (kbd "M-n") 'helm-gtags-next-history)))
-
 (eval-after-load "helm-gtags"
   '(progn
      (define-key helm-gtags-mode-map (kbd "M-g") 'helm-gtags-dwim)
      (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
      (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
      (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-     (define-key helm-gtags-mode-map (kbd "M-f") 'helm-gtags-select)
+     (define-key helm-gtags-mode-map (kbd "M-f") 'helm-gtags-parse-file)
      (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
      (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
      (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
