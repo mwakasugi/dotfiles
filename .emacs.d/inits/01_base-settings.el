@@ -11,6 +11,9 @@
 (if window-system
     (menu-bar-mode 0))
 
+;; Highlight current line
+(global-hl-line-mode t)
+
 ;; Highlight corresponding parens
 (show-paren-mode t)
 (setq show-paren-delay 0)

@@ -1,37 +1,37 @@
 "*":
-  "exception-reporting":
-    userId: "24a22743-3ade-0a31-d740-004d6a4e0199"
-  welcome:
-    showOnStartup: false
+  "atom-material-ui":
+    fonts: {}
+    panels:
+      panelContrast: true
+    tabs:
+      showTabIcons: "Show on all tabs"
+      tabSize: "Small"
+    ui: {}
   core:
     themes: [
       "atom-material-ui"
       "atom-material-syntax"
     ]
   editor:
-    invisibles: {}
     fontFamily: "Ricty Diminished"
-    showInvisibles: true
     fontSize: 15
+    invisibles: {}
+    showInvisibles: true
+  "exception-reporting":
+    userId: "24a22743-3ade-0a31-d740-004d6a4e0199"
+  "git-plus": {}
+  linter: {}
+  minimap:
+    plugins:
+      bookmarks: true
+      "git-diff": true
+      "highlight-selected": true
+      "minimap-autohide": true
+      pigments: true
+  "recent-finder": {}
+  "symbols-tree-view": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
-  minimap:
-    plugins:
-      "git-diff": true
-      "minimap-autohide": true
-      bookmarks: true
-      pigments: true
-      "highlight-selected": true
-  linter: {}
-  "recent-finder": {}
-  "atom-material-ui":
-    ui: {}
-    tabs:
-      showTabIcons: "Show on all tabs"
-      tabSize: "Small"
-    fonts: {}
-    panels:
-      panelContrast: true
-  "git-plus": {}
-  "symbols-tree-view": {}
+  welcome:
+    showOnStartup: false
