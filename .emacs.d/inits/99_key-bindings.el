@@ -59,3 +59,8 @@
           (lambda ()
             (define-key eshell-mode-map (kbd "M-,") 'helm-esh-pcomplete)
             (define-key eshell-mode-map (kbd "M-.") 'helm-eshell-history)))
+
+;; =====================================================================
+;; Custom Functions
+;; =====================================================================
+(global-set-key (kbd "C-c f") 'name-of-the-file)
