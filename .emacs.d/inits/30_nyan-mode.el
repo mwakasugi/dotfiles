@@ -9,5 +9,6 @@
 ;;      +         +
 ;; =====================================================================
 (quelpa 'nyan-mode)
+(require 'nyan-mode)
 (nyan-mode)
 (nyan-start-animation)
