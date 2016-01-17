@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-c b") 'helm-bookmarks)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c j") 'helm-projectile)
 (global-set-key (kbd "C-c k") 'helm-projectile-ag)
 (global-set-key (kbd "C-c l") 'helm-resume)
