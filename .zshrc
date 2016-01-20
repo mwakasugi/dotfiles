@@ -80,6 +80,7 @@ alias lla="ls -la"
 alias emc="emacsclient"
 alias pfopen="open -a 'Path Finder'"
 alias termopen="open -a 'Terminal' ."
+alias ccat="pygmentize"
 
 export EDITOR=vim
 export BUNDLER_EDITOR=vim
