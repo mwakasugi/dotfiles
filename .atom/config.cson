@@ -16,6 +16,7 @@
     fontFamily: "Ricty Diminished"
     fontSize: 15
     invisibles: {}
+    showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "24a22743-3ade-0a31-d740-004d6a4e0199"

@@ -26,5 +26,6 @@ pigments@0.19.5
 project-manager@2.7.1
 recent-finder@0.4.4
 sort-lines@0.12.0
+tabs-to-spaces@1.0.1
 vim-mode@0.64.0
 
