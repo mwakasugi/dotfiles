@@ -37,7 +37,7 @@
 (add-to-list 'default-frame-alist '(font . "fontset-ricty"))
 
 ; 行間設定
-(setq-default line-spacing 0.2)
+(setq-default line-spacing 0.4)
 
 ;; ------------------------------------------------------------------------
 ;; @ migemo

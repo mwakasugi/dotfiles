@@ -1,5 +1,6 @@
 Sublime-Style-Column-Selection@1.3.0
 advanced-new-file@0.5.0
+advanced-open-file@0.14.1
 asciidoc-preview@0.6.0
 atom-fix-path@0.1.0
 atom-material-syntax@0.2.10
