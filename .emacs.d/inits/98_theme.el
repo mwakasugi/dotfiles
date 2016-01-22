@@ -1,5 +1,6 @@
 (quelpa 'solarized-theme)
 (quelpa 'material-theme)
+(quelpa 'green-phosphor-theme)
 
 (if window-system
     (load-theme 'solarized-dark t) (load-theme 'tango-dark t))
@@ -8,6 +9,8 @@
     ; (load-theme 'wombat t) (load-theme 'tango-dark t))
     ; (load-theme 'tango-dark t) (load-theme 'tango-dark t))
     ; (load-theme 'material t) (load-theme 'tango-dark t))
+    ; (load-theme 'material-light t) (load-theme 'tango-dark t))
+    ; (load-theme 'green-phosphor t) (load-theme 'tango-dark t))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
