@@ -10,6 +10,8 @@
     (tool-bar-mode 0))
 (if window-system
     (menu-bar-mode 0))
+(if window-system
+    (scroll-bar-mode 0))
 
 ;; Highlight current line
 (global-hl-line-mode t)
