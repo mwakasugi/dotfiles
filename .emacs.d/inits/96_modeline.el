@@ -1,8 +1,8 @@
 ;; Mode line setup
 (setq-default
  mode-line-format
- ;;'(
- '("%e" mode-line-front-space
+ '(
+   "%e" mode-line-front-space
    ;; Standard info about the current buffer
    mode-line-mule-info
    mode-line-client
@@ -30,7 +30,7 @@
    ; directory and buffer/file name
    ;; (:propertize (:eval (shorten-directory default-directory 30))
    ;;              face mode-line-folder-face)
-   (:propertize "%b"
+   (:propertize mode-line-buffer-identification
                 face mode-line-filename-face)
 
    ; narrow [default -- keep?]
