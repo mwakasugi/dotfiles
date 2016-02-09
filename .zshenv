@@ -49,3 +49,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=~/Laboratory/mybin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# composer
+export PATH=$HOME/.composer/vendor/bin:$PATH
