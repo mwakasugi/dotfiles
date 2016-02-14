@@ -3,6 +3,7 @@
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ctp$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.blade.php$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 (defadvice web-mode-highlight-part (around tweak-jsx activate)
   (if (equal web-mode-content-type "jsx")
