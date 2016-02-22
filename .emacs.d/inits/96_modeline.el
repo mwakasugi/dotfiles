@@ -99,7 +99,7 @@
                     :box '(:line-width 2 :color "#c82829"))
 (set-face-attribute 'mode-line-filename-face nil
                     :inherit 'mode-line-face
-                    :foreground "#eab700"
+                    :foreground "#b4c342"
                     :weight 'bold)
 (set-face-attribute 'mode-line-position-face nil
                     :inherit 'mode-line-face)
