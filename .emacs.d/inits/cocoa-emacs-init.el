@@ -75,12 +75,12 @@
   (if (file-exists-p (concat (file-name-sans-extension buffer-file-name) ".md"))
       (shell-command
        (format "open -a /Applications/Marked\\ 2.app %s"
-	       (shell-quote-argument
-		(concat (file-name-sans-extension buffer-file-name) ".md"))))
+               (shell-quote-argument
+                (concat (file-name-sans-extension buffer-file-name) ".md"))))
     (shell-command
      (format "open -a /Applications/Marked\\ 2.app %s"
-	     (shell-quote-argument
-	      (concat (file-name-sans-extension buffer-file-name) ".markdown"))))))
+             (shell-quote-argument
+              (concat (file-name-sans-extension buffer-file-name) ".markdown"))))))
 
 (global-set-key "\C-cm" 'markdown-preview-file-with-marked)
 
