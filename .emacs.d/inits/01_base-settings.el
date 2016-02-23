@@ -52,8 +52,8 @@
 (setq recentf-max-saved-items 10000)
 
 ;; Transparency settings
-; (if window-system
-;     (set-frame-parameter nil 'alpha 96))
+(if window-system
+    (set-frame-parameter nil 'alpha 90))
 
 ;; Ignore case on completion
 (setq completion-ignore-case t)
