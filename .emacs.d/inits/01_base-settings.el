@@ -53,7 +53,7 @@
 
 ;; Transparency settings
 (if window-system
-    (set-frame-parameter nil 'alpha 90))
+    (set-frame-parameter nil 'alpha 95))
 
 ;; Ignore case on completion
 (setq completion-ignore-case t)
