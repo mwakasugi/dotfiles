@@ -11,7 +11,6 @@
 (defconst json-mode-beautify-command-python3-with-unicode-escape
   "python3 -c \"import sys,json,codecs,collections; data=json.loads(sys.stdin.read(),object_pairs_hook=collections.OrderedDict); print((json.dumps(data,sort_keys=%s,indent=2,separators=(',',': ')))[0])\"")
 
-
 (eval-after-load "json-mode"
   '(defun json-mode-beautify (&optional preserve-key-order)
      "Beautify / pretty-print from BEG to END, and optionally PRESERVE-KEY-ORDER."
