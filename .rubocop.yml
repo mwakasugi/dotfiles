@@ -1,3 +1,8 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
 StringLiterals:
   Enabled: false
 AsciiComments:
