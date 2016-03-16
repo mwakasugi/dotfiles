@@ -34,6 +34,10 @@
 (global-set-key (kbd "C-c o") 'browse-at-remote)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 
+;; Move cursor like normal Emacs in Evil's insert state
+(define-key evil-insert-state-map (kbd "C-a") nil)
+(define-key evil-insert-state-map (kbd "C-e") nil)
+
 ;; evil-numbers
 (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
