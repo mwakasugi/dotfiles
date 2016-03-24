@@ -37,6 +37,7 @@
 ;; Move cursor like normal Emacs in Evil's insert state
 (define-key evil-insert-state-map (kbd "C-a") nil)
 (define-key evil-insert-state-map (kbd "C-e") nil)
+(define-key evil-insert-state-map (kbd "C-d") nil)
 
 ;; evil-numbers
 (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
