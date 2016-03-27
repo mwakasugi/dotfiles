@@ -8,7 +8,6 @@
   (let ((cmd (concat "$SHELL -i -c '" "cd " dir " && direnv export bash'")))
     (shell-command-to-string cmd)))
 
-;;(direnv-data "~/src/direnv")
 (defun commands-from-direnv (text)
   (cl-remove-if 's-blank?
                 (split-string (first (last (split-string text "\n"))) ";")))
