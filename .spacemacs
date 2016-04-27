@@ -26,8 +26,9 @@ values."
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
-     ;; markdown
+     git
+     html
+     markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -252,6 +253,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq-default line-spacing 0.4)
   (global-set-key "\C-h" 'delete-backward-char)
+  (add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
