@@ -15,3 +15,4 @@ ln -s Laboratory/dotfiles/.tigrc
 ln -s Laboratory/dotfiles/.rubocop.yml
 ln -s Laboratory/dotfiles/.tmux.conf
 ln -s Laboratory/dotfiles/.atom
+ln -s Laboratory/dotfiles/.spacemacs
