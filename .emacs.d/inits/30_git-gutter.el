@@ -1,4 +1,4 @@
 (quelpa 'git-gutter)
 
 (global-git-gutter-mode t)
-(git-gutter:linum-setup)
+;; (git-gutter:linum-setup)

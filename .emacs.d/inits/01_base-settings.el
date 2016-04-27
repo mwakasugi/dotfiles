@@ -7,14 +7,22 @@
 
 ;; Do not disspay Menu bar and Tool bar
 (if window-system
-    (tool-bar-mode 0))
+    (tool-bar-mode -1))
 (if window-system
-    (menu-bar-mode 0))
+    (menu-bar-mode -1))
 (if window-system
-    (scroll-bar-mode 0))
+    (scroll-bar-mode -1))
 
 ;; Highlight current line
-(global-hl-line-mode t)
+;; (global-hl-line-mode nil)
+(require 'hl-line)
+(defun global-hl-line-timer-function ()
+  (global-hl-line-unhighlight-all)
+  (let ((global-hl-line-mode t))
+    (global-hl-line-highlight)))
+(setq global-hl-line-timer
+      (run-with-idle-timer 0.03 t 'global-hl-line-timer-function))
+;; (cancel-timer global-hl-line-timer)
 
 ;; Highlight corresponding parens
 (show-paren-mode t)
@@ -52,8 +60,8 @@
 (setq recentf-max-saved-items 10000)
 
 ;; Transparency settings
-(if window-system
-    (set-frame-parameter nil 'alpha 95))
+;; (if window-system
+;;     (set-frame-parameter nil 'alpha 95))
 
 ;; Ignore case on completion
 (setq completion-ignore-case t)
