@@ -1,1 +1,35 @@
+"----------------------------------------
+" General Settings
+"----------------------------------------
+set nocompatible
 syntax on
+
+"----------------------------------------
+" Search Settings
+"----------------------------------------
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+"----------------------------------------
+" Editor Settings
+"----------------------------------------
+set infercase
+set hidden
+set switchbuf=useopen
+set showmatch
+set matchtime=1
+set matchpairs& matchpairs+=<:>
+set backspace=indent,eol,start
+
+"----------------------------------------
+" Display Settings
+"----------------------------------------
+set list
+set wrap
+set textwidth=0
+set noerrorbells
+set novisualbell
+set t_vb=
+set display=lastline
