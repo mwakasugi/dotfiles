@@ -35,11 +35,25 @@ set t_vb=
 set display=lastline
 
 "----------------------------------------
+" leader
+"----------------------------------------
+let mapleader = "\<Space>"
+
+"----------------------------------------
 " vim-plug
 "----------------------------------------
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/neomru.vim', { 'on':  ['Unite'] } | Plug 'shougo/unite.vim', { 'on': ['Unite'] }
 
 call plug#end()
+
+"----------------------------------------
+" unite.vim
+"----------------------------------------
+nnoremap <silent> <Leader>fr :<C-u>Unite<Space>file_mru<CR>
+
+let g:unite_enable_start_insert = 1
