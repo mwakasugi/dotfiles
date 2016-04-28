@@ -113,3 +113,12 @@ if [ -d ${HOME}/.nvm ] ; then
   export NVM_DIR="${HOME}/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
+
+# pyenv
+# it also added in .zshenv
+if [ -d ${HOME}/.pyenv ] ; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
+
