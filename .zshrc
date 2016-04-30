@@ -94,24 +94,8 @@ fi
 
 . ~/.zshlib/hlcopy
 
-# added by travis gem
-if [ -d ${HOME}/.travis/travis.sh ] ; then
-  source ${HOME}/.travis/travis.sh
-fi
+. ~/.zshlib/myanyenv
 
-# rbenv
-# it also added in .zshenv
-if [ -d ${HOME}/.rbenv ] ; then
-  PATH=${HOME}/.rbenv/bin:${PATH}
-  export PATH
-  eval "$(rbenv init -)"
-fi
-
-# pyenv
-# it also added in .zshenv
-if [ -d ${HOME}/.pyenv ] ; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
-
+rbenv-init
+# pyenv-init
+# travis-init
