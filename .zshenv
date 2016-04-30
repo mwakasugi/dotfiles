@@ -8,15 +8,7 @@ if type direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
-# rbenv
-if [ -d ${HOME}/.rbenv ] ; then
-  PATH=${HOME}/.rbenv/bin:${PATH}
-  export PATH
-  eval "$(rbenv init -)"
-fi
-
 # nvm
-# it also added in .zshenv
 if [ -d ${HOME}/.nvm ] ; then
   export NVM_DIR="${HOME}/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -32,13 +24,6 @@ fi
 #if hash virtualenvwrapper.sh 2> /dev/null; then
 #  source `which virtualenvwrapper.sh`
 #fi
-
-# pyenv
-if [ -d ${HOME}/.pyenv ] ; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
 
 # Go
 if [ ! -d $HOME/.go ] ; then
