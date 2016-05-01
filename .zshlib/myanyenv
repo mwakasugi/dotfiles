@@ -27,7 +27,6 @@ function direnv-init() {
   fi
 }
 
-
 function virtualenv-init() {
   if [ -d ${HOME}/.virtualenvs ] ; then
     export WORKON_HOME=$HOME/.virtualenvs

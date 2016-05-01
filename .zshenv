@@ -1,10 +1,3 @@
-. ~/.zshlib/myanyenv
-
-# nvm-init
-# virtualenv-init
-go-init
-direnv-init
-
 # PATH configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -21,3 +14,11 @@ export PATH=~/Laboratory/mybin:$PATH
 
 # composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
+
+# *env
+. ~/.zshlib/myanyenv
+
+# nvm-init
+# virtualenv-init
+go-init
+direnv-init
