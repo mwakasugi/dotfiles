@@ -81,6 +81,8 @@ alias emc="emacsclient"
 alias pfopen="open -a 'Path Finder'"
 alias termopen="open -a 'Terminal' ."
 alias ccat="pygmentize"
+alias ghl='cd $(ghq root)/$(ghq list | peco)'
+alias ghub='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 export EDITOR=vim
 export BUNDLER_EDITOR=vim

@@ -1,23 +1,23 @@
 #!/bin/sh
 
 cd $HOME
-ln -s Laboratory/dotfiles/.zshrc
-ln -s Laboratory/dotfiles/.zshlib
-ln -s Laboratory/dotfiles/.zshenv
-ln -s Laboratory/dotfiles/.vimrc
-ln -s Laboratory/dotfiles/.gvimrc
-ln -s Laboratory/dotfiles/.vim
-ln -s Laboratory/dotfiles/.emacs.d
-ln -s Laboratory/dotfiles/.gemrc
-ln -s Laboratory/dotfiles/.gitignore_global
-ln -s Laboratory/dotfiles/.pryrc
-ln -s Laboratory/dotfiles/.tigrc
-ln -s Laboratory/dotfiles/.rubocop.yml
-ln -s Laboratory/dotfiles/.tmux.conf
-ln -s Laboratory/dotfiles/.atom
-ln -s Laboratory/dotfiles/.spacemacs
+ln -s .ghq/github.com/5t111111/dotfiles/.zshrc
+ln -s .ghq/github.com/5t111111/dotfiles/.zshlib
+ln -s .ghq/github.com/5t111111/dotfiles/.zshenv
+# ln -s .ghq/github.com/5t111111/dotfiles/.vimrc
+# ln -s .ghq/github.com/5t111111/dotfiles/.gvimrc
+# ln -s .ghq/github.com/5t111111/dotfiles/.vim
+# ln -s .ghq/github.com/5t111111/dotfiles/.emacs.d
+ln -s .ghq/github.com/5t111111/dotfiles/.gemrc
+ln -s .ghq/github.com/5t111111/dotfiles/.gitignore_global
+ln -s .ghq/github.com/5t111111/dotfiles/.pryrc
+ln -s .ghq/github.com/5t111111/dotfiles/.tigrc
+ln -s .ghq/github.com/5t111111/dotfiles/.rubocop.yml
+ln -s .ghq/github.com/5t111111/dotfiles/.tmux.conf
+ln -s .ghq/github.com/5t111111/dotfiles/.atom
+ln -s .ghq/github.com/5t111111/dotfiles/.spacemacs
 
 # neovim
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-ln -s ~/.vim $XDG_CONFIG_HOME/nvim
-ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+# ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+# ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
