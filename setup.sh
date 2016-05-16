@@ -16,8 +16,9 @@ ln -s .ghq/github.com/5t111111/dotfiles/.rubocop.yml
 ln -s .ghq/github.com/5t111111/dotfiles/.tmux.conf
 ln -s .ghq/github.com/5t111111/dotfiles/.atom
 ln -s .ghq/github.com/5t111111/dotfiles/.spacemacs
+ln -s .ghq/github.com/5t111111/dotfiles/.jruby_art
 
 # neovim
-mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+# mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 # ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 # ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim

@@ -24,6 +24,7 @@
 !/.rubocop.yml
 !/.atom
 !/.spacemacs
+!/.jruby_art
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store

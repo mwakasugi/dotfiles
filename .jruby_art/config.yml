@@ -1,0 +1,5 @@
+# YAML configuration file for jruby_art
+# K9_HOME: "/home/ruby2.3.0 ... /jruby_art" #windows users may need to set this
+PROCESSING_ROOT: "/Applications/Processing.app/Contents/Java"
+# important sketch_book path may be different for processing-3.0
+sketchbook_path: "/Users/hirofumiwakasugi/Documents/Processing"
