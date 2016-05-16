@@ -99,5 +99,7 @@ fi
 . ~/.zshlib/myanyenv
 
 rbenv-init
-# pyenv-init
+pyenv-init
+nvm-init
+go-init
 # travis-init
