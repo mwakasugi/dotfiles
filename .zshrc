@@ -98,6 +98,8 @@ fi
 
 . ~/.zshlib/myanyenv
 
+. ~/.zshlib/iab
+
 rbenv-init
 pyenv-init
 nvm-init
