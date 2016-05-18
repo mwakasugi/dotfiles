@@ -9,6 +9,7 @@ ln -s .ghq/github.com/5t111111/dotfiles/.zshenv
 # ln -s .ghq/github.com/5t111111/dotfiles/.vim
 # ln -s .ghq/github.com/5t111111/dotfiles/.emacs.d
 ln -s .ghq/github.com/5t111111/dotfiles/.gemrc
+ln -s .ghq/github.com/5t111111/dotfiles/.gitconfig
 ln -s .ghq/github.com/5t111111/dotfiles/.gitignore_global
 ln -s .ghq/github.com/5t111111/dotfiles/.pryrc
 ln -s .ghq/github.com/5t111111/dotfiles/.tigrc
