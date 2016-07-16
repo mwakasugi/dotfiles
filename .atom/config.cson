@@ -1,5 +1,28 @@
 "*":
+  editor: {}
   "exception-reporting":
     userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
+  "git-projects":
+    rootPath: "/Users/hirofumiwakasugi/.ghq"
+  minimap:
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
   welcome:
     showOnStartup: false
