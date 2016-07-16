@@ -1,38 +1,5 @@
 "*":
-  "atom-material-ui":
-    fonts: {}
-    panels:
-      panelContrast: true
-    tabs:
-      showTabIcons: "Show on all tabs"
-      tabSize: "Small"
-    ui: {}
-  core:
-    themes: [
-      "atom-material-ui"
-      "atom-material-syntax"
-    ]
-  editor:
-    fontFamily: "Ricty Diminished"
-    fontSize: 16
-    invisibles: {}
-    showIndentGuide: true
-    showInvisibles: true
   "exception-reporting":
-    userId: "24a22743-3ade-0a31-d740-004d6a4e0199"
-  "git-plus": {}
-  linter: {}
-  minimap:
-    plugins:
-      bookmarks: true
-      "git-diff": true
-      "highlight-selected": true
-      "minimap-autohide": true
-      pigments: true
-  "recent-finder": {}
-  "symbols-tree-view": {}
-  "vim-mode":
-    useClipboardAsDefaultRegister: true
-    useSmartcaseForSearch: true
+    userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
   welcome:
     showOnStartup: false
