@@ -2,6 +2,7 @@
   core:
     packagesWithKeymapsDisabled: [
       "term3"
+      "git-blame"
     ]
   editor: {}
   "exception-reporting":
