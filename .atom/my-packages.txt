@@ -1,3 +1,5 @@
+rails-test-runner@0.1.2
+
 api-docs@0.0.5
 build@0.65.0
 busy@0.5.0
@@ -32,6 +34,7 @@ minimap-selection@4.4.0
 pdf-view@0.50.0
 pigments@0.31.1
 rails-snippets@2.7.0
+rails-test-runner@0.1.2
 rails-transporter@1.6.5
 regex-railroad-diagram@0.16.0
 script@3.8.2
