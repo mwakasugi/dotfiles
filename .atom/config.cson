@@ -4,6 +4,7 @@
     userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
   "git-projects":
     rootPath: "/Users/hirofumiwakasugi/.ghq"
+    showGitInfo: false
   minimap:
     plugins:
       bookmarks: true
