@@ -1,5 +1,6 @@
 rails-test-runner@0.1.2
 
+atom-ctags@4.5.2
 color-picker@2.2.2
 cursor-history@0.5.9
 file-icons@1.7.17
