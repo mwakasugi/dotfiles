@@ -34,6 +34,7 @@
     minitestAllCommand: "bin/rails test"
     minitestFileCommand: "bin/rails test {relative_path}"
     minitestSingleCommand: "bin/rails test {relative_path}:{line_number}"
+    shell: "zsh"
     specFramework: "minitest"
     testFramework: "minitest"
   "split-diff":

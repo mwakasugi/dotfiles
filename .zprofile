@@ -1,0 +1,3 @@
+. ~/.zshlib/myanyenv
+
+rbenv-init
