@@ -18,6 +18,7 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 # *env
 . ~/.zshlib/myanyenv
 
+rbenv-init
 # nvm-init
 # virtualenv-init
 go-init

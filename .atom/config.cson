@@ -30,6 +30,12 @@
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
+  "ruby-test":
+    minitestAllCommand: "bin/rails test"
+    minitestFileCommand: "bin/rails test {relative_path}"
+    minitestSingleCommand: "bin/rails test {relative_path}:{line_number}"
+    specFramework: "minitest"
+    testFramework: "minitest"
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
