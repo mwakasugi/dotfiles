@@ -1,5 +1,7 @@
 rails-test-runner@0.1.2
 
+activate-power-mode@0.7.0
+atom-beautify@0.29.10
 color-picker@2.2.2
 cursor-history@0.5.9
 file-icons@1.7.17
@@ -32,5 +34,6 @@ script@3.8.2
 sort-lines@0.14.0
 term3@0.22.1
 vim-mode-plus@0.47.0
+zentabs@0.8.7
 
 

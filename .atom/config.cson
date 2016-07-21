@@ -1,8 +1,19 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
+    particles: {}
+    screenShake: {}
+  "atom-beautify":
+    general:
+      analytics: false
   core:
+    disabledPackages: [
+      "metrics"
+    ]
     packagesWithKeymapsDisabled: [
       "term3"
       "git-blame"
+      "activate-power-mode"
     ]
   editor: {}
   "exception-reporting":
@@ -30,6 +41,8 @@
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
+  "recent-files-fuzzy-finder":
+    restoreSession: true
   "ruby-test":
     minitestAllCommand: "bin/rails test"
     minitestFileCommand: "bin/rails test {relative_path}"
@@ -47,3 +60,5 @@
     useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false
+  zentabs:
+    neverCloseUnsaved: true
