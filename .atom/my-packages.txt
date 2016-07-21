@@ -1,6 +1,5 @@
 rails-test-runner@0.1.2
 
-atom-ctags@4.5.2
 color-picker@2.2.2
 cursor-history@0.5.9
 file-icons@1.7.17
@@ -31,9 +30,7 @@ regex-railroad-diagram@0.16.0
 ruby-test@0.9.17
 script@3.8.2
 sort-lines@0.14.0
-symbols-tree-view@0.13.2
 term3@0.22.1
-test-status@1.0.0
 vim-mode-plus@0.47.0
 
 
