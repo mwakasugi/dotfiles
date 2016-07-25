@@ -13,7 +13,7 @@ set -g Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
 
-set fish_plugins theme peco rbenv z thefuck
+set fish_plugins theme peco rbenv z thefuck balias
 
 # set fish_theme fishface
 
@@ -32,17 +32,17 @@ function fish_user_key_bindings
   bind \cr peco_select_history # Bind for prco history to Ctrl+r
 end
 
-alias ghl peco_select_repository
+balias ghl peco_select_repository
 
 # Git aliases
-alias ga 'git add'
-alias gst 'git status'
-alias gb 'git branch'
-alias gco 'git checkout'
-alias gc 'git commit'
-alias gd 'git diff'
-alias gdt 'git difftool'
-alias gp 'git push'
-alias gp 'git push'
-alias gclean 'git clean -fd'
-alias gl 'git pull'
+balias ga 'git add'
+balias gst 'git status'
+balias gb 'git branch'
+balias gco 'git checkout'
+balias gc 'git commit'
+balias gd 'git diff'
+balias gdt 'git difftool'
+balias gp 'git push'
+balias gp 'git push'
+balias gclean 'git clean -fd'
+balias gl 'git pull'
