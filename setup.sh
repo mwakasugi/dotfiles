@@ -22,6 +22,9 @@ ln -s .ghq/github.com/5t111111/dotfiles/.atom
 ln -s .ghq/github.com/5t111111/dotfiles/.spacemacs
 ln -s .ghq/github.com/5t111111/dotfiles/.jruby_art
 
+mkdir -p .config
+ln -s ~/.ghq/github.com/5t111111/dotfiles/fish .config
+
 # neovim
 # mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 # ln -s ~/.vim $XDG_CONFIG_HOME/nvim
