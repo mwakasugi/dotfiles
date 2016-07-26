@@ -15,6 +15,10 @@
       "git-blame"
       "activate-power-mode"
     ]
+    themes: [
+      "one-dark-ui"
+      "vanian-theme"
+    ]
   editor: {}
   "exception-reporting":
     userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
@@ -41,6 +45,8 @@
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
+  "open-recent":
+    maxRecentFiles: 20
   "recent-files-fuzzy-finder":
     restoreSession: true
   "ruby-test":
