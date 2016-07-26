@@ -46,3 +46,7 @@ balias gdt 'git difftool'
 balias gp 'git push'
 balias gclean 'git clean -fd'
 balias gl 'git pull'
+
+# direnv
+eval (direnv hook fish)
+
