@@ -22,7 +22,7 @@ function peco_select_repository
   ghq list -p | peco --layout=bottom-up | read line
 
   if [ $line ]
-    commandline $line
+    builtin cd $line
   else
     commandline ''
   end
@@ -49,4 +49,3 @@ balias gl 'git pull'
 
 # direnv
 eval (direnv hook fish)
-
