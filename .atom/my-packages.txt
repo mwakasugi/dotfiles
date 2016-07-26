@@ -1,6 +1,5 @@
-rails-test-runner@0.1.2
+language-minitest@0.2.0
 
-activate-power-mode@0.7.0
 atom-beautify@0.29.10
 color-picker@2.2.2
 cursor-history@0.5.9
@@ -9,7 +8,7 @@ git-blame@0.4.8
 git-plus@5.16.2
 git-projects@1.17.0
 git-time-machine@1.5.3
-highlight-selected@0.11.2
+language-minitest@0.2.0
 language-slim@0.5.0
 linter@1.11.14
 linter-flake8@1.13.2
@@ -19,18 +18,13 @@ linter-slim@1.0.0
 merge-conflicts@1.4.4
 minimap@4.24.7
 minimap-autohide@0.10.1
-minimap-cursorline@0.2.0
-minimap-find-and-replace@4.5.1
 minimap-git-diff@4.3.1
-minimap-highlight-selected@4.4.0
 minimap-linter@1.1.1
-minimap-selection@4.4.0
 pigments@0.31.2
-rails-test-runner@0.1.3
 rails-transporter@1.6.5
 regex-railroad-diagram@0.16.0
 ruby-test@0.9.17
-script@3.8.2
+script@3.8.3
 sort-lines@0.14.0
 term3@0.22.1
 vim-mode-plus@0.47.0
