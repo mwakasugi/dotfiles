@@ -13,7 +13,7 @@ set -g Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
 
-set fish_plugins theme peco rbenv z thefuck balias
+set fish_plugins theme peco rbenv z thefuck balias direnv
 
 # set fish_theme fishface
 
@@ -36,6 +36,8 @@ function fish_user_key_bindings
   bind \cr peco_select_history # Bind for prco history to Ctrl+r
 end
 
+set -g fish_prompt_pwd_dir_length 3
+
 balias ghl peco_select_repository
 
 # Git aliases
@@ -50,6 +52,3 @@ balias gdt 'git difftool'
 balias gp 'git push'
 balias gclean 'git clean -fd'
 balias gl 'git pull'
-
-# direnv
-eval (direnv hook fish)
