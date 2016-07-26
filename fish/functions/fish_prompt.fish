@@ -25,18 +25,18 @@ function fish_prompt
   set -l directory_color  (set_color $fish_color_quote ^/dev/null; or set_color brown)
   set -l repository_color (set_color $fish_color_cwd ^/dev/null; or set_color green)
 
-  set -l emojis
-  set -l emojis $emojis 🐠
-  set -l emojis $emojis 🐟
-  set -l emojis $emojis 🐟
-  set -l emojis $emojis 🐡
-  set -l emojis $emojis 🐬
-  set -l emojis $emojis 🐳
-  set -l emojis $emojis 🐋
-  set -l emojis $emojis 🦀
+  set -l fishes
+  set -l fishes $fishes 🐠
+  set -l fishes $fishes 🐟
+  set -l fishes $fishes 🐟
+  set -l fishes $fishes 🐡
+  set -l fishes $fishes 🐬
+  set -l fishes $fishes 🐳
+  set -l fishes $fishes 🐋
+  set -l fishes $fishes 🦀
 
-  set -l index (math (math (random)%(count $emojis))+1)
-  set -l fish $emojis[$index]
+  set -l index (math (math (random)%(count $fishes))+1)
+  set -l fish $fishes[$index]
 
   if test $last_command_status -eq 0
     echo -n -s $success_color $fish $normal_color " "
