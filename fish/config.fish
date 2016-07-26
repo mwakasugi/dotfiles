@@ -28,6 +28,10 @@ function peco_select_repository
   end
 end
 
+# Remove right prompt from omf default theme
+function fish_right_prompt
+end
+
 function fish_user_key_bindings
   bind \cr peco_select_history # Bind for prco history to Ctrl+r
 end
