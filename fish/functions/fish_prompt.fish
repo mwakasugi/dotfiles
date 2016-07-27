@@ -33,7 +33,6 @@ function fish_prompt
   set -l fishes $fishes 🐬
   set -l fishes $fishes 🐳
   set -l fishes $fishes 🐋
-  set -l fishes $fishes 🐋
   set -l fishes $fishes 🦀
   set -l fishes $fishes 🐙
   set -l fishes $fishes 🐢

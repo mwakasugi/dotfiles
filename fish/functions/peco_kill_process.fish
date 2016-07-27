@@ -3,6 +3,7 @@ function peco_kill_process
 
   if [ $line ]
     command kill $line
+    echo $line is killed 
   else
     commandline ''
   end
