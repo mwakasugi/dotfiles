@@ -11,9 +11,13 @@
 	status = auto
 	branch = auto
 [alias]
-  	pbcopy = !printf "$1" | pbcopy
+  pbcopy = !printf "$1" | pbcopy
+[log]
+  date = iso
+[fetch]
+  prune = true
 [push]
-	default = current
+	default = simple
 [diff]
 	tool = Kaleidoscope
 [merge]

@@ -33,7 +33,10 @@ function fish_prompt
   set -l fishes $fishes 🐬
   set -l fishes $fishes 🐳
   set -l fishes $fishes 🐋
+  set -l fishes $fishes 🐋
   set -l fishes $fishes 🦀
+  set -l fishes $fishes 🐙
+  set -l fishes $fishes 🐢
 
   set -l index (math (math (random)%(count $fishes))+1)
   set -l fish $fishes[$index]
