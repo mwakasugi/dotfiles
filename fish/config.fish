@@ -54,5 +54,5 @@ balias gst 'git status'
 
 # Go
 set -x GOPATH $HOME/.go
-set -U PATH ~/usr/local/opt/go/libexec/bin $PATH
-set -U PATH $GOPATH/bin $PATH
+set -x PATH /usr/local/opt/go/libexec/bin $PATH
+set -x PATH $GOPATH/bin $PATH
