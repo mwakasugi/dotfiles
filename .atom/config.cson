@@ -20,7 +20,8 @@
       "vanian-theme"
     ]
   editor:
-    fontFamily: "\"源ノ角ゴシック Code JP"
+    fontFamily: "\"Source Han Code JP\""
+    fontSize: 13
   "exception-reporting":
     userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
   "git-projects":
