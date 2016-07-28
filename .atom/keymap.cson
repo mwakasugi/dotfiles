@@ -38,3 +38,4 @@
   'ctrl-cmd-o': 'cursor-history:prev-within-editor'
   'cmd-F':      'project-find:toggle'
   'cmd-f':      'find-and-replace:toggle'
+  'ctrl-[':     'core:cancel'

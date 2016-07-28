@@ -16,8 +16,8 @@
       "activate-power-mode"
     ]
     themes: [
-      "one-dark-ui"
-      "vanian-theme"
+      "vanian-ui"
+      "vanian-syntax"
     ]
   editor:
     fontFamily: "\"Source Han Code JP\""
