@@ -23,6 +23,9 @@ set fish_plugins theme peco rbenv z thefuck balias direnv
 
 # Aliases
 # ------------------------------------------------------------------------------
+# Basic
+balias lla 'ls -la'
+
 # functions
 balias pk peco_kill_process
 balias f peco_find
@@ -45,3 +48,11 @@ balias gr 'git rebase'
 balias gri 'git rebase -i'
 balias grim 'git rebase -i origin/master'
 balias gst 'git status'
+
+# Language specific configuration
+# ------------------------------------------------------------------------------
+
+# Go
+set -x GOPATH $HOME/.go
+set -U PATH ~/usr/local/opt/go/libexec/bin $PATH
+set -U PATH $GOPATH/bin $PATH
