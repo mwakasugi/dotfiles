@@ -3,6 +3,7 @@ function peco_select_repository
 
   if [ $line ]
     builtin cd $line
+    commandline -f repaint
   else
     commandline ''
   end
