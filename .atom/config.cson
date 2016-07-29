@@ -6,6 +6,9 @@
   "atom-beautify":
     general:
       analytics: false
+    json:
+      indent_size: 2
+      unescape_strings: true
   core:
     disabledPackages: [
       "metrics"
