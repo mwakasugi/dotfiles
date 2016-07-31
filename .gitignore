@@ -28,6 +28,7 @@
 !/.spacemacs
 !/.jruby_art
 !/fish
+!/powerline
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
