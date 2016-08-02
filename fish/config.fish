@@ -51,6 +51,9 @@ balias gri 'git rebase -i'
 balias grim 'git rebase -i origin/master'
 balias gst 'git status'
 
+# wrap tmux to avoid issues with environment loading
+alias tmux "direnv exec / tmux"
+
 # Language specific configuration
 # ------------------------------------------------------------------------------
 
