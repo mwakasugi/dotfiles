@@ -13,6 +13,7 @@ set -q XDG_DATA_HOME
 set -g fish_prompt_pwd_dir_length 3
 set -g fish_greeting ""
 set -g Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
+set -gx EDITOR vim
 
 # Initialize oh-my-fish
 # ------------------------------------------------------------------------------
