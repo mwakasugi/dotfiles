@@ -67,7 +67,9 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
-  "tidy-markdown": {}
+  "tidy-markdown":
+    ensureFirstHeaderIsH1: false
+    runOnSave: false
   "vim-mode-plus":
     useClipboardAsDefaultRegister: true
   welcome:

@@ -1,21 +1,31 @@
-language-minitest@0.2.2
+dict-en2ja@3.1.0
+language-minitest@0.2.3
+rails-transporter@1.6.5
+vanian-syntax@1.2.17
+vanian-ui@1.5.4
 
 atom-beautify@0.29.10
+autocomplete-swift@1.0.2
 color-picker@2.2.2
-cursor-history@0.5.9
-file-icons@1.7.17
-git-blame@0.4.8
+cursor-history@0.6.1
+dict-en2ja@3.1.0
+dracula-theme@1.2.8
+dracula-ui@0.3.0
+file-icons@1.7.18
+git-blame@0.4.11
 git-plus@5.16.2
 git-projects@1.17.0
 git-time-machine@1.5.3
-language-fish-shell@1.0.4
-language-minitest@0.2.2
+language-fish-shell@1.0.5
+language-minitest@0.2.3
 language-slim@0.5.0
-linter@1.11.14
+language-swift@0.4.0
+linter@1.11.15
 linter-flake8@1.13.2
 linter-rubocop@0.4.7
-linter-sass-lint@1.6.1
+linter-sass-lint@1.7.0
 linter-slim@1.0.0
+linter-swiftlint@1.1.0
 merge-conflicts@1.4.4
 minimap@4.24.7
 minimap-autohide@0.10.1
@@ -28,9 +38,12 @@ regex-railroad-diagram@0.16.0
 ruby-test@0.9.17
 script@3.8.3
 sort-lines@0.14.0
+swift-debugger@0.1.2
 term3@0.22.1
-vanian-theme@1.2.12
-vim-mode-plus@0.49.0
+tidy-markdown@3.0.1
+vanian-syntax@1.2.17
+vanian-ui@1.5.4
+vim-mode-plus@0.50.0
 zentabs@0.8.7
 
 
