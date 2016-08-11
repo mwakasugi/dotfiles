@@ -9,8 +9,6 @@ autocomplete-swift@1.0.2
 color-picker@2.2.2
 cursor-history@0.6.1
 dict-en2ja@3.1.0
-dracula-theme@1.2.8
-dracula-ui@0.3.0
 file-icons@1.7.18
 git-blame@0.4.11
 git-plus@5.16.2
@@ -20,7 +18,8 @@ language-fish-shell@1.0.5
 language-minitest@0.2.3
 language-slim@0.5.0
 language-swift@0.4.0
-linter@1.11.15
+linter@1.11.16
+linter-eslint@7.2.4
 linter-flake8@1.13.2
 linter-rubocop@0.4.7
 linter-sass-lint@1.7.0
@@ -31,7 +30,6 @@ minimap@4.24.7
 minimap-autohide@0.10.1
 minimap-git-diff@4.3.1
 minimap-linter@1.1.1
-open-recent@5.0.0
 pigments@0.31.2
 rails-transporter@1.6.5
 regex-railroad-diagram@0.16.0
@@ -44,6 +42,5 @@ tidy-markdown@3.0.1
 vanian-syntax@1.2.17
 vanian-ui@1.5.4
 vim-mode-plus@0.50.0
-zentabs@0.8.7
 
 
