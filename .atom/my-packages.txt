@@ -36,6 +36,7 @@ regex-railroad-diagram@0.16.0
 ruby-test@0.9.17
 script@3.8.3
 sort-lines@0.14.0
+split-diff@1.0.3
 swift-debugger@0.1.2
 term3@0.22.1
 tidy-markdown@3.0.1
