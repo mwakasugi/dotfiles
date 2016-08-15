@@ -30,6 +30,7 @@ balias lla 'ls -la'
 # functions
 balias pk peco_kill_process
 balias f peco_find
+balias gbco peco_git_checkout
 
 # Git aliases
 balias ga 'git add'
