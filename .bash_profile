@@ -37,8 +37,8 @@ export SCM_CHECK=true
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
-# Load additinal libraries
-source ${HOME}/.bash/functions/peco_select_repository.bash
+# Load additional functions
+source ${HOME}/.bash/functions/*
 
 # Editor
 export EDITOR='vim'
