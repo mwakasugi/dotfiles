@@ -37,5 +37,12 @@ export SCM_CHECK=true
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
+# Editor
+export EDITOR='vim'
+
 # Cuz on OS X, gd is going to open Textmate...
 alias gd='git diff'
+
+# Go
+export GOPATH=${HOME}/.go
+export PATH=${PATH}:${GOPATH}/bin
