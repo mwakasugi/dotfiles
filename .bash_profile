@@ -44,8 +44,10 @@ export EDITOR='vim'
 for f in ${HOME}/.bash/functions/*; do source $f; done
 
 # Keybindings
-bind -x '"\C-g": peco_select_repository'
-bind -x '"\eo": peco_git_checkout'
+bind -x '"\C-r": peco-select-history'
+bind -x '"\C-g": peco-select-repository'
+bind -x '"\eo": peco-git-checkout'
+bind -x '"\ek": peco-kill-process'
 
 # Aliases
 alias gd='git diff' # Cuz on OS X, gd is going to open Textmate...
