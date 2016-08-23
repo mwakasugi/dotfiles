@@ -74,11 +74,18 @@ done
 cat << EOS
 
 ================================================================================
-Installation completed
+Installation completed!
 
-*** Bash version must be 4 or later to use full feature! ***
+Please run "source ~/.bashrc" or re-enter bash session.
+
+* Bash version must be 4 or later to use full feature! *
+
+You are using the following version of bash.
+Please install 4 or later version of bash if not.
 ================================================================================
 
 EOS
+
+bash --version
 
 popd > /dev/null
