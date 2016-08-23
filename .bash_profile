@@ -37,14 +37,18 @@ export SCM_CHECK=true
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
-# Load additional functions
-source ${HOME}/.bash/functions/*
-
 # Editor
 export EDITOR='vim'
 
-# Cuz on OS X, gd is going to open Textmate...
-alias gd='git diff'
+# Load additional functions
+for f in ${HOME}/.bash/functions/*; do source $f; done
+
+# Keybindings
+bind -x '"\C-g": peco_select_repository'
+bind -x '"\eo": peco_git_checkout'
+
+# Aliases
+alias gd='git diff' # Cuz on OS X, gd is going to open Textmate...
 
 # Go
 export GOPATH=${HOME}/.go
