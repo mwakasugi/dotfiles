@@ -11,16 +11,19 @@ Installing bash-it
 EOS
 if [ ! -d ${HOME}/.bash_it ]; then
   git clone --depth=1 https://github.com/Bash-it/bash-it.git ${HOME}/.bash_it
-  ${HOME}/.bash_it/install.sh
+  yes | ${HOME}/.bash_it/install.sh
 else
   echo "bash-it seems to be already installed ([${HOME}/.bash_it] already exists) ."
 fi
 
-rm ${HOME}/.bash_profile # Remove default .bash_profile installed by bash-it
+bash_it_files=(.bashrc .bash_profile .bashrc.bak .bash_profile.bak)
 
-if [ -f ${HOME}/.bash_profile.bak ]; then
-  rm ${HOME}/.bash_profile.bak # Remove .bash_profile backup created by bash-it
-fi
+for i in "${bash_it_files[@]}"; do
+  if [ -f ${HOME}/${i} ]; then
+    # Remove files created by bash-it
+    rm ${HOME}/${i}
+  fi
+done
 
 cat << EOS
 
