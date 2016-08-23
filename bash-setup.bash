@@ -36,6 +36,7 @@ files=(.bashrc .bash_profile .bash)
 for i in "${files[@]}"; do
   if [ ! -e ${HOME}/${i} ]; then
     ln -s ${script_path}/${i} ${HOME}/${i}
+    echo "Symlink [${HOME}/${i}] is created."
   else
     echo "Failed to set symlink [${i}] because [${HOME}/${i}] already exists."
   fi
