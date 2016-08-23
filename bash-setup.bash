@@ -62,7 +62,7 @@ done
 
 echo '---------- bash-it plugins ----------'
 bash-it disable plugin all
-plugins_to_enable=(alias-completion base pyenv rbenv z)
+plugins_to_enable=(alias-completion base rbenv z)
 for i in "${plugins_to_enable[@]}"; do
   bash-it enable plugin $i
 done

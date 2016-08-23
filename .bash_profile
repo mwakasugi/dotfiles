@@ -5,7 +5,7 @@ export BASH_IT="${HOME}/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='bobby'
+# export BASH_IT_THEME='bobby'
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
@@ -42,6 +42,9 @@ export EDITOR='vim'
 
 # Load additional functions
 for f in ${HOME}/.bash/functions/*; do source $f; done
+
+# Load custom theme
+source ${HOME}/.bash/themes/itchy.theme.bash
 
 # Keybindings
 bind -x '"\C-r": peco-select-history'
