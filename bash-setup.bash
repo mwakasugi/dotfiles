@@ -47,7 +47,7 @@ cat << EOS
 Configuring bash-it
 ================================================================================
 EOS
-source ${HOME}/.bash_profile
+source ${HOME}/.bash_profile >/dev/null 2>&1
 
 echo '---------- bash-it aliases ----------'
 bash-it disable alias all
