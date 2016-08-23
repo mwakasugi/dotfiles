@@ -1,5 +1,5 @@
 function peco_git_checkout
-  git branch -a | peco --layout=bottom-up | tr -d ' ' | read branch
+  git branch -a | peco --layout=bottom-up --prompt "BRANCH>" | tr -d ' ' | read branch
 
   if [ $branch ]
     if echo $branch | grep -q -E '^.*remotes/.*$'
