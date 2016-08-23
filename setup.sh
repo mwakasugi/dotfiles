@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
 cd $HOME
-ln -s .ghq/github.com/5t111111/dotfiles/.bashrc
-ln -s .ghq/github.com/5t111111/dotfiles/.bash_profile
-ln -s .ghq/github.com/5t111111/dotfiles/.bash
 ln -s .ghq/github.com/5t111111/dotfiles/.zshrc
 ln -s .ghq/github.com/5t111111/dotfiles/.zshlib
 ln -s .ghq/github.com/5t111111/dotfiles/.zshenv
@@ -35,20 +32,3 @@ ln -s ~/.ghq/github.com/5t111111/dotfiles/powerline ${XDG_CONFIG_HOME}/powerline
 # neovim
 # ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 # ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
-
-# bash-it configuration
-if [ ! -d ${HOME}/.bash_it ] ; then
-  git clone --depth=1 https://github.com/Bash-it/bash-it.git ${HOME}/.bash_it
-  ${HOME}/.bash_it/install.sh
-
-  source ${HOME}/.bash_profile
-
-  bash-it enable alias bundler
-  bash-it enable alias fuck
-  bash-it enable alias git
-
-  bash-it enable completion bundler
-  bash-it enable completion git
-
-  bash-it enable plugin z
-fi

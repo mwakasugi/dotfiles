@@ -4,6 +4,7 @@
 # git管理するやつ
 !/README.md
 !/setup.sh
+!/bash-setup.bash
 !/.gitconfig
 !/.gitignore
 !/.bashrc
