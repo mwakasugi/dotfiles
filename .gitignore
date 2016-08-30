@@ -31,6 +31,7 @@
 !/fish
 !/powerline
 !/.bash
+!/.scss-lint.yml
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store
