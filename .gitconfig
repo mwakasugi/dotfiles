@@ -35,3 +35,5 @@
 	root = ~/.ghq
 [tig "bind"]
 	main = C !@git pbcopy %(commit)
+[rebase]
+	autostash = true
