@@ -15,6 +15,7 @@ ln -s .ghq/github.com/5t111111/dotfiles/.gitignore_global
 ln -s .ghq/github.com/5t111111/dotfiles/.pryrc
 ln -s .ghq/github.com/5t111111/dotfiles/.tigrc
 ln -s .ghq/github.com/5t111111/dotfiles/.rubocop.yml
+ln -s .ghq/github.com/5t111111/dotfiles/.scss-lint.yml
 ln -s .ghq/github.com/5t111111/dotfiles/.tmux.conf
 ln -s .ghq/github.com/5t111111/dotfiles/.atom
 ln -s .ghq/github.com/5t111111/dotfiles/.spacemacs
