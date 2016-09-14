@@ -11,11 +11,12 @@
 	status = auto
 	branch = auto
 [alias]
-  pbcopy = !printf "$1" | pbcopy
+	pbcopy = !printf "$1" | pbcopy
+	delete-merged-branches = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
 [log]
-  date = iso
+	date = iso
 [fetch]
-  prune = true
+	prune = true
 [push]
 	default = simple
 [diff]
