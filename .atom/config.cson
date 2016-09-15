@@ -75,6 +75,8 @@
   "tidy-markdown":
     ensureFirstHeaderIsH1: false
     runOnSave: false
+  try:
+    root: "/tmp/try"
   "vim-mode-plus":
     useClipboardAsDefaultRegister: true
   welcome:
