@@ -13,3 +13,5 @@ blob-store
 git-time-machine
 split-diff
 test-status.cson
+
+my-packages-tmp.txt

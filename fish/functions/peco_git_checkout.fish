@@ -3,7 +3,7 @@ function peco_git_checkout
 
   if [ $branch ]
     if echo $branch | grep -q -E '^.*remotes/.*$'
-      set -l b (echo $branch | awk -F'/' '{print $3}')
+      set -l b (echo $branch | sed -e 's/^\([^\/]*\)\/\([^\/]*\)\///g')
       command git checkout -b $b $branch
       commandline -f repaint
     else
