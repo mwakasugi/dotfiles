@@ -43,7 +43,7 @@ function fish_prompt
   if test $last_command_status -eq 0
     echo -n -s $success_color $fish $normal_color " "
   else
-    echo -n -s $error_color 😇 $normal_color " "
+    echo -n -s $error_color 👿 $normal_color " "
   end
 
   if git_is_repo
