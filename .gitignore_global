@@ -9,3 +9,4 @@ GRTAGS
 GTAGS
 .envrc
 tags
+venv/
