@@ -26,6 +26,7 @@ set fish_plugins theme peco rbenv z thefuck balias direnv
 # ------------------------------------------------------------------------------
 # Basic
 balias lla 'ls -la'
+balias hm 'history --merge'
 
 # functions
 balias pk peco_kill_process
