@@ -22,6 +22,10 @@ source $OMF_PATH/init.fish
 
 set fish_plugins theme peco rbenv z thefuck balias direnv
 
+# Colors
+# ------------------------------------------------------------------------------
+set fish_color_command cyan
+
 # Aliases
 # ------------------------------------------------------------------------------
 # Basic
