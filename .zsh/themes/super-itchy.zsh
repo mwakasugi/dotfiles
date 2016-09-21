@@ -23,8 +23,16 @@ function _git_prompt_info() {
   git_prompt_info="${git_prompt}"
 }
 
+function _rbenv_prompt_info() {
+  rbenv_prompt_info="(ruby: $(rbenv version-name))"
+}
+
 add-zsh-hook precmd _git_prompt_info
-add-zsh-hook chpwd _git_prompt_info # For changing directory via peco-select-repository
+add-zsh-hook precmd _rbenv_prompt_info
+
+# For changing directory via peco-select-repository
+add-zsh-hook chpwd _git_prompt_info
+add-zsh-hook chpwd _rbenv_prompt_info
 
 () {
   local user='%{%F{cyan}%}%n%{%f%}'
@@ -35,5 +43,5 @@ add-zsh-hook chpwd _git_prompt_info # For changing directory via peco-select-rep
   local git='$git_prompt_info'
   local nl=$'\n'
   PROMPT="${user} (${via}${host}) ${dir} ${git}${nl}${smiley}  "
-  RPROMPT="(ruby: $(rbenv version-name))"
+  RPROMPT='${rbenv_prompt_info}'
 }
