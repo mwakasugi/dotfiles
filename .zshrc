@@ -32,8 +32,31 @@ setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
 setopt hist_save_no_dups
-autoload -Uz history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
+
+alias ll='ls -la'
+
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gclean='git clean -fd'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias gdt='git difftool'
+alias gf='git fetch'
+alias gl='git pull'
+alias glog='git log --oneline --decorate --graph'
+alias gp='git push'
+alias gr='git rebase'
+alias gri='git rebase -i'
+alias grim='git rebase -i origin/master'
+alias gst='git status'
+
+() {
+  if type rbenv >/dev/null 2>&1; then
+    PATH=${HOME}/.rbenv/bin:${PATH}
+    export PATH
+    eval "$(rbenv init -)"
+  fi
+}
