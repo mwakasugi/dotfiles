@@ -1,0 +1,6 @@
+# vim: ft=zsh
+
+function peco-select-history() {
+  BUFFER=$(history -n -r 1 | peco --layout=bottom-up --prompt "HISTORY>")
+  CURSOR=$#BUFFER
+}

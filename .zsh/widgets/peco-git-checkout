@@ -1,0 +1,21 @@
+# vim: ft=zsh
+
+function peco-git-checkout() {
+  local line=$(git branch -a | peco --layout=bottom-up --prompt "BRANCH>" | tr -d ' ')
+
+  if [ -n "${line}" ]; then
+    echo "${line}" | grep -q -E '^.*remotes/.*$'
+    local ret=$?
+
+    if [ $ret -eq 0 ]; then
+      local branch=$(echo "${line}" | sed -e 's/^\([^\/]*\)\/\([^\/]*\)\///g')
+      BUFFER="git checkout -b ${branch} ${line}"
+    else
+      BUFFER="git checkout ${line}"
+    fi
+
+    CURSOR=$#BUFFER
+  fi
+
+  zle reset-prompt
+}

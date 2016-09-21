@@ -1,4 +1,4 @@
-autoload -Uz add-zsh-hook
+autoload -U add-zsh-hook
 setopt prompt_subst
 
 function _git_prompt_info() {
@@ -24,6 +24,7 @@ function _git_prompt_info() {
 }
 
 add-zsh-hook precmd _git_prompt_info
+add-zsh-hook chpwd _git_prompt_info # For changing directory via peco-select-repository
 
 () {
   local user='%{%F{cyan}%}%n%{%f%}'
