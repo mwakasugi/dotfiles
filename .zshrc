@@ -60,3 +60,5 @@ alias gst='git status'
     eval "$(rbenv init -)"
   fi
 }
+
+eval "$(direnv hook zsh)"
