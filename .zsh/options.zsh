@@ -67,3 +67,47 @@
 # setopt shglob               # SH_GLOB
 # unsetopt unset              # UNSET
 # setopt warncreateglobal     # WARN_CREATE_GLOBAL
+
+# ==============================================================================
+# History
+# ==============================================================================
+# unsetopt appendhistory # APPEND_HISTORY
+# unsetopt banghist # BANG_HIST
+# setopt extendedhistory # EXTENDED_HISTORY
+# setopt histallowclobber # HIST_ALLOW_CLOBBER
+# unsetopt histbeep # HIST_BEEP
+# setopt histexpiredupsfirst # HIST_EXPIRE_DUPS_FIRST
+# setopt histfcntllock #HIST_FCNTL_LOCK
+# setopt histfindnodups # HIST_FIND_NO_DUPS
+# setopt histignorealldups # HIST_IGNORE_ALL_DUPS
+# 直前のコマンドと同じコマンドはヒストリに保存しない
+# set -o HIST_IGNORE_DUPS
+# 行頭がスペースのコマンドはヒストリに保存しない
+# set -o HIST_IGNORE_SPACE
+# ヒストリファイルの形式を変更する
+#set -o HIST_LEX_WORDS
+# ヒストリから関数定義を除去する
+# set -o HIST_NO_FUNCTIONS
+# ヒストリコマンドをヒストリから取り除く
+# set -o HIST_NO_STORE
+# ヒストリ保存時に余分な空白を除去する
+# set -o HIST_REDUCE_BLANKS
+# ヒストリを一旦コピーファイルに保存しない
+#set +o HIST_SAVE_BY_COPY
+# ヒストリファイルに書き出すときに以前のコマンドと同じものを除去する
+# set -o HIST_SAVE_NO_DUPS
+# ヒストリコマンドを直接実行しない
+#set -o HIST_VERIFY
+# ヒストリをヒストリファイルに即座に書き込む
+# set -o INC_APPEND_HISTORY
+# ヒストリ書き込み時間をヒストリファイルに追加する
+#set -o INC_APPEND_HISTORY_TIME
+# ヒストリの読み出しと書き込みを同時に行う
+# set -o SHARE_HISTORY
+
+
+
+
+
+
+
