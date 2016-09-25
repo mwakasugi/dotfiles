@@ -75,3 +75,4 @@ alias gst='git status'
 eval "$(direnv hook zsh)"
 
 eval "$(thefuck --alias)"
+export PATH="/usr/local/sbin:$PATH"
