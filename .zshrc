@@ -56,14 +56,6 @@ alias grim='git rebase -i origin/master'
 alias gst='git status'
 
 () {
-  if type rbenv >/dev/null 2>&1; then
-    PATH=${HOME}/.rbenv/bin:${PATH}
-    export PATH
-    eval "$(rbenv init -)"
-  fi
-}
-
-() {
   if type pyenv >/dev/null 2>&1; then
     export PYENV_ROOT="${HOME}/.pyenv"
     export PATH="${PYENV_ROOT}/bin:${PATH}"
