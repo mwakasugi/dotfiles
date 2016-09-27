@@ -27,7 +27,7 @@ Installation completed!
 
 Please run "source ~/.zshrc" or re-enter zsh session.
 
-* With too old version of zsh, you cannnot use full feature! *
+* With too old version of zsh, you cannot use full feature! *
 
 You are using the following version of zsh:
 EOS
