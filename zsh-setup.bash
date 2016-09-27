@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/usr/bin/env bash
 
 pushd "$(dirname $0)" > /dev/null
 script_path="$(pwd -P)"
