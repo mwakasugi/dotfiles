@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 cd $HOME
-ln -s .ghq/github.com/5t111111/dotfiles/.zsh
-ln -s .ghq/github.com/5t111111/dotfiles/.zshrc
-ln -s .ghq/github.com/5t111111/dotfiles/.zshlib
-ln -s .ghq/github.com/5t111111/dotfiles/.zshenv
-ln -s .ghq/github.com/5t111111/dotfiles/.zprofile
+# ln -s .ghq/github.com/5t111111/dotfiles/.zsh
+# ln -s .ghq/github.com/5t111111/dotfiles/.zshrc
+# ln -s .ghq/github.com/5t111111/dotfiles/.zshlib
+# ln -s .ghq/github.com/5t111111/dotfiles/.zshenv
+# ln -s .ghq/github.com/5t111111/dotfiles/.zprofile
 # ln -s .ghq/github.com/5t111111/dotfiles/.vimrc
 # ln -s .ghq/github.com/5t111111/dotfiles/.gvimrc
 # ln -s .ghq/github.com/5t111111/dotfiles/.vim

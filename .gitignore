@@ -5,6 +5,7 @@
 !/README.md
 !/setup.sh
 !/bash-setup.bash
+!/zsh-setup.bash
 !/.gitconfig
 !/.gitignore
 !/.bashrc

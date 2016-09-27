@@ -38,7 +38,7 @@ for i in "${files[@]}"; do
     ln -s ${script_path}/${i} ${HOME}/${i}
     echo "Symlink [${HOME}/${i}] is created."
   else
-    echo "Failed to set symlink [${i}] because [${HOME}/${i}] already exists."
+    echo "Failed to create symlink [${i}] because [${HOME}/${i}] already exists."
   fi
 done
 
