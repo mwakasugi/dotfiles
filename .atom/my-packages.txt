@@ -1,9 +1,12 @@
 dict-en2ja@3.1.0
-vanian-syntax@1.2.15
-vanian-ui@1.5.1
+language-cucumber@0.0.1
+language-minitest@0.2.3
+rails-transporter@1.6.5
+vanian-syntax@1.2.17
+vanian-ui@1.5.4
 
 activate-power-mode@0.9.0
-atom-beautify@0.29.12
+atom-beautify@0.29.13
 autocomplete-swift@1.0.2
 color-picker@2.2.2
 cursor-history@0.6.1
@@ -24,7 +27,7 @@ language-swift@0.4.0
 linter@1.11.16
 linter-eslint@7.3.2
 linter-flake8@1.13.4
-linter-rubocop@0.4.7
+linter-rubocop@0.5.0
 linter-scss-lint@3.0.4
 linter-slim@1.0.0
 linter-swiftlint@1.1.0
@@ -35,13 +38,14 @@ minimap-find-and-replace@4.5.1
 minimap-git-diff@4.3.1
 minimap-highlight-selected@4.4.0
 minimap-linter@1.6.0
-pigments@0.35.0
+pigments@0.35.1
 rails-transporter@1.6.5
 regex-railroad-diagram@0.16.0
 ruby-test@0.9.17
 script@3.10.1
 sort-lines@0.14.0
 split-diff@1.0.4
+tablr@1.5.3
 term3@0.22.1
 tidy-markdown@3.0.1
 try@0.4.0
