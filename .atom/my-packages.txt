@@ -19,6 +19,7 @@ git-time-machine@1.5.3
 highlight-selected@0.11.2
 language-babel@2.42.0
 language-cucumber@0.0.1
+language-docker@1.1.7
 language-fish-shell@1.0.5
 language-haskell@1.9.9
 language-minitest@0.2.3
