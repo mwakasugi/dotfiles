@@ -83,3 +83,6 @@
     showOnStartup: false
   zentabs:
     neverCloseUnsaved: true
+".go.source":
+  editor:
+    tabLength: 4
