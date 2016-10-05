@@ -209,10 +209,10 @@
 # setopt histfindnodups
 
 # HIST_IGNORE_ALL_DUPS: If a new command line being added to the history list duplicates an older one, the older command is removed from the list.
-# unsetopt histignorealldups
+setopt histignorealldups
 
 # HIST_IGNORE_DUPS: Ignore duplicate command history list.
-# unsetopt histignoredups
+setopt histignoredups
 
 # HIST_IGNORE_SPACE: If the commandline starts with a whitespace, don't add it to history.
 # setopt histignorespace
@@ -233,7 +233,7 @@
 # unsetopt histsavebycopy
 
 # HIST_SAVE_NO_DUPS: Avoid duplicates on history saving.
-# unsetopt histsavenodups
+setopt histsavenodups
 
 # HIST_VERIFY: Don't execute the line directly from the history.
 # setopt histverify
@@ -245,7 +245,7 @@
 # setopt incappendhistorytime
 
 # SHARE_HISTORY: Share history file among all zsh sessions.
-# unsetopt sharehistory
+setopt sharehistory
 
 # ==============================================================================
 # Initialisation
