@@ -2,10 +2,10 @@
 # Changing Directories
 # ==============================================================================
 # AUTO_CD: Change directory if the command doesn't exist.
-# setopt autocd
+setopt autocd
 
 # AUTO_PUSHD: Make cd push the old directory onto the directory stack.
-# setopt autopushd
+setopt autopushd
 
 # CDABLE_VARS: Try to expand the expression as if it were preceded by a `~'.
 # setopt cdablevars
@@ -119,7 +119,7 @@
 # unsetopt equals
 
 # EXTENDED_GLOB: Treat the '#', '~' and '^' characters as part of patterns for filename generation, etc.
-# setopt extendedglob
+setopt extendedglob
 
 # FORCE_FLOAT: Constants in arithmetic evaluation will be treated as floating point.
 # setopt forcefloat
@@ -227,7 +227,7 @@ setopt histignoredups
 # setopt histnostore
 
 # HIST_REDUCE_BLANKS: Remove superfluous blanks from each command line being added to the history list.
-# setopt histreduceblanks
+setopt histreduceblanks
 
 # HIST_SAVE_BY_COPY: Don't create temporaly file to copy history.
 # unsetopt histsavebycopy
@@ -308,7 +308,7 @@ setopt sharehistory
 # setopt pathscript
 
 # PRINT_EIGHTBIT: Enable file names using 8 bits, important to rendering Japanese file names.
-# setopt printeightbit
+setopt printeightbit
 
 # PRINT_EXIT_VALUE: Print the exit value of programs with non-zero exit status.
 # setopt printexitvalue
