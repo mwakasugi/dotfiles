@@ -14,6 +14,7 @@ bindkey -e
 autoload -U compinit; compinit
 autoload -U colors; colors
 
+# Pre-load configurations
 () {
   local zsh_dir="${HOME}/.zsh"
 
@@ -22,8 +23,8 @@ autoload -U colors; colors
   source ${zsh_dir}/load-functions.zsh
   source ${zsh_dir}/load-widgets.zsh
   source ${zsh_dir}/key-bindings.zsh
+  source ${zsh_dir}/zplug.zsh
 }
-
 
 # 以下未整理だけどとりあえず設定しとかないとやってられないやつ
 
@@ -69,10 +70,6 @@ alias gri='git rebase -i'
 alias grim='git rebase -i origin/master'
 alias gst='git status'
 
-# zplug
-export ZPLUG_HOME="${HOME}/.zsh/.zplug"
-source ${ZPLUG_HOME}/init.zsh
-
 () {
   # if type pyenv >/dev/null 2>&1; then
     export PYENV_ROOT="${HOME}/.pyenv"
@@ -80,7 +77,6 @@ source ${ZPLUG_HOME}/init.zsh
     eval "$(pyenv init -)"
   # fi
 }
-
 
 eval "$(direnv hook zsh)"
 

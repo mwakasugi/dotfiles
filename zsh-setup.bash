@@ -39,6 +39,7 @@ cat << EOS
 Installation completed!
 
 Please run "source ~/.zshrc" or re-enter zsh session.
+(You also have to run "zplug install" to install plugins via zplug).
 
 * With too old version of zsh, you cannot use full feature! *
 
