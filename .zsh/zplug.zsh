@@ -36,6 +36,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # emoji-cli
 export EMOJI_CLI_KEYBIND='^v'
+export EMOJI_CLI_FILTER='peco --layout=bottom-up --prompt "EMOJI>"'
 
 # ==============================================================================
 # Load plugins
