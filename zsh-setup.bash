@@ -23,6 +23,19 @@ done
 cat << EOS
 
 ================================================================================
+Installing zplug
+================================================================================
+EOS
+zplug_home="${HOME}/.zsh/.zplug"
+if [ ! -d ${zplug_home} ]; then
+  git clone https://github.com/zplug/zplug ${zplug_home}
+else
+  echo ".zplug seems to be already installed ([${zplug_home}] already exists) ."
+fi
+
+cat << EOS
+
+================================================================================
 Installation completed!
 
 Please run "source ~/.zshrc" or re-enter zsh session.

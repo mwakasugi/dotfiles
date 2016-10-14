@@ -38,7 +38,7 @@ setopt autopushd
 # unsetopt alwayslastprompt
 
 # ALWAYS_TO_END: Move to end of word when completing.
-# setopt alwaystoend
+setopt alwaystoend
 
 # AUTO_LIST: Automatically list choices on an ambiguous completion.
 # unsetopt autolist
@@ -80,7 +80,7 @@ setopt autopushd
 # unsetopt listbeep
 
 # LIST_PACKED: Try to make the completion list smaller (occupying less lines) by printing the matches in columns with different widths.
-# setopt listpacked
+setopt listpacked
 
 # LIST_ROWS_FIRST: Move horizontally during completion.
 # setopt listrowsfirst
@@ -239,7 +239,7 @@ setopt histsavenodups
 # setopt histverify
 
 # INC_APPEND_HISTORY: New history lines are added to the $HISTFILE incrementally.
-# setopt incappendhistory
+setopt incappendhistory
 
 # INC_APPEND_HISTORY_TIME: The time taken by the command is recorded correctly in the history file in EXTENDED_HISTORY format.
 # setopt incappendhistorytime

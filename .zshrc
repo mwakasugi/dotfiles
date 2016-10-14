@@ -69,6 +69,10 @@ alias gri='git rebase -i'
 alias grim='git rebase -i origin/master'
 alias gst='git status'
 
+# zplug
+export ZPLUG_HOME="${HOME}/.zsh/.zplug"
+source ${ZPLUG_HOME}/init.zsh
+
 () {
   # if type pyenv >/dev/null 2>&1; then
     export PYENV_ROOT="${HOME}/.pyenv"
