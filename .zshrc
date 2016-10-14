@@ -52,6 +52,8 @@ select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
