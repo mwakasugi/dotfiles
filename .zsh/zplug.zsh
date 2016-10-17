@@ -7,9 +7,19 @@ source ${ZPLUG_HOME}/init.zsh
 # ==============================================================================
 # Plugins
 # ==============================================================================
+zplug "zplug/zplug"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
+
+# ==============================================================================
+# Load plugins
+# ==============================================================================
+if ! zplug check; then
+  zplug install
+fi
+
+zplug load --verbose
 
 # ==============================================================================
 # Plugin Configurations
@@ -33,7 +43,3 @@ bindkey -M emacs '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-# ==============================================================================
-# Load plugins
-# ==============================================================================
-zplug load --verbose
