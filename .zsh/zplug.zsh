@@ -11,6 +11,7 @@ zplug "zplug/zplug"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "b4b4r07/emoji-cli", nice:10
 
 # ==============================================================================
 # Load plugins
@@ -43,3 +44,6 @@ bindkey -M emacs '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+# emoji-cli
+export EMOJI_CLI_KEYBIND='^v'
+export EMOJI_CLI_FILTER='peco --layout=bottom-up --prompt "EMOJI>"'
