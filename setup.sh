@@ -15,18 +15,18 @@ ln -s .ghq/github.com/5t111111/dotfiles/.gitconfig
 ln -s .ghq/github.com/5t111111/dotfiles/.gitignore_global
 ln -s .ghq/github.com/5t111111/dotfiles/.pryrc
 ln -s .ghq/github.com/5t111111/dotfiles/.tigrc
-ln -s .ghq/github.com/5t111111/dotfiles/.rubocop.yml
-ln -s .ghq/github.com/5t111111/dotfiles/.scss-lint.yml
+# ln -s .ghq/github.com/5t111111/dotfiles/.rubocop.yml
+# ln -s .ghq/github.com/5t111111/dotfiles/.scss-lint.yml
 ln -s .ghq/github.com/5t111111/dotfiles/.tmux.conf
 ln -s .ghq/github.com/5t111111/dotfiles/.atom
-ln -s .ghq/github.com/5t111111/dotfiles/.spacemacs
-ln -s .ghq/github.com/5t111111/dotfiles/.jruby_art
+# ln -s .ghq/github.com/5t111111/dotfiles/.spacemacs
+# ln -s .ghq/github.com/5t111111/dotfiles/.jruby_art
 
 # XDG_CONFIG
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 
 # Fish
-ln -s ~/.ghq/github.com/5t111111/dotfiles/fish ${XDG_CONFIG_HOME}/fish
+# ln -s ~/.ghq/github.com/5t111111/dotfiles/fish ${XDG_CONFIG_HOME}/fish
 
 # Powerline
 ln -s ~/.ghq/github.com/5t111111/dotfiles/powerline ${XDG_CONFIG_HOME}/powerline
