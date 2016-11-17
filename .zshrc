@@ -47,10 +47,10 @@ esac
 
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
 autoload -Uz select-word-style
-select-word-style default
-zstyle ':zle:*' word-chars " /=;@:{},|"
-zstyle ':zle:*' word-style unspecified
+select-word-style bash
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
@@ -71,6 +71,7 @@ alias gr='git rebase'
 alias gri='git rebase -i'
 alias grim='git rebase -i origin/master'
 alias gst='git status'
+alias gwt='git worktree'
 
 # () {
 #   # if type pyenv >/dev/null 2>&1; then
