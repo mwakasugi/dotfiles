@@ -1,0 +1,30 @@
+# vim: ft=zsh
+
+function hlcopy() {
+  local language="$1"
+  local font_size="$2"
+  local font_size_option
+
+  if [ ! $+commands[pbpaste] ]; then
+    echo 'pbpaste: command is not installed'
+    return
+  fi
+
+  if [ ! $+commands[highlight] ]; then
+    echo 'highlight: command is not installed'
+    return
+  fi
+
+  if [ $# -eq 0 ]; then
+    echo 'ERROR: Language type must be specified.'
+    return
+  fi
+
+  if [ "${font_size}" != '' ]; then
+    font_size_option="-K ${font_size}"
+  else
+    font_size_option="-K 32"
+  fi
+
+  pbpaste | highlight -k 'Source Code Pro' "${font_size_option}" -S $1 -O rtf | pbcopy
+}
