@@ -1,7 +1,7 @@
 # vim: ft=zsh
 
 function peco-git-checkout() {
-  local line=$(git branch -a | peco --layout=bottom-up --prompt "BRANCH>" | tr -d ' ')
+  local line=$(git branch -a | peco --layout=bottom-up --prompt 'BRANCH>' | tr -d ' ')
 
   if [ -n "${line}" ]; then
     echo "${line}" | grep -q -E '^.*remotes/.*$'

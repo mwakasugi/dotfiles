@@ -1,0 +1,11 @@
+# vim: ft=zsh
+
+function peco-select-git-worktree() {
+  local line=$(gwt list | awk '{ print $1 }' | peco --layout=bottom-up --prompt 'WORKTREE>')
+
+  if [ -n "${line}" ]; then
+    BUFFER="cd ${line}"
+    zle accept-line
+  fi
+}
+

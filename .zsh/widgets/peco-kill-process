@@ -1,7 +1,7 @@
 # vim: ft=zsh
 
 function peco-kill-process() {
-  local pid=$(ps aux | peco --layout=bottom-up --prompt "PROCESS>" | awk '{ print $2 }')
+  local pid=$(ps aux | peco --layout=bottom-up --prompt 'PROCESS>' | awk '{ print $2 }')
 
   if [ -n ${pid} ]; then
     kill ${pid}

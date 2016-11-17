@@ -10,3 +10,4 @@ GTAGS
 .envrc
 tags
 venv/
+git-worktrees/*

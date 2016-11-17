@@ -72,6 +72,7 @@ alias gri='git rebase -i'
 alias grim='git rebase -i origin/master'
 alias gst='git status'
 alias gwt='git worktree'
+alias groot='cd "$(git rev-parse --show-toplevel)"'
 
 # () {
 #   # if type pyenv >/dev/null 2>&1; then

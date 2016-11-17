@@ -1,7 +1,7 @@
 # vim: ft=zsh
 
 function peco-select-repository() {
-  local line=$(ghq list -p | peco --layout=bottom-up --prompt "REPOSITORY>")
+  local line=$(ghq list -p | peco --layout=bottom-up --prompt 'REPOSITORY>')
 
   if [ -n "${line}" ]; then
     BUFFER="cd ${line}"
