@@ -133,6 +133,9 @@ setopt extendedglob
 # GLOB_DOTS: Don't require a leading '.' in a filename to be matched explicitly.
 # setopt globdots
 
+# When this option is set and the default zsh-style globbing is in effect, the pattern ‘**/*’ can be abbreviated to ‘**’ and the pattern ‘***/*’ can be abbreviated to ***.
+# setopt globstarshort
+
 # GLOB_SUBST: Use recursive glob expansion. (variable expansion)
 # setopt globsubst
 
@@ -287,7 +290,7 @@ setopt sharehistory
 # setopt ignoreeof
 
 # INTERACTIVE_COMMENTS: Allow comments even in interactive shells.
-# setopt nteractivecomments
+# setopt interactivecomments
 
 # HASH_CMDS: Subsequent invocations of the same command will use the saved location, avoiding a path search.
 # unsetopt hashcmds
@@ -331,3 +334,139 @@ setopt printeightbit
 # ==============================================================================
 # Job Control
 # ==============================================================================
+# Stopped jobs that are removed from the job table with the disown builtin command are automatically sent a CONT signal.
+# setopt autocontinue
+
+# Resume the command if the command is suspended.
+# setopt autoresume
+
+# Run all background jobs at a lower priority.
+# unsetopt bgnice
+
+# Report the status of background and suspended jobs before exiting a shell.
+# unsetopt checkjobs
+
+# Send the HUP signal to running jobs when the shell exits.
+# unsetopt hup
+
+# List jobs in the long format by default.
+# setopt longlistjobs
+
+# Allow job control.
+# setopt monitor
+
+# Report the status of background jobs immediately.
+# unsetopt notify
+
+# Make job control more POSIX compliant.
+# setopt posixjobs
+
+# ==============================================================================
+# Prompting
+# ==============================================================================
+# '!' is treated specially in prompt expansion.
+# setopt promptbang
+
+# Don't print a carriage return just before printing a prompt in the line editor.
+# unsetopt promptcr
+
+# The shell parameter PROMPTEOLMARK can be used to customize how the end of partial lines are shown.
+# unsetopt promptsp
+
+# '%' is treated specially in prompt expansion.
+# unsetopt promptpercent
+
+# Expand parameters in the prompt.
+# unsetopt promptsubst
+
+# Remove any right prompt from display when accepting a command line.
+# setopt transientrprompt
+
+# ==============================================================================
+# Scripts and Functions
+# * Basically you MUST NOT modify this options
+# ==============================================================================
+# setopt cbases
+# setopt cprecedences
+# setopt debugbeforecmd
+# setopt errexit
+# setopt errreturn
+# unsetopt evallineno
+# unsetopt exec
+# unsetopt functionargzero
+# setopt localloops
+# setopt localoptions
+# setopt localpatterns
+# setopt localtraps
+# unsetopt multifuncdef
+# unsetopt multios
+# setopt octalzeroes
+# setopt pipefail
+# setopt sourcetrace
+# setopt typesetsilent
+# setopt verbose
+# setopt xtrace
+
+# ==============================================================================
+# Shell Emulation
+# * Basically you MUST NOT modify this options
+# ==============================================================================
+# setopt appendcreate
+# setopt bashrematch
+# setopt bsdecho
+# setopt continueonerror
+# setopt cshjunkiehistory
+# setopt cshjunkieloops
+# setopt cshjunkiequotes
+# setopt cshnullcmd
+# setopt ksharrays
+# setopt kshautoload
+# setopt kshoptionprint
+# setopt kshtypeset
+# setopt kshzerosubscript
+# setopt posixaliases
+# setopt posixargzero
+# setopt posixbuiltins
+# setopt posixidentifiers
+# setopt posixstrings
+# setopt posixtraps
+# setopt shfileexpansion
+# setopt shnullcmd
+# setopt shoptionletters
+# setopt shwordsplit
+# setopt trapsasync
+
+# ==============================================================================
+# Shell State
+# * Basically you MUST NOT modify this options
+# ==============================================================================
+# setopt interactive
+# setopt login
+# setopt privileged
+# setopt restricted
+# setopt shinstdin
+# setopt singlecommand
+
+#-----------------------------------
+# Zle
+#-----------------------------------
+# Beep on error in ZLE
+# unsetopt beep
+
+# Assume that the terminal displays combining characters correctly.
+# setopt combiningchars
+
+# If ZLE is loaded, turning on this option has the equivalent effect of ‘bindkey -e’.
+# setopt emacs
+
+# Start up the line editor in overstrike mode.
+# setopt overstrike
+
+# Use single-line command line editing instead of multi-line.
+# setopt singlelinezle
+
+# If ZLE is loaded, turning on this option has the equivalent effect of ‘bindkey -v’.
+# setopt vi
+
+# Use the zsh line editor. Set by default in interactive shells connected to a terminal.
+# setopt zle

@@ -1,5 +1,11 @@
 # vim: ft=zsh
 
 function show-options() {
+  echo '------ Show current Zsh option settings ------'
   set -o | sed -e 's/^no\(.*\)on$/\1  off/' -e 's/^no\(.*\)off$/\1  on/'
+
+  #  Display if there are differences between built-in Zsh options and dotfiles' options.zsh
+  diff \
+  <(grep -E '^#? *(un)*setopt' "${HOME}/.zsh/options.zsh" | awk '{ sub(/^# ./, ""); print $2 }' | sort) \
+  <(set -o | sed -e 's/^no\(.*\)on$/\1  off/' -e 's/^no\(.*\)off$/\1  on/' | sort | awk '{ print $1 }')
 }
