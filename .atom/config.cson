@@ -14,6 +14,7 @@
       indent_size: 2
       unescape_strings: true
   core:
+    audioBeep: false
     disabledPackages: [
       "metrics"
     ]
@@ -22,6 +23,7 @@
       "git-blame"
       "activate-power-mode"
     ]
+    telemetryConsent: "no"
     themes: [
       "vanian-ui"
       "vanian-syntax"
@@ -30,6 +32,8 @@
     fontFamily: "\"Source Han Code JP\""
     fontSize: 13
     lineHeight: 1.6
+    showIndentGuide: true
+    showInvisibles: true
   "exception-reporting":
     userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
   "git-projects":
