@@ -33,9 +33,10 @@
     fontSize: 13
     lineHeight: 1.6
     showIndentGuide: true
-    showInvisibles: true
   "exception-reporting":
     userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
+  "find-and-replace":
+    openProjectFindResultsInRightPane: true
   "git-projects":
     rootPath: "/Users/hirofumiwakasugi/.ghq"
     showGitInfo: false
