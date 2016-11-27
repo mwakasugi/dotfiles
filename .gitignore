@@ -3,7 +3,7 @@
 
 # git管理するやつ
 !/README.md
-!/setup.sh
+!/setup.bash
 !/bash-setup.bash
 !/zsh-setup.bash
 !/.gitconfig
