@@ -1,0 +1,7 @@
+# vim: ft=zsh
+
+function peco-find() {
+  BUFFER=$(find . -name "*${1}*" | grep -v "/\." | peco --layout=bottom-up --prompt 'ENTRY>')
+  CURSOR=$#BUFFER
+}
+
