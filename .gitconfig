@@ -33,7 +33,7 @@
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
 [ghq]
-	root = ~/.ghq
+	root = ~/Ghq
 [tig "bind"]
 	main = C !@git pbcopy %(commit)
 [rebase]
