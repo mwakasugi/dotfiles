@@ -13,6 +13,10 @@
     json:
       indent_size: 2
       unescape_strings: true
+    scss:
+      convert_quotes: "single"
+      default_beautifier: "CSScomb"
+      indent_size: 2
   core:
     audioBeep: false
     disabledPackages: [
