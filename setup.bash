@@ -11,8 +11,8 @@ Setup plain old dotfiles
 
 EOS
 
-# files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .scss-lint.yml .tmux.conf .spacemacs .jruby_art .emacs.d .atom)
-files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .scss-lint.yml .tmux.conf .atom)
+# files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .scss-lint.yml .csscomb.json .tmux.conf .spacemacs .jruby_art .emacs.d .atom)
+files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .scss-lint.yml .csscomb.json .tmux.conf .atom)
 
 for i in "${files[@]}"; do
   if [ ! -L "${HOME}/${i}" ] && [ ! -e "${HOME}/${i}" ]; then
