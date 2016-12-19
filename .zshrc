@@ -97,4 +97,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Yarn
-export PATH="$PATH:`yarn global bin`"
+if (( $+commands[yarn] )); then
+  export PATH="$PATH:`yarn global bin`"
+fi
