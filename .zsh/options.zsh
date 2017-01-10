@@ -104,7 +104,7 @@ setopt listpacked
 # unsetopt bareglobqual
 
 # BRACE_CCL: Enable expansion from {a-c} to a b c.
-# setopt braceccl
+setopt braceccl
 
 # CASE_GLOB: Use case-insensitive matching.
 # unsetopt caseglob
