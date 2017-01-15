@@ -25,7 +25,7 @@ function _git_prompt_info() {
 
 function _rbenv_prompt_info() {
   if (( $+commands[rbenv] )); then
-    rbenv_prompt_info="(ruby: $(rbenv version-name))"
+    rbenv_prompt_info="(💎  $(rbenv version-name))"
   else
     rbenv_prompt_info="(no rbenv)"
   fi
@@ -33,7 +33,7 @@ function _rbenv_prompt_info() {
 
 function _pyenv_prompt_info() {
   if (( $+commands[pyenv] )); then
-    pyenv_prompt_info="(python: $(pyenv version-name))"
+    pyenv_prompt_info="(🐍  $(pyenv version-name))"
   else
     pyenv_prompt_info="(no pyenv)"
   fi
