@@ -20,7 +20,7 @@ if ! zplug check; then
   zplug install
 fi
 
-zplug load --verbose
+zplug load
 
 # ==============================================================================
 # Plugin Configurations
