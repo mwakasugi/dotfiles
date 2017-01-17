@@ -1,0 +1,13 @@
+# vim: ft=zsh
+
+function toggle-rprompt() {
+  if [ -z "${HIDE_RPROMPT}" ]; then
+    unset RPROMPT
+    export HIDE_RPROMPT=true
+    zle reset-prompt
+  else
+    source "${HOME}/.zsh/themes/super-itchy.zsh"
+    unset HIDE_RPROMPT
+    zle accept-line
+  fi
+}
