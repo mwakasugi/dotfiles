@@ -19,7 +19,7 @@ autoload -U colors; colors
   local zsh_dir="${HOME}/.zsh"
 
   source ${zsh_dir}/options.zsh
-  source ${zsh_dir}/themes/super-itchy.zsh
+  source ${zsh_dir}/themes/super-itchy.zsh-theme
   source ${zsh_dir}/load-functions.zsh
   source ${zsh_dir}/load-widgets.zsh
   source ${zsh_dir}/key-bindings.zsh
