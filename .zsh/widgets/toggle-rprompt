@@ -6,7 +6,7 @@ function toggle-rprompt() {
     export HIDE_RPROMPT=true
     zle reset-prompt
   else
-    source "${HOME}/.zsh/themes/super-itchy.zsh"
+    source "${HOME}/.zsh/themes/super-itchy.zsh-theme"
     unset HIDE_RPROMPT
     zle accept-line
   fi
