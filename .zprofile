@@ -13,3 +13,17 @@
     eval "$(pyenv init -)"
   fi
 }
+
+
+() {
+  if (( $+commands[go] )); then
+    local gopath="${HOME}/go"
+
+    if [ ! -d "${gopath}" ]; then
+      mkdir "${gopath}"
+    fi
+
+    export GOPATH="${gopath}"
+    export PATH=${PATH}:${GOPATH}/bin
+  fi
+}
