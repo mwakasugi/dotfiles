@@ -14,7 +14,6 @@
   fi
 }
 
-
 () {
   if (( $+commands[go] )); then
     local gopath="${HOME}/go"
@@ -25,5 +24,11 @@
 
     export GOPATH="${gopath}"
     export PATH=${PATH}:${GOPATH}/bin
+  fi
+}
+
+() {
+  if (( $+commands[yarn] )); then
+    export PATH="$PATH:$(yarn global bin)"
   fi
 }

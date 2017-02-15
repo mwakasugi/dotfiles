@@ -21,6 +21,7 @@ autoload -U colors; colors
   source ${zsh_dir}/options.zsh
   source ${zsh_dir}/themes/super-itchy.zsh-theme
   source ${zsh_dir}/load-functions.zsh
+  source ${zsh_dir}/load-aliases.zsh
   source ${zsh_dir}/load-widgets.zsh
   source ${zsh_dir}/key-bindings.zsh
   source ${zsh_dir}/zplug.zsh
@@ -54,26 +55,6 @@ select-word-style bash
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit'
-alias gclean='git clean -fd'
-alias gco='git checkout'
-alias gcob='git checkout -b'
-alias gd='git diff'
-alias gdca='git diff --cached'
-alias gdt='git difftool'
-alias gf='git fetch'
-alias gl='git pull'
-alias glog='git log --oneline --decorate --graph'
-alias gp='git push'
-alias gpf='git push --force-with-lease'
-alias gr='git rebase'
-alias gri='git rebase -i'
-alias grim='git rebase -i origin/master'
-alias gst='git status'
-alias gwt='git worktree'
-alias groot='cd "$(git rev-parse --show-toplevel)"'
 
 eval "$(direnv hook zsh)"
 
@@ -83,8 +64,3 @@ export PATH="/usr/local/sbin:$PATH"
 # Workaround https://coderwall.com/p/-k_93g/mac-os-x-valueerror-unknown-locale-utf-8-in-python
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# Yarn
-if (( $+commands[yarn] )); then
-  export PATH="$PATH:`yarn global bin`"
-fi
