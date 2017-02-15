@@ -9,6 +9,7 @@ source ${ZPLUG_HOME}/init.zsh
 # ==============================================================================
 zplug "zplug/zplug"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "b4b4r07/emoji-cli", defer:3
