@@ -20,6 +20,7 @@ autoload -U colors; colors
 
   source ${zsh_dir}/options.zsh
   source ${zsh_dir}/themes/super-itchy.zsh-theme
+  source ${zsh_dir}/load-completions.zsh
   source ${zsh_dir}/load-functions.zsh
   source ${zsh_dir}/load-aliases.zsh
   source ${zsh_dir}/load-widgets.zsh
@@ -47,14 +48,13 @@ linux*)
 esac
 
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' verbose yes
 
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 autoload -Uz select-word-style
 select-word-style bash
-
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-
 
 eval "$(direnv hook zsh)"
 
