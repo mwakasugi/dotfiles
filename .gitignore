@@ -2,6 +2,9 @@
 /*
 
 # git管理するやつ
+!/vimrc
+!/zshrc
+
 !/README.md
 !/setup.bash
 !/bash-setup.bash
@@ -10,10 +13,7 @@
 !/.bashrc
 !/.bash_profile
 !/.emacs.d
-!/.vimrc
 !/.gvimrc
-!/.vim
-!/zshrc
 !/.tmux.conf
 !/.globalrc
 !/.xvimrc
