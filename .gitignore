@@ -5,7 +5,6 @@
 !/README.md
 !/setup.bash
 !/bash-setup.bash
-!/zsh-setup.bash
 !/.gitconfig
 !/.gitignore
 !/.bashrc
@@ -14,11 +13,7 @@
 !/.vimrc
 !/.gvimrc
 !/.vim
-!/.zsh
-!/.zshenv
-!/.zshrc
-!/.zprofile
-!/.zshlib/
+!/zshrc
 !/.tmux.conf
 !/.globalrc
 !/.xvimrc
