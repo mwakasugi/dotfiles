@@ -19,7 +19,7 @@ if has('win32')
   set guifont=MeiryoKe_Gothic:h11
   set linespace=2
 elseif has('mac')
-  set guifont=Source\ Han\ Code\ JP\ L:h12
+  set guifont=SauceCodePowerline-Light:h13
   " set linespace=2
 elseif has('unix')
   set guifont=Ricty\ 12
