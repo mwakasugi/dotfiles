@@ -4,3 +4,6 @@
 [submodule "vimrc"]
 	path = vimrc
 	url = git@github.com:yochiyochirb/vimrc.git
+[submodule "fish-config"]
+	path = fish-config
+	url = git@github.com:5t111111/fish-config.git
