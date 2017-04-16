@@ -11,3 +11,4 @@ GTAGS
 tags
 venv/
 git-worktrees/*
+.idea/
