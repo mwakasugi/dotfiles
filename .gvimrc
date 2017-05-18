@@ -41,3 +41,11 @@ endif
 "----------------------------------------------------
 highlight Cursor guifg=NONE guibg=Green
 highlight CursorIM guifg=NONE guibg=Purple
+
+"----------------------------------------------------
+" Scrollbar settings
+"----------------------------------------------------
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
