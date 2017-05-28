@@ -49,3 +49,21 @@ for i in "${dirs[@]}"; do
     echo "Failed to create symlink [${i}] because [${XDG_CONFIG_HOME}/${i}] already exists."
   fi
 done
+
+
+cat << EOS
+
+================================================================================
+Setup VSCode
+================================================================================
+
+EOS
+
+vscode_config_path="${HOME}/Library/Application Support/Code/User"
+
+if [ -d "${vscode_config_path}" ]; then
+  rm -rf "${vscode_config_path}"
+  echo "Existing [${vscode_config_path}] is deleted."
+fi
+
+ln -s "${script_path}/vscode/User" "${vscode_config_path}"

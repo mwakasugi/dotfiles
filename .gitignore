@@ -4,6 +4,7 @@
 # git管理するやつ
 !/vimrc
 !/zshrc
+!/vscode
 
 !/README.md
 !/setup.bash
