@@ -12,19 +12,16 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
+    "vim.insertModeKeyBindings": [{
+        "before": [
+            "j",
+            "j"
+        ],
+        "after": [
+            "<Esc>"
+        ]
+    }],
+    "vim.otherModesKeyBindingsNonRecursive": [{
             "before": [
                 "<leader>",
                 "d"
@@ -39,11 +36,9 @@
                 "<C-n>"
             ],
             "after": [],
-            "commands": [
-                {
-                    "command": ":nohl"
-                }
-            ]
+            "commands": [{
+                "command": ":nohl"
+            }]
         }
     ],
     "vim.leader": "<space>",
@@ -54,5 +49,15 @@
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.disableAnnoyingNeovimMessage": true,
-    "vim.disableAnnoyingGcMessage": true
+    "vim.disableAnnoyingGcMessage": true,
+    "ruby.lint": {
+        "reek": false,
+        "rubocop": true,
+        "ruby": {
+            "unicode": true //Runs ruby -wc -Ku
+        },
+        "fasterer": false,
+        "debride": false,
+        "ruby-lint": true
+    }
 }

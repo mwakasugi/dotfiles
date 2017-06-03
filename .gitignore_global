@@ -12,3 +12,4 @@ tags
 venv/
 git-worktrees/*
 .idea/
+.vscode/
