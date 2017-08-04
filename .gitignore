@@ -31,6 +31,7 @@
 !/.bash
 !/.scss-lint.yml
 !/.csscomb.json
+!/.ideavimrc
 
 # git管理フォルダで更に無視するやつを指定
 .DS_Store

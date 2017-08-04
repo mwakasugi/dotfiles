@@ -17,6 +17,8 @@
       convert_quotes: "single"
       default_beautifier: "CSScomb"
       indent_size: 2
+  "atom-package-deps":
+    ignored: []
   core:
     audioBeep: false
     disabledPackages: [

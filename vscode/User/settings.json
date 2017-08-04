@@ -1,11 +1,10 @@
 {
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 0.2,
     "editor.fontSize": 12,
     "editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
     "editor.lineHeight": 20,
     "files.insertFinalNewline": true,
     "workbench.iconTheme": "vs-seti",
-    "window.zoomLevel": 0.2,
     "workbench.colorTheme": "Dracula Soft",
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -49,7 +48,6 @@
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.disableAnnoyingNeovimMessage": true,
-    "vim.disableAnnoyingGcMessage": true,
     "ruby.lint": {
         "reek": false,
         "rubocop": true,
@@ -59,5 +57,6 @@
         "fasterer": false,
         "debride": false,
         "ruby-lint": true
-    }
+    },
+    "haskell.ghcMod.executablePath": "stack"
 }
