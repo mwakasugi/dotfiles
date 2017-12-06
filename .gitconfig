@@ -3,6 +3,7 @@
 	precomposeunicode = true
 	quotepath = false
 	editor = vim -c \"set fenc=utf-8\"
+	autocrlf = input
 [user]
 	name = Hirofumi Wakasugi
 	email = baenej@gmail.com
