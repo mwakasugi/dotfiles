@@ -1,8 +1,10 @@
 {
     "window.zoomLevel": 0.2,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
     "editor.fontSize": 12,
     "editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
     "editor.lineHeight": 20,
+    "editor.rulers": [80, 120],
     "files.insertFinalNewline": true,
     "workbench.iconTheme": "vs-seti",
     "workbench.colorTheme": "Dracula Soft",
@@ -11,16 +13,19 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [{
-        "before": [
-            "j",
-            "j"
-        ],
-        "after": [
-            "<Esc>"
-        ]
-    }],
-    "vim.otherModesKeyBindingsNonRecursive": [{
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
             "before": [
                 "<leader>",
                 "d"
@@ -35,9 +40,11 @@
                 "<C-n>"
             ],
             "after": [],
-            "commands": [{
-                "command": ":nohl"
-            }]
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
         }
     ],
     "vim.leader": "<space>",
