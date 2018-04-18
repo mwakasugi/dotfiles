@@ -14,4 +14,6 @@ git-time-machine
 split-diff
 test-status.cson
 
+recovery/
+
 my-packages-tmp.txt

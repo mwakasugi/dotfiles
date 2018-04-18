@@ -3,6 +3,8 @@
     autoToggle: false
     particles: {}
     screenShake: {}
+  "asciidoc-preview":
+    scrollMode: false
   "atom-beautify":
     general:
       analytics: false
@@ -39,6 +41,7 @@
     fontSize: 12
     lineHeight: 1.6
     showIndentGuide: true
+    softWrap: true
   "exception-reporting":
     userId: "edddb662-6b8c-b055-201c-a48bbe8f28b6"
   "find-and-replace":
@@ -46,6 +49,10 @@
   "git-projects":
     rootPath: "/Users/hirofumiwakasugi/.ghq"
     showGitInfo: false
+  "linter-ui-default":
+    panelHeight: 258.875
+  "markdown-preview":
+    useGitHubStyle: true
   minimap:
     plugins:
       bookmarks: true

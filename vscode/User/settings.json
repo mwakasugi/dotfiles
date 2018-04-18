@@ -4,7 +4,11 @@
     "editor.fontSize": 12,
     "editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
     "editor.lineHeight": 20,
-    "editor.rulers": [80, 120],
+    "editor.wordWrap": "on",
+    "editor.rulers": [
+        80,
+        120
+    ],
     "files.insertFinalNewline": true,
     "workbench.iconTheme": "vs-seti",
     "workbench.colorTheme": "Dracula Soft",
@@ -65,5 +69,12 @@
         "debride": false,
         "ruby-lint": true
     },
-    "haskell.ghcMod.executablePath": "stack"
+    "haskell.ghcMod.executablePath": "stack",
+    "[crystal]": {
+        "editor.tabSize": 2
+    },
+    "crystal-lang.problems": "build",
+    "[ruby]": {
+        "editor.tabSize": 2
+    }
 }
