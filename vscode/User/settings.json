@@ -76,5 +76,10 @@
     "crystal-lang.problems": "build",
     "[ruby]": {
         "editor.tabSize": 2
-    }
+    },
+    "gitlens.keymap": "alternate",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true
 }
