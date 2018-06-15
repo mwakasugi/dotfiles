@@ -51,11 +51,89 @@
         "command": "-workbench.action.gotoSymbol"
     },
     {
-        "key": "shift+cmd+o",
-        "command": "workbench.action.showAllSymbols"
+        "key": "shift+cmd+y",
+        "command": "workbench.action.togglePanel"
     },
     {
-        "key": "cmd+t",
-        "command": "-workbench.action.showAllSymbols"
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+shift+cmd+y",
+        "command": "workbench.debug.action.toggleRepl"
+    },
+    {
+        "key": "shift+cmd+y",
+        "command": "-workbench.debug.action.toggleRepl"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+cmd+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "shift+cmd+f5",
+        "command": "-workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "cmd+.",
+        "command": "workbench.action.debug.stop",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "shift+f5",
+        "command": "-workbench.action.debug.stop",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "cmd+b",
+        "command": "workbench.action.tasks.build"
+    },
+    {
+        "key": "shift+cmd+b",
+        "command": "-workbench.action.tasks.build"
+    },
+    {
+        "key": "cmd+0",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     }
 ]

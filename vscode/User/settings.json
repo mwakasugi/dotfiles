@@ -11,7 +11,6 @@
     ],
     "files.insertFinalNewline": true,
     "workbench.iconTheme": "vs-seti",
-    "workbench.colorTheme": "Dracula Soft",
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -81,5 +80,6 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.historyExplorer.enabled": true
+    "gitlens.historyExplorer.enabled": true,
+    "workbench.colorTheme": "Dracula At Night"
 }
