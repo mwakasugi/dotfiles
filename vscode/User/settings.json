@@ -10,7 +10,7 @@
         120
     ],
     "files.insertFinalNewline": true,
-    "workbench.iconTheme": "vs-seti",
+    "workbench.iconTheme": "material-icon-theme",
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -57,7 +57,6 @@
     },
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
-    "vim.disableAnnoyingNeovimMessage": true,
     "ruby.lint": {
         "reek": false,
         "rubocop": true,
@@ -69,17 +68,22 @@
         "ruby-lint": true
     },
     "haskell.ghcMod.executablePath": "stack",
-    "[crystal]": {
-        "editor.tabSize": 2
-    },
-    "crystal-lang.problems": "build",
     "[ruby]": {
         "editor.tabSize": 2
+    },
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
     },
     "gitlens.keymap": "alternate",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.historyExplorer.enabled": true,
-    "workbench.colorTheme": "Dracula At Night"
+    "workbench.colorTheme": "Dracula"
 }
