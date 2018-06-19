@@ -51,10 +51,6 @@
         }
     ],
     "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
-    },
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
     "ruby.lint": {
