@@ -64,6 +64,12 @@
         "ruby-lint": true
     },
     "haskell.ghcMod.executablePath": "stack",
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
     "[ruby]": {
         "editor.tabSize": 2
     },
@@ -81,5 +87,6 @@
         "suppressShowKeyBindingsNotice": true
     },
     "gitlens.historyExplorer.enabled": true,
-    "workbench.colorTheme": "Dracula"
+    "workbench.colorTheme": "Dracula",
+    "gitlens.codeLens.enabled": false
 }
