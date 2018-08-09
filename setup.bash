@@ -1,5 +1,27 @@
 #!/usr/bin/env bash -eu
 
+uname="`uname`"
+
+case $uname in
+  'Linux')
+    OS='Linux'
+    ;;
+  # 'FreeBSD')
+  #   OS='FreeBSD'
+  #   ;;
+  # 'WindowsNT')
+  #   OS='Windows'
+  #   ;;
+  'Darwin')
+    OS='Mac'
+    ;;
+  # 'SunOS')
+  #   OS='Solaris'
+  #   ;;
+  # 'AIX') ;;
+  *) ;;
+esac
+
 pushd "$(dirname $0)" > /dev/null
 script_path="$(pwd -P)"
 
@@ -59,11 +81,19 @@ Setup VSCode
 
 EOS
 
-vscode_config_path="${HOME}/Library/Application Support/Code/User"
+case $OS in
+  'Linux')
+    ;;
+  'Mac')
+    vscode_config_path="${HOME}/Library/Application Support/Code/User"
+    vscode_user_path="${script_path}/vscode/User_mac"
+    ;;
+  *) ;;
+esac
 
 if [ -d "${vscode_config_path}" ]; then
   rm -rf "${vscode_config_path}"
   echo "Existing [${vscode_config_path}] is deleted."
 fi
 
-ln -s "${script_path}/vscode/User" "${vscode_config_path}"
+ln -s "${vscode_user_path}" "${vscode_config_path}"
