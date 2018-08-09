@@ -1,0 +1,29 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    {
+        "key": "ctrl+alt+j",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "shift+alt+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    }
+]
