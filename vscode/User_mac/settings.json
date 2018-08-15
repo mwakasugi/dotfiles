@@ -88,5 +88,8 @@
     },
     "gitlens.historyExplorer.enabled": true,
     "workbench.colorTheme": "Dracula",
-    "gitlens.codeLens.enabled": false
+    "gitlens.codeLens.enabled": false,
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.rules": "@PSR2",
+    "php-cs-fixer.formatHtml": false
 }
