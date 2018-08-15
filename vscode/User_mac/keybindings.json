@@ -1,6 +1,14 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
         "key": "ctrl+cmd+j",
         "command": "editor.action.goToDeclaration",
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
@@ -65,14 +73,6 @@
     {
         "key": "shift+cmd+y",
         "command": "-workbench.debug.action.toggleRepl"
-    },
-    {
-        "key": "shift+cmd+o",
-        "command": "workbench.action.quickOpen"
-    },
-    {
-        "key": "cmd+p",
-        "command": "-workbench.action.quickOpen"
     },
     {
         "key": "alt+cmd+1",
