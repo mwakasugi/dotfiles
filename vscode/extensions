@@ -1,4 +1,3 @@
-bceskavich.theme-dracula-at-night
 blanu.vscode-styled-jsx
 bungcip.better-toml
 castwide.solargraph
@@ -11,8 +10,10 @@ eamodio.gitlens
 eg2.tslint
 eg2.vscode-npm-script
 esbenp.prettier-vscode
+felixfbecker.php-intellisense
 formulahendry.auto-close-tag
 jpoissonnier.vscode-styled-components
+junstyle.php-cs-fixer
 kumar-harsh.graphql-for-vscode
 mike-co.import-sorter
 mikestead.dotenv
