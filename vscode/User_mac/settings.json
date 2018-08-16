@@ -76,12 +76,7 @@
     "[rust]": {
         "editor.formatOnSave": true
     },
-    "[typescript]": {
-        "editor.formatOnSave": true
-    },
-    "[typescriptreact]": {
-        "editor.formatOnSave": true
-    },
+    "tslint.autoFixOnSave": true,
     "gitlens.keymap": "alternate",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
