@@ -1,7 +1,8 @@
 {
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "window.zoomLevel": 1.1,
     "editor.fontFamily": "源ノ角ゴシック Code JP",
-    "editor.fontSize": 14,
+    "editor.fontSize": 12,
     "editor.lineHeight": 20,
     "editor.wordWrap": "on",
     "editor.rulers": [
