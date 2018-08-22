@@ -76,6 +76,9 @@
     "[rust]": {
         "editor.formatOnSave": true
     },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
     "tslint.autoFixOnSave": true,
     "gitlens.keymap": "alternate",
     "gitlens.advanced.messages": {
