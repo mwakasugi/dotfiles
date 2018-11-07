@@ -1,94 +1,82 @@
 {
-    "window.zoomLevel": 0.2,
-    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
-    "editor.fontSize": 12,
-    "editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
-    "editor.lineHeight": 20,
-    "editor.wordWrap": "on",
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "files.insertFinalNewline": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
+  "window.zoomLevel": 0.2,
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+  "editor.fontSize": 12,
+  "editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
+  "editor.lineHeight": 20,
+  "editor.wordWrap": "on",
+  "editor.rulers": [80, 120],
+  "files.associations": {
+    "*.blade.php": "html"
+  },
+  "files.insertFinalNewline": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "after": [],
+      "commands": [
         {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+          "command": ":nohl"
         }
-    ],
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "<C-n>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": ":nohl"
-                }
-            ]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/local/bin/nvim",
-    "ruby.lint": {
-        "reek": false,
-        "rubocop": true,
-        "ruby": {
-            "unicode": true //Runs ruby -wc -Ku
-        },
-        "fasterer": false,
-        "debride": false,
-        "ruby-lint": true
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "ruby.lint": {
+    "reek": false,
+    "rubocop": true,
+    "ruby": {
+      "unicode": true //Runs ruby -wc -Ku
     },
-    "haskell.ghcMod.executablePath": "stack",
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
-    "[javascriptreact]": {
-        "editor.formatOnSave": true
-    },
-    "[ruby]": {
-        "editor.tabSize": 2
-    },
-    "[rust]": {
-        "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.tabSize": 2
-    },
-    "tslint.autoFixOnSave": true,
-    "gitlens.keymap": "alternate",
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": true,
-    "workbench.colorTheme": "Dracula",
-    "gitlens.codeLens.enabled": false,
-    "php-cs-fixer.onsave": true,
-    "php-cs-fixer.rules": "@PSR2",
-    "php-cs-fixer.config": ".php_cs;.php_cs.dist",
-    "php-cs-fixer.formatHtml": false
+    "fasterer": false,
+    "debride": false,
+    "ruby-lint": true
+  },
+  "haskell.ghcMod.executablePath": "stack",
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "[rust]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "tslint.autoFixOnSave": true,
+  "gitlens.keymap": "alternate",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "workbench.colorTheme": "Dracula",
+  "gitlens.codeLens.enabled": false,
+  "php-cs-fixer.onsave": true,
+  "php-cs-fixer.rules": "@PSR2",
+  "php-cs-fixer.config": ".php_cs;.php_cs.dist",
+  "php-cs-fixer.formatHtml": false,
+  "editor.formatOnSave": true
 }
