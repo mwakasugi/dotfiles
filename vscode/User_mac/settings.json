@@ -6,9 +6,6 @@
   "editor.lineHeight": 20,
   "editor.wordWrap": "on",
   "editor.rulers": [80, 120],
-  "files.associations": {
-    "*.blade.php": "html"
-  },
   "files.insertFinalNewline": true,
   "workbench.iconTheme": "material-icon-theme",
   "vim.easymotion": true,
@@ -72,11 +69,11 @@
     "suppressShowKeyBindingsNotice": true
   },
   "gitlens.historyExplorer.enabled": true,
-  "workbench.colorTheme": "Dracula",
   "gitlens.codeLens.enabled": false,
   "php-cs-fixer.onsave": true,
   "php-cs-fixer.rules": "@PSR2",
   "php-cs-fixer.config": ".php_cs;.php_cs.dist",
   "php-cs-fixer.formatHtml": false,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Dracula At Night"
 }
