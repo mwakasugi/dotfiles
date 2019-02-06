@@ -1,8 +1,7 @@
 {
   "window.zoomLevel": 0.2,
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
-  "editor.fontSize": 12,
-  "editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "\"Liga Source Code Variable\", SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
   "editor.lineHeight": 20,
   "editor.wordWrap": "on",
   "editor.rulers": [80, 120],
@@ -60,6 +59,9 @@
   "[rust]": {
     "editor.formatOnSave": true
   },
+  "[swift]": {
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
     "editor.tabSize": 2
   },
@@ -75,5 +77,15 @@
   "php-cs-fixer.config": ".php_cs;.php_cs.dist",
   "php-cs-fixer.formatHtml": false,
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Dracula At Night"
+  "sourcekit-lsp.serverPath": "/Users/hirofumiwakasugi/ghq/github.com/apple/sourcekit-lsp/.build/x86_64-apple-macosx/debug/sourcekit-lsp",
+  "workbench.colorTheme": "Dracula",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.rendererType": "dom",
+  "sourcekit-lsp.trace.server": "messages",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "sourcekit-lsp.toolchainPath": "/Library/Developer/Toolchains/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-30-a.xctoolchain",
+  "editor.renderControlCharacters": true
 }
