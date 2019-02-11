@@ -465,6 +465,7 @@ before packages are loaded."
   ;; Prettier
   (add-hook 'js2-mode-hook 'prettier-js-mode)
   (add-hook 'web-mode-hook 'prettier-js-mode)
+  (add-hook 'typescript-mode-hook 'prettier-js-mode)
   ;; Indentation
   (setq javascript-indent-level 2) ; javascript-mode
   (setq js-indent-level 2) ; js-mode
