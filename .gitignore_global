@@ -15,3 +15,4 @@ git-worktrees/*
 .vscode/
 .ac-php-conf.json
 .tern-port
+.nvmrc
