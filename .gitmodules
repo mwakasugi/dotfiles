@@ -7,3 +7,6 @@
 [submodule "fish-config"]
 	path = fish-config
 	url = git@github.com:5t111111/private-fish-config.git
+[submodule ".tmux"]
+	path = .tmux
+	url = https://github.com/gpakosz/.tmux.git

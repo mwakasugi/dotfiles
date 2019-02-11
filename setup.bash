@@ -34,7 +34,7 @@ Setup plain old dotfiles
 EOS
 
 # files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .scss-lint.yml .csscomb.json .tmux.conf .spacemacs .jruby_art .emacs.d .atom .ideavimrc)
-files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .scss-lint.yml .csscomb.json .tmux.conf .atom .ideavimrc .xvimrc)
+files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .scss-lint.yml .csscomb.json .atom .ideavimrc .xvimrc)
 
 for i in "${files[@]}"; do
   if [ ! -L "${HOME}/${i}" ] && [ ! -e "${HOME}/${i}" ]; then
@@ -97,3 +97,14 @@ if [ -d "${vscode_config_path}" ]; then
 fi
 
 ln -s "${vscode_user_path}" "${vscode_config_path}"
+
+cat << EOS
+
+================================================================================
+Setup TMUX
+================================================================================
+
+EOS
+
+ln -s "${script_path}/.tmux/.tmux.conf" "${HOME}/.tmux.conf"
+ln -s "${script_path}/.tmux.conf.local" "${HOME}/.tmux.conf.local"

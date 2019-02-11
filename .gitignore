@@ -15,7 +15,8 @@
 !/.bash_profile
 !/.emacs.d
 !/.gvimrc
-!/.tmux.conf
+!/.tmux
+!/.tmux.conf.local
 !/.globalrc
 !/.xvimrc
 !/.gemrc
