@@ -445,6 +445,11 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+
+  ;; Prettier
+  (add-hook 'js2-mode-hook 'prettier-js-mode)
+  (add-hook 'web-mode-hook 'prettier-js-mode)
+  (add-hook 'typescript-mode-hook 'prettier-js-mode)
   )
 
 (defun dotspacemacs/user-load ()
@@ -462,10 +467,6 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (global-set-key (kbd "C-h") 'delete-backward-char)
   (setq-default line-spacing 2)
-  ;; Prettier
-  (add-hook 'js2-mode-hook 'prettier-js-mode)
-  (add-hook 'web-mode-hook 'prettier-js-mode)
-  (add-hook 'typescript-mode-hook 'prettier-js-mode)
   ;; Indentation
   (setq javascript-indent-level 2) ; javascript-mode
   (setq js-indent-level 2) ; js-mode
