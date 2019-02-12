@@ -209,8 +209,8 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Liga Source Code Variable"
-                               :size 14
+   dotspacemacs-default-font '("Source Han Code JP R"
+                               :size 12
                                :weight normal
                                :width normal)
 
@@ -450,6 +450,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (add-hook 'js2-mode-hook 'prettier-js-mode)
   (add-hook 'web-mode-hook 'prettier-js-mode)
   (add-hook 'typescript-mode-hook 'prettier-js-mode)
+  (add-hook 'php-mode-hook
+            (lambda ()
+              (setq flycheck-phpcs-standard "PSR2")))
   )
 
 (defun dotspacemacs/user-load ()
