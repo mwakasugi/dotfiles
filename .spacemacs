@@ -67,7 +67,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(prettier-js)
+   dotspacemacs-additional-packages '(prettier-js osx-clipboard)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -478,6 +478,22 @@ before packages are loaded."
   (setq web-mode-css-indent-offset 2) ; web-mode, css in html file
   (setq web-mode-code-indent-offset 2) ; web-mode, js code in html file
   (setq css-indent-offset 2) ; css-mode
+
+  ;; Use macOS clipboard https://github.com/syl20bnr/spacemacs/issues/10896
+  (use-package osx-clipboard
+    :commands
+    (osx-clipboard-paste-function osx-clipboard-cut-function))
+  (defun aj/select-text (text &rest ignore)
+    (if (display-graphic-p)
+        (gui-select-text text)
+      (osx-clipboard-cut-function text)))
+  (defun aj/selection-value ()
+    (if (display-graphic-p)
+        (gui-selection-value)
+      (osx-clipboard-paste-function)))
+  (setq interprogram-cut-function 'aj/select-text
+        interprogram-paste-function 'aj/selection-value)
+  (provide 'init-macos-terminal-copy-paste)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -494,7 +510,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (phpunit phpcbf php-extras php-auto-yasnippets drupal-mode company-php ac-php-core xcscope php-mode yasnippet-snippets tide smeargle mmm-mode markdown-toc markdown-mode magit-svn magit-gitflow json-navigator hierarchy json-mode json-snatcher json-reformat helm-gitignore helm-git-grep helm-company helm-c-yasnippet gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flycheck-pos-tip pos-tip evil-magit magit magit-popup git-commit with-editor dracula-theme diff-hl company-tern dash-functional company-statistics browse-at-remote auto-yasnippet ac-ispell auto-complete yapfify ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package typescript-mode treemacs-projectile treemacs-evil toc-org tern tagedit symon string-inflection stickyfunc-enhance spaceline-all-the-icons slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file nameless move-text macrostep lorem-ipsum livid-mode live-py-mode link-hint js2-refactor js-doc indent-guide importmagic impatient-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-gtags helm-flx helm-descbinds helm-css-scss helm-cscope helm-ag google-translate golden-ratio ggtags font-lock+ flycheck flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish define-word cython-mode counsel-projectile counsel-gtags counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent add-node-modules-path ace-link ace-jump-helm-line))))
+    (osx-clipboard phpunit phpcbf php-extras php-auto-yasnippets drupal-mode company-php ac-php-core xcscope php-mode yasnippet-snippets tide smeargle mmm-mode markdown-toc markdown-mode magit-svn magit-gitflow json-navigator hierarchy json-mode json-snatcher json-reformat helm-gitignore helm-git-grep helm-company helm-c-yasnippet gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flycheck-pos-tip pos-tip evil-magit magit magit-popup git-commit with-editor dracula-theme diff-hl company-tern dash-functional company-statistics browse-at-remote auto-yasnippet ac-ispell auto-complete yapfify ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package typescript-mode treemacs-projectile treemacs-evil toc-org tern tagedit symon string-inflection stickyfunc-enhance spaceline-all-the-icons slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file nameless move-text macrostep lorem-ipsum livid-mode live-py-mode link-hint js2-refactor js-doc indent-guide importmagic impatient-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-gtags helm-flx helm-descbinds helm-css-scss helm-cscope helm-ag google-translate golden-ratio ggtags font-lock+ flycheck flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish define-word cython-mode counsel-projectile counsel-gtags counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent add-node-modules-path ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
