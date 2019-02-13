@@ -480,20 +480,22 @@ before packages are loaded."
   (setq css-indent-offset 2) ; css-mode
 
   ;; Use macOS clipboard https://github.com/syl20bnr/spacemacs/issues/10896
-  (use-package osx-clipboard
-    :commands
-    (osx-clipboard-paste-function osx-clipboard-cut-function))
-  (defun aj/select-text (text &rest ignore)
-    (if (display-graphic-p)
-        (gui-select-text text)
-      (osx-clipboard-cut-function text)))
-  (defun aj/selection-value ()
-    (if (display-graphic-p)
-        (gui-selection-value)
-      (osx-clipboard-paste-function)))
-  (setq interprogram-cut-function 'aj/select-text
-        interprogram-paste-function 'aj/selection-value)
-  (provide 'init-macos-terminal-copy-paste)
+  (if (eq system-type 'darwin)
+      (use-package osx-clipboard
+        :commands
+        (osx-clipboard-paste-function osx-clipboard-cut-function))
+    (defun aj/select-text (text &rest ignore)
+      (if (display-graphic-p)
+          (gui-select-text text)
+        (osx-clipboard-cut-function text)))
+    (defun aj/selection-value ()
+      (if (display-graphic-p)
+          (gui-selection-value)
+        (osx-clipboard-paste-function)))
+    (setq interprogram-cut-function 'aj/select-text
+          interprogram-paste-function 'aj/selection-value)
+    (provide 'init-macos-terminal-copy-paste)
+    )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
