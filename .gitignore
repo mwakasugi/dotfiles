@@ -25,6 +25,7 @@
 !/.gitignore_global
 !/.rubocop.yml
 !/.atom
+!/spacemacs
 !/.spacemacs
 !/fish
 !/.bash
