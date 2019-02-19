@@ -1,3 +1,0 @@
-;; clearly distinguish the same file names
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)

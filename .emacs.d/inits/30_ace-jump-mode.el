@@ -1,1 +1,0 @@
-(quelpa 'ace-jump-mode)

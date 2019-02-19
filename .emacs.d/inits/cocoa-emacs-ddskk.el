@@ -1,5 +1,0 @@
-(add-to-list 'load-path "~/.emacs.d/elisp/skk")
-(setq skk-user-directory "~/Dropbox/extra-dotfiles/ddskk")
-(when (require 'skk-autoloads nil t)
-(define-key global-map (kbd "C-x C-j") 'skk-mode)
-(setq skk-byte-compile-init-file t))

@@ -26,12 +26,8 @@
 !/.rubocop.yml
 !/.atom
 !/.spacemacs
-!/.jruby_art
 !/fish
-!/powerline
 !/.bash
-!/.scss-lint.yml
-!/.csscomb.json
 !/.ideavimrc
 
 # git管理フォルダで更に無視するやつを指定

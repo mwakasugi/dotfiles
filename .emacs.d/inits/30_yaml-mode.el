@@ -1,1 +1,0 @@
-(quelpa 'yaml-mode)

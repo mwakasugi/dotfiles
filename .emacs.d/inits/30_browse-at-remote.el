@@ -1,1 +1,0 @@
-(quelpa 'browse-at-remote)

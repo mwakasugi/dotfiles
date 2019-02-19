@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: iftype
-# key: iftype
-# binding: direct-keybinding
-# --
-if type $0 > /dev/null 2>&1
-then
-  $1
-fi

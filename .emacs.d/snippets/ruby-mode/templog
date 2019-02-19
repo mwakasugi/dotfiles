@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: templog
-# key: templog
-# binding: direct-keybinding
-# --
-puts "*" * 30
-puts $0
-puts "*" * 30
