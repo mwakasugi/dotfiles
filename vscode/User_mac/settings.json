@@ -1,5 +1,5 @@
 {
-  "window.zoomLevel": 0.2,
+  "window.zoomLevel": 0,
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
   "editor.fontFamily": "\"Liga Source Code Variable\", SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
   "editor.lineHeight": 20,
