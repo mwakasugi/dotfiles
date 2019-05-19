@@ -33,8 +33,13 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(html
-     (javascript :variables node-add-modules-path t)
+   '((html :variables
+           web-fmt-tool 'prettier)
+     (javascript :variables
+                 node-add-modules-path t
+                 javascript-fmt-tool 'prettier
+                 js2-basic-offset 2
+                 js-indent-level 2)
      typescript
      php
      shell-scripts
@@ -480,8 +485,6 @@ before packages are loaded."
   (setq-default line-spacing 2)
 
   ;; Indentation
-  (setq-default js-indent-level 2)
-  (setq-default js2-basic-offset 2)
   (setq-default web-mode-markup-indent-offset 2)
   (setq-default web-mode-css-indent-offset 2)
   (setq-default web-mode-code-indent-offset 2)
