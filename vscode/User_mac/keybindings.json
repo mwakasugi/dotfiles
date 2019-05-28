@@ -1,3 +1,11 @@
 // Place your key bindings in this file to overwrite the defaults
 [
+  {
+    "key": "ctrl+cmd+v",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "-workbench.view.scm"
+  }
 ]
