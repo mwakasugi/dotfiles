@@ -69,4 +69,7 @@
 	"vim.useSystemClipboard": true,
 	"window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
 	"workbench.colorTheme": "Dracula",
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
 }
