@@ -40,7 +40,10 @@ This function should only modify configuration layer settings."
                  javascript-fmt-tool 'prettier
                  js2-basic-offset 2
                  js-indent-level 2)
-     typescript
+     (typescript :variables
+                 typescript-fmt-on-save t
+                 typescript-fmt-tool 'prettier
+                 typescript-linter 'eslint)
      php
      shell-scripts
      python
@@ -460,11 +463,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (add-hook 'php-mode-hook
             (lambda ()
               (setq flycheck-phpcs-standard "PSR2")))
-
-  ;; Use ESLint for TypeScript flycheck
-  (add-hook 'typescript-mode-hook
-            (lambda ()
-              (flycheck-select-checker 'javascript-eslint)))
   )
 
 (defun dotspacemacs/user-load ()
