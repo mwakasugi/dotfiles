@@ -1,13 +1,4 @@
 {
-	"[php]": {
-		"editor.tabSize": 4
-	},
-	"[python]": {
-		"editor.tabSize": 4
-	},
-	"[swift]": {
-		"editor.tabSize": 4
-	},
 	"editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 12,
@@ -45,7 +36,6 @@
 	"gitlens.views.fileHistory.enabled": true,
 	"gitlens.views.lineHistory.enabled": true,
   "html.format.indentHandlebars": true,
-  "phpcs.standard": "PSR2",
 	"terminal.integrated.fontSize": 12,
 	"terminal.integrated.rendererType": "dom",
 	"vim.easymotion": true,
@@ -69,10 +59,25 @@
 	"vim.useSystemClipboard": true,
 	"window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
 	"workbench.colorTheme": "Dracula",
+	"[php]": {
+		"editor.tabSize": 4,
+   	"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[python]": {
+		"editor.tabSize": 4
+	},
+	"[swift]": {
+		"editor.tabSize": 4
+	},
+	"[javascript]": {
+		"editor.formatOnSave": false,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[yaml]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
+	"editor.formatOnSaveTimeout": 5000,
 }
