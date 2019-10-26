@@ -27,7 +27,9 @@
 			"autoFix": true
 		}
 	],
+	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
 	"gitlens.advanced.messages": {
 		"suppressShowKeyBindingsNotice": true
 	},
