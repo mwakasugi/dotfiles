@@ -1,11 +1,8 @@
-# 最初に全てを無視リストに入れる
 /*
 
-# git管理するやつ
 !/vimrc
 !/zshrc
 !/vscode
-
 !/README.md
 !/setup.bash
 !/bash-setup.bash
@@ -13,25 +10,19 @@
 !/.gitignore
 !/.bashrc
 !/.bash_profile
-!/.emacs.d
 !/.gvimrc
 !/.tmux
 !/.tmux.conf.local
 !/.globalrc
 !/.xvimrc
-!/.gemrc
-!/.pryrc
 !/.tigrc
 !/.gitignore_global
-!/.rubocop.yml
-!/.atom
 !/spacemacs
 !/.spacemacs
 !/fish
 !/.bash
 !/.ideavimrc
 
-# git管理フォルダで更に無視するやつを指定
 .DS_Store
 *~
 \#*#
