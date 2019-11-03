@@ -10,7 +10,6 @@
 !/.gitignore
 !/.bashrc
 !/.bash_profile
-!/.gvimrc
 !/.tmux
 !/.tmux.conf.local
 !/.globalrc
