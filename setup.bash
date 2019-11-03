@@ -33,7 +33,7 @@ Setup plain old dotfiles
 
 EOS
 
-files=(.gemrc .gitconfig .gitignore_global .pryrc .tigrc .rubocop.yml .atom .ideavimrc .xvimrc .spacemacs)
+files=(.gitconfig .gitignore_global .tigrc .ideavimrc .xvimrc .spacemacs)
 
 for i in "${files[@]}"; do
   if [ ! -L "${HOME}/${i}" ] && [ ! -e "${HOME}/${i}" ]; then
