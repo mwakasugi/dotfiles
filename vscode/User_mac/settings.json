@@ -1,5 +1,5 @@
 {
-	"editor.fontFamily": "SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontFamily": "'Fira Code', SourceHanCodeJP-Normal, SauceCodePowerline, Menlo, Monaco, 'Courier New', monospace",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 12,
 	"editor.formatOnPaste": true,
@@ -82,4 +82,10 @@
 		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
 	"editor.formatOnSaveTimeout": 5000,
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.formatOnSave": false,
+	},
 }
