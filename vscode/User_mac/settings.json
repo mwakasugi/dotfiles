@@ -7,8 +7,10 @@
   "editor.formatOnType": false,
   "editor.lineHeight": 20,
   "editor.renderControlCharacters": true,
-  "editor.rulers": [80, 120],
-  "editor.tabSize": 2,
+  "editor.rulers": [
+    80,
+    120
+  ],
   "editor.wordWrap": "on",
   "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
