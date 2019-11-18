@@ -1,61 +1,49 @@
-[core]
-	excludesfile = ~/.gitignore_global
-	precomposeunicode = true
-	quotepath = false
-	editor = vim -c \"set fenc=utf-8\"
-	autocrlf = input
 [user]
 	name = Hirofumi Wakasugi
 	email = baenej@gmail.com
-	signingkey = 3D244A690D1DAFC8
+[core]
+	excludesfile = ~/.gitignore_global
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+	ui = auto
 [alias]
+	aliases = !git config --get-regexp alias
 	a = add
 	b = branch
 	c = commit
+	ci = commit
 	co = checkout
-	cob = checkout -b
 	d = diff
 	f = fetch
 	g = grep
-	l = log --oneline --decorate --graph
-	p = pull
+	lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
 	st = status
-	pbcopy = !printf "$1" | pbcopy
-	delete-merged-branches = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
-[log]
-	date = iso
+	oops = commit --amend --no-edit
+	push-with-lease = push --force-with-lease
+	review-local = "!git lg @{push}.."
+	uncommit = reset --soft HEAD~1
+	untrack = rm --cache --
+[diff]
+	mnemonicPrefix = true
+	renames = true
+	wordRegex = .
+	submodule = log
 [fetch]
-	prune = true
+	recurseSubmodules = on-demand
+[grep]
+	break = true
+	heading = true
+	lineNumber = true
+[log]
+	abbrevCommit = true
+	date = iso
+	follow = true
 [push]
 	default = simple
-[diff]
-	tool = Kaleidoscope
-[merge]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool]
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-[ghq]
-	root = ~/ghq
-	root = ~/go/src
-[tig "bind"]
-	main = C !@git pbcopy %(commit)
-[rebase]
-	autostash = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[commit]
-	gpgsign = true
+	followTags = true
+[status]
+	submoduleSummary = true
+	showUntrackedFiles = all
+[tag]
+	sort = version:refname
+[include]
+	path = ~/.gitconfig.local
