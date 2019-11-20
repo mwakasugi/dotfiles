@@ -1,5 +1,7 @@
 blanu.vscode-styled-jsx
+codezombiech.gitignore
 dbaeumer.vscode-eslint
+donjayamanne.githistory
 dracula-theme.theme-dracula
 eamodio.gitlens
 EditorConfig.EditorConfig
@@ -18,4 +20,6 @@ msjsdiag.debugger-for-chrome
 redhat.vscode-yaml
 satokaz.vscode-bs-ctrlchar-remover
 silvenon.mdx
+skyapps.fish-vscode
+unpublished.sourcekit-lsp
 vscodevim.vim
