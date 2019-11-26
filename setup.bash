@@ -86,24 +86,29 @@ case $OS in
   'Linux')
     ;;
   'Mac')
-    vscode_config_path="${HOME}/Library/Application Support/Code/User"
+    vscode_config_root="${HOME}/Library/Application Support/Code"
+    vscode_config_path="${vscode_config_root}/User"
     vscode_user_path="${script_path}/vscode/User_mac"
+
+    if [ ! -e "${vscode_config_root}" ] ; then
+      echo -e "${BLUE}WARN: [${vscode_config_root}] is not found. Maybe VSCode is not installed.${NC}"
+    else
+      if [ -e "${vscode_config_path}" ] && [ ! -L "${vscode_config_path}" ] ; then
+        echo -e "${RED}ERROR: Failed to create symlink [${vscode_config_path}] because it already exists.${NC}"
+      else
+        if [ -e "${vscode_config_path}" ] && [ -L "${vscode_config_path}" ] ; then
+          rm "${vscode_config_path}"
+          echo -e "${BLUE}WARN: Existing symlink [${vscode_config_path}] is deleted.${NC}"
+        fi
+
+        ln -s "${vscode_user_path}" "${vscode_config_path}"
+        echo -e "${CYAN}INFO: Symlink [${vscode_config_path}] is created.${NC}"
+      fi
+    fi
     ;;
   *)
     ;;
 esac
-
-if [ -e "${vscode_config_path}" ] && [ ! -L "${vscode_config_path}" ] ; then
-  echo -e "${RED}ERROR: Failed to create symlink [${vscode_config_path}] because it already exists.${NC}"
-else
-  if [ -e "${vscode_config_path}" ] && [ -L "${vscode_config_path}" ] ; then
-    rm "${vscode_config_path}"
-    echo -e "${BLUE}WARN: Existing symlink [${vscode_config_path}] is deleted.${NC}"
-  fi
-
-  ln -s "${vscode_user_path}" "${vscode_config_path}"
-  echo -e "${CYAN}INFO: Symlink [${vscode_config_path}] is created.${NC}"
-fi
 
 
 cat << EOS
