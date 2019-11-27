@@ -1,6 +1,3 @@
-[submodule "zshrc"]
-	path = zshrc
-	url = https://github.com/5t111111/zshrc.git
 [submodule "fish-config"]
 	path = fish-config
 	url = https://github.com/5t111111/private-fish-config.git
