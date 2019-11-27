@@ -4,11 +4,8 @@
 !/vscode
 !/README.md
 !/setup.bash
-!/bash-setup.bash
 !/.gitconfig
 !/.gitignore
-!/.bashrc
-!/.bash_profile
 !/.tmux
 !/.tmux.conf.local
 !/.globalrc
@@ -18,7 +15,6 @@
 !/spacemacs
 !/.spacemacs
 !/fish
-!/.bash
 !/.ideavimrc
 
 .DS_Store
