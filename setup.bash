@@ -187,17 +187,14 @@ Setup global Git ignore
 ================================================================================
 EOS
 
-if [ -d "${XDG_CONFIG_HOME}" ] ; then
-  if [ -e "${GLOBAL_GITIGNORE:=$XDG_CONFIG_HOME/git/ignore}" ] && [ ! -L "${GLOBAL_GITIGNORE}" ] ; then
-    echo -e "${RED}ERROR: Failed to create symlink [${GLOBAL_GITIGNORE}] because it already exists.${NC}"
-  else
-    if [ -L "${GLOBAL_GITIGNORE}" ] ; then
-      rm "${GLOBAL_GITIGNORE}"
-      echo -e "${BLUE}WARN: Existing symlink [${GLOBAL_GITIGNORE}] is deleted.${NC}"
-    fi
-
-    mkdir -p $(dirname "${GLOBAL_GITIGNORE}")
-    ln -s "${SCRIPT_PATH}/.gitignore_global" "${GLOBAL_GITIGNORE}"
-    echo -e "${CYAN}INFO: Symlink [${GLOBAL_GITIGNORE}] is created.${NC}"
+if [ -e "${GIT_CONFIG_DIR:=$XDG_CONFIG_HOME/git}" ] && [ ! -L "${GIT_CONFIG_DIR}" ] ; then
+  echo -e "${RED}ERROR: Failed to create symlink [${GIT_CONFIG_DIR}] because it already exists.${NC}"
+else
+  if [ -L "${GIT_CONFIG_DIR}" ] ; then
+    rm "${GIT_CONFIG_DIR}"
+    echo -e "${BLUE}WARN: Existing symlink [${GIT_CONFIG_DIR}] is deleted.${NC}"
   fi
+
+  ln -s "${SCRIPT_PATH}/git" "${GIT_CONFIG_DIR}"
+  echo -e "${CYAN}INFO: Symlink [${GIT_CONFIG_DIR}] is created.${NC}"
 fi
