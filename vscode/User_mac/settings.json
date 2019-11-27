@@ -82,5 +82,6 @@
   },
   "[markdown]": {
     "editor.formatOnSave": false
-  }
+  },
+  "debug.node.autoAttach": "on"
 }
