@@ -138,7 +138,7 @@ else
     echo -e "${BLUE}WARN: Existing symlink [${HOME}/.tmux.conf.local] is deleted.${NC}"
   fi
 
-  ln -s "${script_path}/.tmux/.tmux.conf.local" "${HOME}/.tmux.conf.local"
+  ln -s "${script_path}/.tmux.conf.local" "${HOME}/.tmux.conf.local"
   echo -e "${CYAN}INFO: Symlink [${HOME}/.tmux.conf.local] is created.${NC}"
 fi
 
