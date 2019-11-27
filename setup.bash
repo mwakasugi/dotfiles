@@ -196,6 +196,7 @@ if [ -d "${XDG_CONFIG_HOME}" ] ; then
       echo -e "${BLUE}WARN: Existing symlink [${GLOBAL_GITIGNORE}] is deleted.${NC}"
     fi
 
+    mkdir -p $(dirname "${GLOBAL_GITIGNORE}")
     ln -s "${SCRIPT_PATH}/.gitignore_global" "${GLOBAL_GITIGNORE}"
     echo -e "${CYAN}INFO: Symlink [${GLOBAL_GITIGNORE}] is created.${NC}"
   fi
