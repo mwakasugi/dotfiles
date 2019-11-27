@@ -1,8 +1,6 @@
 [user]
 	name = Hirofumi Wakasugi
 	email = baenej@gmail.com
-[core]
-	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
 [alias]
