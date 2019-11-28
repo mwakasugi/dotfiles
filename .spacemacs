@@ -10,7 +10,6 @@ This function should only modify configuration layer settings."
    ;; `+distribution'. For now available distributions are `spacemacs-base'
    ;; or `spacemacs'. (default 'spacemacs)
    dotspacemacs-distribution 'spacemacs
-
    ;; Lazy installation of layers (i.e. layers are installed only when a file
    ;; with a supported type is opened). Possible values are `all', `unused'
    ;; and `nil'. `unused' will lazy install only unused layers (i.e. layers
@@ -487,6 +486,10 @@ before packages are loaded."
   (setq-default web-mode-css-indent-offset 2)
   (setq-default web-mode-code-indent-offset 2)
   (setq-default css-indent-offset 2)
+
+  ;; Nicely formatted linum-mode
+  (global-linum-mode t)
+  (setq linum-format "%4d ")
 
   ;; Use macOS clipboard https://github.com/syl20bnr/spacemacs/issues/10896
   (if (eq system-type 'darwin) (progn
