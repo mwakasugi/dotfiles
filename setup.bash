@@ -250,23 +250,11 @@ Installing Fisher
 --------------------------------------------------------------------------------
 EOS
 
-fish -c 'fisher -v' > /dev/null 2>&1
-RC=$?
-
-if [ $RC = 0 ] ; then
+if fish -c 'type fisher  >/dev/null ^/dev/null' ; then
     echo -e "${CYAN}INFO: Fisher is already installed.${NC}"
 else
     FISHER_INSTALL_PATH="${FISH_CONFIG_DIR}/functions/fisher.fish"
-
     curl https://git.io/fisher --create-dirs -sLo "${FISHER_INSTALL_PATH}"
-
-    RC=$?
-
-    if [ $RC != 0 ]; then
-        echo -e "${RED}ERROR: Failed to install Fisher [$RC]${NC}"
-        exit $RC
-    fi
-
     echo -e "${CYAN}INFO: Fisher is successfully installed to [${FISHER_INSTALL_PATH}].${NC}"
 fi
 
