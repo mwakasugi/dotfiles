@@ -99,7 +99,7 @@ case $OS in
           echo -e "${BLUE}WARN: Existing symlink [${VSCODE_CONFIG_PATH}] is deleted.${NC}"
         fi
 
-        ln -s "${SCRIPT_PATH}/vscode/User_mac}" "${VSCODE_CONFIG_PATH}"
+        ln -s "${SCRIPT_PATH}/vscode/User_mac" "${VSCODE_CONFIG_PATH}"
         echo -e "${CYAN}INFO: Symlink [${VSCODE_CONFIG_PATH}] is created.${NC}"
       fi
     fi
