@@ -10,7 +10,7 @@ function __init_go -d 'Initialize Go environment along with setting GOPATH'
     end
 
     if not set -q GOPATH
-        set -l default_location "$HOME/go"
+        set -l default_location "$HOME/.go"
         if [ $argv[1] ]
             if [ $argv[1] = '-v' ]; or [ $argv[1] = '--verbose' ]
                 echo $filename: (set_color yellow)GOPATH is not set.(set_color normal)
