@@ -1,5 +1,4 @@
 set -g fish_prompt_pwd_dir_length 3
-set -gx EDITOR vim
 
 begin
     set -l source_dirs aliases

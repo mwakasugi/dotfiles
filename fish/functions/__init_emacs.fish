@@ -1,3 +1,4 @@
 function __init_emacs -d 'Get ready to use Emacs'
-    alias e 'emacsclient --alternate-editor ""'
+    set -gx EDITOR "emacsclient --alternate-editor ''"
+    alias e $EDITOR
 end
