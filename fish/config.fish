@@ -33,7 +33,7 @@ begin
         "$HOME/.fzf/bin"
 
     for path in $paths_to_add
-        if not contains "$path" $fish_user_paths
+        if test -d "$path"; and not contains "$path" $fish_user_paths
             set -U fish_user_paths "$path" $fish_user_paths
         end
     end
@@ -44,8 +44,6 @@ __init_direnv
 __init_emacs
 __init_go
 __init_gpg
-__init_rbenv
-__init_yarn
 
 # Source local specific config
 begin
