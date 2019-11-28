@@ -44,4 +44,4 @@
 [tag]
 	sort = version:refname
 [include]
-	path = ~/.gitconfig.local
+	path = ~/GitHub/5t111111/dotfiles/git/config.local

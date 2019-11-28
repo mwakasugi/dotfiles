@@ -43,7 +43,6 @@ Setup plain old dotfiles
 EOS
 
 FILES=( \
-  .gitconfig \
   .spacemacs \
 )
 
@@ -183,7 +182,7 @@ fi
 cat << EOS
 
 ================================================================================
-Setup global Git ignore
+Setup global Git config
 ================================================================================
 EOS
 
