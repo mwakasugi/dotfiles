@@ -42,6 +42,7 @@ end
 
 # Initalize environent settings
 __init_direnv
+__init_emacs
 __init_go
 __init_gpg
 __init_rbenv
