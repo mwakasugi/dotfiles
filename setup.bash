@@ -197,3 +197,95 @@ else
   ln -s "${SCRIPT_PATH}/git" "${GIT_CONFIG_DIR}"
   echo -e "${CYAN}INFO: Symlink [${GIT_CONFIG_DIR}] is created.${NC}"
 fi
+
+# ==============================================================================
+
+cat << EOS
+
+================================================================================
+Setup fish shell
+================================================================================
+EOS
+
+cat << EOS
+
+Checking fish installation
+--------------------------------------------------------------------------------
+EOS
+
+if type fish > /dev/null 2>&1 ; then
+    echo -e "${CYAN}INFO: fish shell is installed.${NC}"
+else
+    echo -e "${RED}ERROR: fish is not found.${NC}"
+    cat << EOS
+Please install fish before executing this setup script.
+See https://fishshell.com for further details.
+
+If using macOS, you may have to add fish executable path to /private/etc/shells before "chsh".
+EOS
+    exit 1
+fi
+
+cat << EOS
+
+Creating symlink to fish config
+--------------------------------------------------------------------------------
+EOS
+
+if [ -e "${FISH_CONFIG_DIR:=$XDG_CONFIG_HOME/fish}" ] && [ ! -L "${FISH_CONFIG_DIR}" ] ; then
+    echo -e "${RED}ERROR: Failed to create symlink [${FISH_CONFIG_DIR}] because it already exists.${NC}"
+else
+    if [ -L "${FISH_CONFIG_DIR}" ] ; then
+        rm "${FISH_CONFIG_DIR}"
+        echo -e "${BLUE}WARN: Existing symlink [${FISH_CONFIG_DIR}] is deleted.${NC}"
+    fi
+
+    ln -s "${SCRIPT_PATH}/fish" "${FISH_CONFIG_DIR}"
+    echo -e "${CYAN}INFO: Symlink [${FISH_CONFIG_DIR}] is created.${NC}"
+fi
+
+cat << EOS
+
+Installing Fisher
+--------------------------------------------------------------------------------
+EOS
+
+fish -c 'fisher -v' > /dev/null 2>&1
+RC=$?
+
+if [ $RC = 0 ] ; then
+    echo -e "${CYAN}INFO: Fisher is already installed.${NC}"
+else
+    FISHER_INSTALL_PATH="${FISH_CONFIG_DIR}/functions/fisher.fish"
+
+    curl https://git.io/fisher --create-dirs -sLo "${FISHER_INSTALL_PATH}"
+
+    RC=$?
+
+    if [ $RC != 0 ]; then
+        echo -e "${RED}ERROR: Failed to install Fisher [$RC]${NC}"
+        exit $RC
+    fi
+
+    echo -e "${CYAN}INFO: Fisher is successfully installed to [${FISHER_INSTALL_PATH}].${NC}"
+fi
+
+cat << EOS
+
+Installing plugins
+--------------------------------------------------------------------------------
+EOS
+
+fish -c 'fisher'
+
+cat << EOS
+
+Installation complete!
+--------------------------------------------------------------------------------
+Recommended way to configure your local specific configuration is
+adding settings in [${FISH_CONFIG_DIR}/config.local.fish]
+instead of [${FISH_CONFIG_DIR}/config.fish].
+
+EOS
+
+popd > /dev/null
