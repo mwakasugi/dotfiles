@@ -1,5 +1,9 @@
 set -g fish_prompt_pwd_dir_length 3
 
+# While this is not efficient way to set paths in Fish,
+# clear fish_user_paths at first for simplification
+set -U fish_user_paths
+
 begin
     set -l source_dirs aliases
     set -l fish_config_dir "$HOME/.config/fish"
