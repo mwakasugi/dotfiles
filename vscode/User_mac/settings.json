@@ -41,7 +41,6 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.rendererType": "dom",
   "vim.easymotion": true,
-  "vim.enableNeovim": true,
   "vim.hlsearch": true,
   "vim.incsearch": true,
   "vim.insertModeKeyBindings": [
@@ -51,7 +50,6 @@
     }
   ],
   "vim.leader": "<space>",
-  "vim.neovimPath": "/usr/local/bin/nvim",
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
