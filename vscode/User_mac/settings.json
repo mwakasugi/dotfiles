@@ -40,6 +40,7 @@
   "html.format.indentHandlebars": true,
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.shell.osx": "/Users/hirofumiwakasugi/.homebrew/bin/fish",
   "vim.easymotion": true,
   "vim.hlsearch": true,
   "vim.incsearch": true,

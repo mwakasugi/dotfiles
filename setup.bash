@@ -43,6 +43,7 @@ Setup plain old dotfiles
 EOS
 
 FILES=( \
+  .direnvrc \
   .spacemacs \
 )
 
