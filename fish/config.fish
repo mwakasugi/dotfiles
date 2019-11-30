@@ -48,6 +48,7 @@ __init_direnv
 __init_emacs
 __init_go
 __init_gpg
+__init_node
 
 # Source local specific config
 begin
