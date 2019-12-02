@@ -1,10 +1,8 @@
 function __init_go -d 'Initialize Go environment along with setting GOPATH'
     if not type go >/dev/null ^/dev/null
-        if [ $argv[1] ]
-            if [ $argv[1] = '-v' ]; or [ $argv[1] = '--verbose' ]
-                set -l filename (basename (status -f))
-                echo $filename: (set_color yellow)go executable is not found.(set_color normal) 1>&2
-            end
+        if isatty
+            set -l filename (basename (status -f))
+            echo $filename: (set_color yellow)go executable is not found.(set_color normal) 1>&2
         end
 
         return 0
