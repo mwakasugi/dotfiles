@@ -3,9 +3,9 @@ function __init_node -d 'Initialize Node'
         if isatty
             set -l filename (basename (status -f))
             echo $filename: (set_color yellow)nvm is not found.(set_color normal) 1>&2
-
-            return 0
         end
+
+        return 0
     end
 
     if isatty
