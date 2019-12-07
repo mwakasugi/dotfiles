@@ -32,7 +32,6 @@
 	heading = true
 	lineNumber = true
 [log]
-	abbrevCommit = true
 	date = iso
 	follow = true
 [push]
