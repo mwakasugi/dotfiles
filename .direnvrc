@@ -1,3 +1,4 @@
 if [ -f .nvmrc ]; then
   fish -c "nvm"
+  echo "Node version: $(fish -c "node -v")"
 fi
