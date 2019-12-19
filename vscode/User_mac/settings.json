@@ -85,5 +85,8 @@
   "debug.node.autoAttach": "on",
   "terminal.integrated.macOptionIsMeta": true,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
