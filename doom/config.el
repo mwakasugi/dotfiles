@@ -58,3 +58,4 @@
 (define-key key-translation-map [?\C-h] [?\C-?])
 (global-set-key (kbd "C-?") 'help-for-help)
 (setq-default line-spacing 0.3)
+(setq +format-with-lsp nil)
