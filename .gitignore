@@ -5,7 +5,6 @@
 !/.gitignore
 !/.gitignore_global
 !/.ideavimrc
-!/.spacemacs
 !/.tmux
 !/.tmux.conf.local
 !/.xvimrc
@@ -13,5 +12,5 @@
 !/fish
 !/git
 !/setup.bash
-!/spacemacs
 !/vscode
+!/doom

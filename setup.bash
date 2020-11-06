@@ -44,7 +44,6 @@ EOS
 
 FILES=( \
   .direnvrc \
-  .spacemacs \
 )
 
 case $OS in
@@ -147,27 +146,6 @@ fi
 cat << EOS
 
 ================================================================================
-Install Spacemacs
-================================================================================
-EOS
-
-if [ -e "${EMACS_D_PATH:=$HOME/.emacs.d}" ] && [ ! -L "${EMACS_D_PATH}" ] ; then
-  echo -e "${RED}ERROR: Failed to create symlink [${EMACS_D_PATH}] because it already exists.${NC}"
-else
-  if [ -L "${EMACS_D_PATH}" ] ; then
-    rm "${EMACS_D_PATH}"
-    echo -e "${BLUE}WARN: Existing symlink [${EMACS_D_PATH}] is deleted.${NC}"
-  fi
-
-  ln -s "${SCRIPT_PATH}/spacemacs" "${EMACS_D_PATH}"
-  echo -e "${CYAN}INFO: Symlink [${EMACS_D_PATH}] is created.${NC}"
-fi
-
-# ==============================================================================
-
-cat << EOS
-
-================================================================================
 Setting up XDG Base Directory
 ================================================================================
 EOS
@@ -200,6 +178,28 @@ else
 fi
 
 # ==============================================================================
+
+cat << EOS
+
+================================================================================
+Setup Doom Emacs
+================================================================================
+EOS
+
+if [ -e "${DOOM_CONFIG_DIR:=$XDG_CONFIG_HOME/doom}" ] && [ ! -L "${DOOM_CONFIG_DIR}" ] ; then
+  echo -e "${RED}ERROR: Failed to create symlink [${DOOM_CONFIG_DIR}] because it already exists.${NC}"
+else
+  if [ -L "${DOOM_CONFIG_DIR}" ] ; then
+    rm "${DOOM_CONFIG_DIR}"
+    echo -e "${BLUE}WARN: Existing symlink [${DOOM_CONFIG_DIR}] is deleted.${NC}"
+  fi
+
+  ln -s "${SCRIPT_PATH}/doom" "${DOOM_CONFIG_DIR}"
+  echo -e "${CYAN}INFO: Symlink [${DOOM_CONFIG_DIR}] is created.${NC}"
+fi
+
+# ==============================================================================
+
 
 cat << EOS
 
