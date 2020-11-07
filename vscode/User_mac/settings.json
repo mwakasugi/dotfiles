@@ -8,25 +8,9 @@
   "editor.highlightActiveIndentGuide": true,
   "editor.lineHeight": 20,
   "editor.renderControlCharacters": true,
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "editor.wordWrap": "on",
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
-  ],
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -60,13 +44,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.python"
   },
   "[swift]": {
     "editor.tabSize": 4
   },
   "[javascript]": {
-    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
@@ -82,11 +66,7 @@
   "[markdown]": {
     "editor.formatOnSave": false
   },
-  "debug.node.autoAttach": "on",
   "terminal.integrated.macOptionIsMeta": true,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
