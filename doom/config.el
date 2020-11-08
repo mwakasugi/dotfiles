@@ -59,3 +59,10 @@
 (global-set-key (kbd "C-?") 'help-for-help)
 (setq-default line-spacing 0.3)
 (setq +format-with-lsp nil)
+
+(setq doom-variable-pitch-font (font-spec :family "Fira Code" :size 12))
+
+(require 'highlight-indent-guides)
+(setq highlight-indent-guides-responsive t)
+(set-face-foreground 'highlight-indent-guides-character-face "brightblack")
+(set-face-foreground 'highlight-indent-guides-top-character-face "blue")
