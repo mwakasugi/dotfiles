@@ -64,5 +64,6 @@
 
 (require 'highlight-indent-guides)
 (setq highlight-indent-guides-responsive t)
+(setq highlight-indent-guides-suppress-auto-error t)
 (set-face-foreground 'highlight-indent-guides-character-face "brightblack")
 (set-face-foreground 'highlight-indent-guides-top-character-face "blue")
