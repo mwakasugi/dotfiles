@@ -1,3 +1,11 @@
 set visualbell
 set noerrorbells
 set clipboard+=unnamedplus
+set smartcase
+set ignorecase
+set hlsearch
+
+let mapleader = "\<Space>"
+
+nnoremap <Leader>cd :action GotoDeclaration<CR>
+
