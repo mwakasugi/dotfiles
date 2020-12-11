@@ -35,7 +35,8 @@ begin
         "$HOME/.cargo/bin" \
         "$HOME/.composer/vendor/bin" \
         "$HOME/.fzf/bin" \
-        "$HOME/.emacs.d/bin"
+        "$HOME/.emacs.d/bin" \
+        "$HOME/.deno/bin"
 
     for path in $paths_to_add
         if test -d "$path"; and not contains "$path" $fish_user_paths
