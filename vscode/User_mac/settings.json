@@ -5,15 +5,19 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
+  "editor.formatOnSaveTimeout": 5000,
   "editor.highlightActiveIndentGuide": true,
   "editor.lineHeight": 20,
   "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "boundary",
   "editor.rulers": [80, 120],
+  "editor.suggestSelection": "first",
   "editor.wordWrap": "on",
   "eslint.alwaysShowStatus": true,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "git.enableSmartCommit": true,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
@@ -23,6 +27,7 @@
   "gitlens.views.lineHistory.enabled": true,
   "html.format.indentHandlebars": true,
   "terminal.integrated.fontSize": 12,
+  "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.rendererType": "dom",
   "terminal.integrated.shell.osx": "/Users/hirofumiwakasugi/.homebrew/bin/fish",
   "vim.easymotion": true,
@@ -59,14 +64,23 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "editor.formatOnSaveTimeout": 5000,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.formatOnSave": false
   },
-  "terminal.integrated.macOptionIsMeta": true,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
