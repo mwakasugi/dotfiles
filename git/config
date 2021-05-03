@@ -44,3 +44,5 @@
 	sort = version:refname
 [include]
 	path = ~/GitHub/5t111111/dotfiles/git/config.local
+[init]
+	defaultBranch = main
