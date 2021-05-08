@@ -5,7 +5,6 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
-  "editor.formatOnSaveTimeout": 5000,
   "editor.highlightActiveIndentGuide": true,
   "editor.lineHeight": 20,
   "editor.renderControlCharacters": true,
@@ -18,18 +17,10 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "git.enableSmartCommit": true,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
-  "gitlens.codeLens.enabled": false,
-  "gitlens.keymap": "alternate",
-  "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.lineHistory.enabled": true,
   "html.format.indentHandlebars": true,
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.macOptionIsMeta": true,
-  "terminal.integrated.rendererType": "dom",
-  "terminal.integrated.shell.osx": "/Users/hirofumiwakasugi/.homebrew/bin/fish",
+  "terminal.integrated.defaultProfile.osx": "/Users/hirofumiwakasugi/.homebrew/bin/fish",
   "vim.easymotion": true,
   "vim.hlsearch": true,
   "vim.incsearch": true,
@@ -70,7 +61,6 @@
   "[markdown]": {
     "editor.formatOnSave": false
   },
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
