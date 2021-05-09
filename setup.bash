@@ -254,9 +254,8 @@ EOS
 if fish -c 'type fisher  >/dev/null ^/dev/null' ; then
     echo -e "${CYAN}INFO: Fisher is already installed.${NC}"
 else
-    FISHER_INSTALL_PATH="${FISH_CONFIG_DIR}/functions/fisher.fish"
-    curl https://git.io/fisher --create-dirs -sLo "${FISHER_INSTALL_PATH}"
-    echo -e "${CYAN}INFO: Fisher is successfully installed to [${FISHER_INSTALL_PATH}].${NC}"
+    echo -e "${CYAN}INFO: Installing Fisher.${NC}"
+    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fi
 
 cat << EOS

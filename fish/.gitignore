@@ -2,7 +2,7 @@
 
 !/.gitignore
 !/config.fish
-!/fishfile
 !/functions
 !/aliases
 !/profiles
+!/fish_plugins
