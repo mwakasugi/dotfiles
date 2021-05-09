@@ -28,8 +28,6 @@ begin
     set -l paths_to_add \
         "/usr/local/bin" \
         "/usr/local/sbin" \
-        "$HOME/.homebrew/bin" \
-        "$HOME/.homebrew/sbin" \
         "$HOME/.local/bin" \
         "/usr/local/go/bin" \
         "$HOME/.cargo/bin" \
